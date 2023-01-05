@@ -1,0 +1,17 @@
+.header {
+    padding: 20px 50px;
+    font-size: 18px;
+    display: flex;
+    gap: 200px;
+    height: 100px;
+}
+
+.game {
+    font-weight: 500;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+    font-size: 17px;
+}
