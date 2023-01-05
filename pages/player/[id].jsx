@@ -1,12 +1,23 @@
+import Head from 'next/head'
+
 import styles from './Player.module.css'
 
 export default function Player({ player }) {
   console.log(player)
   return (
-    <div className={styles.container}>
-      <h2>{player.name}</h2>
-      <p>{player.trophies}</p>
-    </div>
+    <>
+      <Head>
+        <title>{player.name} Profile</title>
+        <meta
+          name='Brawl Stars Stats'
+          content={`Brawl Stars stats of ${player.name}`}
+        />
+      </Head>
+      <div className={styles.container}>
+        <h2>{player.name}</h2>
+        <p>{player.trophies}</p>
+      </div>
+    </>
   )
 }
 
