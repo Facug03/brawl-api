@@ -4,14 +4,25 @@
     display: flex;
     gap: 200px;
     height: 100px;
+    color: #ffffff;
 }
 
 .game {
     font-weight: 500;
+    font-size: 18px;
+}
+
+.pro {
+    font-size: 20px;
+    font-weight: 700;
+    color: #e60302;
 }
 
 .nav {
     display: flex;
     gap: 10px;
+    font-weight: 500;
     font-size: 17px;
+    list-style: none;
+    padding-top: 3px;
 }
