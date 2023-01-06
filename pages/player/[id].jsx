@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import styles from './Player.module.css'
+import Container from '../../components/Container/Container'
 
 export default function Player({ player }) {
   console.log(player)
@@ -19,7 +20,7 @@ export default function Player({ player }) {
           content={`Brawl Stars stats of ${player.name}`}
         />
       </Head>
-      <div className={styles.container}>
+      <Container>
         <header className={styles.head}>
           <div className={styles.icon}>
             <Image
@@ -62,7 +63,7 @@ export default function Player({ player }) {
         <div className={styles.info}>
           <div>Highest trophies {player.highestTrophies}</div>
         </div>
-      </div>
+      </Container>
     </>
   )
 }
