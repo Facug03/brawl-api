@@ -1,5 +1,5 @@
 .container {
-    margin: 0 50px;
+    margin: 0 80px;
 }
 
 .head {
@@ -32,7 +32,7 @@
 }
 
 .profileContainer {
-    transform: skew(7deg,0deg)
+    transform: skew(7deg,0deg);
 }
 
 .nameContainer {
@@ -44,7 +44,7 @@
 .name {
     font-size: 28px;
     font-weight: 700;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    /* text-shadow: #000 -1px 2px, #000 -1px -1px; */
     padding-bottom: 6px;
 }
 
