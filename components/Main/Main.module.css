@@ -16,11 +16,8 @@
     color: #0cf20c;
 }
 
-.search {
-    margin-bottom: 15px;
-    font-weight: 700;
-    font-size: 28px;
-    color: #ffffff;
+.center {
+    border: #000000 solid 2px;
 }
 
 .section {
@@ -28,107 +25,8 @@
     justify-content: space-evenly;
 }
 
-.card {
-    border: #000000 solid;
-    padding: 20px;
-    width: 361px;
-    background-color: #e60302;
-    /* transform: skew(-7deg,0deg) */
-}
-
-.form {
-    position: relative;
-}
-
-.hashtag {
-    position: absolute;
-    font-size: 23px;
-    font-weight: 600;
-    top: 5px;
-    left: 6px;
-    z-index: 50;
-}
-
-.drop {
-    background-color: #2188e8;
-    padding: 10px;
-    margin: 40px 0px 15px 0px;
-    transform: skew(-7deg,0deg);
-    border: #000000 solid 2px;
-    cursor: pointer;
-}
-
-.dropClub {
-    background-color: #2188e8;
-    padding: 10px;
-    margin: 20px 0px 15px 0px;
-    transform: skew(-7deg,0deg);
-    border: #000000 solid 2px;
-    cursor: pointer;
-}
-
-.text {
-    font-size: 30px;
-    color: #ffffff;
-    font-weight: 800;
-    transform: skew(7deg,0deg);
-    padding-left: 30px;
-    position: relative;
-    /* margin: 40px 0px 15px 0px; */
-}
-
-.open {
-    transform: rotate(90deg);
-    position: absolute;
-    left: 7px;
-}
-
-.close {
-    position: absolute;
-    left: 7px;
-}
-
-.tag {
-    width: 160px;
-    outline: none;
-    font-size: 20px;
-    font-family: inherit;
-    font-weight: 600;
-    border: solid #000000 2px;
-    padding: 5px 5px 5px 20px;
-    margin-bottom: 15px;
-    transform: skew(-7deg,0deg)
-}
-
-.button {
-    background-color: #2188e8;
-    font-weight: 800;
-    text-decoration: none;
-    height: 35px;
-    display: block;
-    padding: 5px;
-    color: #ffffff;
-    border-radius: 3px;
-    font-size: 20px;
-    border: solid #000000 2px;
-    width: fit-content;
-    transform: skew(-7deg,0deg)
-}
-
-.link {
-    transform: skew(7deg,0deg)
-}
-
-.tutorial {
-    display: grid;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-auto-flow: column;
-    transition: ease 3s;
-}
-
 .div {
     margin: 0 auto;
-    position: relative;
 }
 
 .p {
@@ -137,5 +35,8 @@
     font-size: 18px;
     margin-bottom: 10px;
 }
+
+
+
 
 
