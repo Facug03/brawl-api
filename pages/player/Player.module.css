@@ -1,3 +1,80 @@
 .container {
     margin: 0 50px;
 }
+
+.head {
+    display: flex;
+    padding: 5px 50px;
+    gap: 100px;
+}
+
+/* .img {
+    object-fit: fill;
+} */
+
+.icon {
+    position: relative;
+}
+
+.tag {
+    position: absolute;
+    color: #ffffff;
+    bottom: -8px;
+    font-weight: 500;
+}
+
+.profile {
+    padding: 10px 100px;
+    border: 3px solid #000000;
+    transform: skew(-7deg,0deg);
+    background-color: #353d50;
+    box-shadow: #0e0e16 0px 3px 9px;
+}
+
+.profileContainer {
+    transform: skew(7deg,0deg)
+}
+
+.nameContainer {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.name {
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    padding-bottom: 6px;
+}
+
+.exp {
+    position: relative;
+}
+
+.level {
+    position: absolute;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: #000 -0.5px 1px, #000 -1px -0.5px;
+    bottom: 19px;
+    left: 10px;
+}
+
+.trophies {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.number {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+}
+
+.info {
+    margin-top: 75px;
+}
