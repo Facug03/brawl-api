@@ -39,7 +39,7 @@
     border: solid #000000 2px;
     padding: 5px 5px 5px 20px;
     margin-bottom: 15px;
-    transform: skew(-7deg,0deg)
+    transform: skew(-7deg,0deg);
 }
 
 .button {
@@ -54,4 +54,5 @@
     font-size: 20px;
     border: solid #000000 2px;
     width: fit-content;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
 }
