@@ -209,7 +209,7 @@ export async function getServerSideProps({ params }) {
   const { id } = params
 
   const res = await fetch(
-    `https://api.brawlstars.com/v1/players/%23${id}?authorization=Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjhlYWM1ZjlmLTNhNjgtNDk4Mi05Y2Q0LTJmMzMyZDQ0M2IzYiIsImlhdCI6MTY3MzI5MTQ2OSwic3ViIjoiZGV2ZWxvcGVyLzNhZDRhZDlkLWIwNmEtZjBkYi00YWQyLTJhYzM2MDRlYjU5YiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDQuMjAyLjk4Ljc1Il0sInR5cGUiOiJjbGllbnQifV19.UE948z07xxkyaNWdr95CXRXV0DREgoobJ--zlKixvpQHOnAav7bIzOy407qinVFDPkqqn-U48T3Jf88vRXOmFg`
+    `https://api.brawlstars.com/v1/players/%23${id}?authorization=Bearer ${process.env.BRAWL_API_KEY}`
   )
   console.log(res.status)
   const player = await res.json()
