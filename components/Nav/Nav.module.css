@@ -7,6 +7,12 @@
     color: #ffffff;
 }
 
+.logo {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+}
+
 .game {
     font-weight: 500;
     font-size: 18px;
@@ -25,4 +31,5 @@
     font-size: 17px;
     list-style: none;
     padding-top: 2px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
 }
