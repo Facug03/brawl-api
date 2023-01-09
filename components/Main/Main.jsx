@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import styles from './Main.module.css'
 import whereIs from '../../public/whereisprofile.jpg'
@@ -13,6 +13,14 @@ import BrawlTalk from '../BrawlTalk/BrawlTalk'
 export default function Main() {
   const [dropPlayer, setDropPlayer] = useState(false)
   const [dropClub, setDropClub] = useState(false)
+
+  useEffect(() => {
+    fetch(
+      `https://api.brawlstars.com/v1/players/%23${id}?authorization=Bearer ${process.env.BRAWL_API_KEY}`
+    )
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err))
+  }, [])
 
   return (
     <main>
