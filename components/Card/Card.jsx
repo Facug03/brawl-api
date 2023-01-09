@@ -7,8 +7,11 @@ export default function Card({ type }) {
   const [id, setId] = useState('')
 
   const controlInput = ({ target }) => {
-    if (target.value.length < 10 && /^[A-Za-z0-9]*$/.test(target.value)) {
-      setId(target.value.toUpperCase())
+    if (
+      target.value.length < 10 &&
+      /^[A-Za-z0-9]*$/.test(target.value.trim())
+    ) {
+      setId(target.value.toUpperCase().trim())
     }
   }
 
