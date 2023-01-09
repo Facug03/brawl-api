@@ -8,6 +8,7 @@ import Tutorial from '../Tutorial/Tutorial'
 import Card from '../Card/Card'
 import TopBrawlers from '../TopBrawlers/TopBrawlers'
 import Container from '../Container/Container'
+import BrawlTalk from '../BrawlTalk/BrawlTalk'
 
 export default function Main() {
   const [dropPlayer, setDropPlayer] = useState(false)
@@ -17,8 +18,8 @@ export default function Main() {
     <main>
       <Container>
         <h2 className={styles.title}>
-          Search your profile or club{' '}
-          <span className={styles.stats}>stats</span>!
+          Search your profile or club
+          <span className={styles.stats}> stats</span>!
         </h2>
         <section className={styles.section}>
           <Card type='Player' />
@@ -35,6 +36,7 @@ export default function Main() {
               height={245}
               src={whereIs}
               alt='where is the profile'
+              priority={false}
             />
           </div>
           <div className={styles.div}>
@@ -47,6 +49,7 @@ export default function Main() {
               height={245}
               src={profile}
               alt='profile of brawl stars'
+              priority={false}
             />
           </div>
         </Tutorial>
@@ -61,6 +64,7 @@ export default function Main() {
               height={245}
               src={whereIs}
               alt='where is the profile'
+              priority={false}
             />
           </div>
           <div className={styles.div}>
@@ -73,10 +77,12 @@ export default function Main() {
               height={245}
               src={profile}
               alt='profile of brawl stars'
+              priority={false}
             />
           </div>
         </Tutorial>
         <TopBrawlers />
+        <BrawlTalk />
       </Container>
     </main>
   )

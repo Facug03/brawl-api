@@ -3,6 +3,7 @@
     font-weight: 800;
     font-size: 30px;
     color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
 }
 
 .stats {
@@ -27,6 +28,7 @@
     font-weight: 500;
     font-size: 18px;
     margin-bottom: 10px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
 }
 
 
