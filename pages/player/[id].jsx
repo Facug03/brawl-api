@@ -6,6 +6,7 @@ import styles from './Player.module.css'
 import Container from '../../components/Container/Container'
 
 export default function Player({ player }) {
+  console.log(process.env.BRAWL_API_KEY)
   console.log(player)
   if (player.tag === undefined) {
     return <h3>{player.reason}</h3>
@@ -207,7 +208,6 @@ export default function Player({ player }) {
 
 export async function getServerSideProps({ params }) {
   const { id } = params
-
   const res = await fetch(
     `https://api.brawlstars.com/v1/players/%23${id}?authorization=Bearer ${process.env.BRAWL_API_KEY}`
   )
