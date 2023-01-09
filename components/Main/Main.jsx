@@ -16,7 +16,7 @@ export default function Main() {
 
   useEffect(() => {
     fetch(
-      `https://api.brawlstars.com/v1/players/%23${id}?authorization=Bearer ${process.env.BRAWL_API_KEY}`
+      `https://api.brawlstars.com/v1/players/%23JGCCGY80?authorization=Bearer ${process.env.BRAWL_API_KEY}`
     )
       .then((res) => console.log(res))
       .catch((err) => console.log(err))
