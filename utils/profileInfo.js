@@ -90,3 +90,14 @@ export const getBrawlerColor = {
   SURGE:
     'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
 }
+
+export const mode = {
+  gemGrab: 'Gem Grab',
+  soloShowdown: 'Solo Showdown',
+  brawlBall: 'Brawl Ball',
+  hotZone: 'Hot Zone',
+  duoShowdown: 'Duo Showdown',
+  knockout: 'Knockout',
+  bigGame: 'Big Game',
+  wipeout: 'Wipeout',
+}

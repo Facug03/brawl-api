@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { getRankImg, getBrawlerColor } from '../../utils'
+import { getRankImg, getBrawlerColor } from '../../utils/profileInfo'
 
 import styles from './Player.module.css'
 import Container from '../../components/Container/Container'

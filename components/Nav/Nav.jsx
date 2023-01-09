@@ -10,9 +10,21 @@ export default function Nav() {
         </h1>
       </Link>
       <ul className={styles.nav}>
-        <li>Eventos</li>
-        <li>Rankings</li>
-        <li>Clubs</li>
+        <li>
+          <Link className={styles.li} href='/events'>
+            Events
+          </Link>
+        </li>
+        <li>
+          <Link className={styles.li} href='/rank'>
+            Rankings
+          </Link>
+        </li>
+        <li>
+          <Link className={styles.li} href='/clubs'>
+            Clubs
+          </Link>
+        </li>
       </ul>
     </header>
   )

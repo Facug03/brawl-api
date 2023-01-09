@@ -5,6 +5,7 @@ import styles from './Card.module.css'
 
 export default function Card({ type }) {
   const [id, setId] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const controlInput = ({ target }) => {
     if (
@@ -26,7 +27,11 @@ export default function Card({ type }) {
           onChange={controlInput}
           className={styles.tag}
         />
-        <Link href={`/player/${id}`} className={styles.button}>
+        <Link
+          href={`/player/${id}`}
+          onClick={() => setLoading(!loading)}
+          className={styles.button}
+        >
           Search
         </Link>
       </form>
