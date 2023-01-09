@@ -16,7 +16,12 @@ export default function Main() {
 
   useEffect(() => {
     fetch(
-      `https://api.brawlstars.com/v1/players/%23JGCCGY80?authorization=Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImI3OTUxMjJmLThlYzUtNDJlMy04ZmJlLTU1OGQwZTUzNWVmZiIsImlhdCI6MTY3MzMwMTE5Niwic3ViIjoiZGV2ZWxvcGVyLzNhZDRhZDlkLWIwNmEtZjBkYi00YWQyLTJhYzM2MDRlYjU5YiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiMTcyLjY2LjQ3LjE2NCIsIjE3Mi42Ni40NC45MiJdLCJ0eXBlIjoiY2xpZW50In1dfQ.TbyybH9SfJahGkn_2EllHwVXyQrYQ5Y0MzA2fIeGprVvP-mb3s7if8S3Y0ccUg-pwF2YjbsGp0wRB3EYU14h9Q`
+      `https://api.brawlstars.com/v1/players/%23JGCCGY80?authorization=Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImI3OTUxMjJmLThlYzUtNDJlMy04ZmJlLTU1OGQwZTUzNWVmZiIsImlhdCI6MTY3MzMwMTE5Niwic3ViIjoiZGV2ZWxvcGVyLzNhZDRhZDlkLWIwNmEtZjBkYi00YWQyLTJhYzM2MDRlYjU5YiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiMTcyLjY2LjQ3LjE2NCIsIjE3Mi42Ni40NC45MiJdLCJ0eXBlIjoiY2xpZW50In1dfQ.TbyybH9SfJahGkn_2EllHwVXyQrYQ5Y0MzA2fIeGprVvP-mb3s7if8S3Y0ccUg-pwF2YjbsGp0wRB3EYU14h9Q`,
+      {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      }
     )
       .then((res) => console.log(res))
       .catch((err) => console.log(err))
