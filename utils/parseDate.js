@@ -1,4 +1,5 @@
-import { intervalToDuration, parseISO, isAfter, tim } from 'date-fns'
+import { intervalToDuration, parseISO, isAfter, formatDistance } from 'date-fns'
+import { enUS } from 'date-fns/locale'
 
 export function getInterval(startTime, endTime) {
   const isNext = isAfter(parseISO(endTime), Date.now())
@@ -31,4 +32,15 @@ export function getInterval(startTime, endTime) {
   } ${interval.minutes + 'm'}`
 
   return starsAt
+}
+
+export function getTimeAgo(time) {
+  const parseTime = parseISO(time)
+
+  const timeAgo = formatDistance(new Date(parseTime), new Date(), {
+    addSuffix: true,
+    locale: enUS,
+  })
+
+  return timeAgo
 }

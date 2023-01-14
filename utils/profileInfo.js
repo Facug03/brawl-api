@@ -1,20 +1,31 @@
 export function getRankImg(n) {
   if (n > 34)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/obsidian/custom'
+    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/obsidian/mini'
   else if (n >= 30)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/ruby/custom'
+    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/ruby/mini'
   else if (n >= 25)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/emerald/custom'
+    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/emerald/mini'
   else if (n >= 20)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/amethyst/custom'
+    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/amethyst/mini'
   else if (n >= 15)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/diamond/custom'
+    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/diamond/mini'
   else if (n >= 10)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/gold/custom'
+    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/gold/mini'
   else if (n >= 5)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/silver/custom'
+    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/silver/mini'
   else if (n >= 1)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/bronze/custom'
+    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/bronze/mini'
+}
+
+export function getPowerImg(n) {
+  if (n > 18) return 'masters'
+  else if (n >= 16) return 'legendary'
+  else if (n >= 13) return 'mythic'
+  else if (n >= 10) return 'diamond'
+  else if (n >= 7) return 'gold'
+  else if (n >= 4) return 'silver'
+  else n >= 1
+  return 'bronze'
 }
 
 export const getBrawlerColor = {
@@ -92,12 +103,14 @@ export const getBrawlerColor = {
 }
 
 export const mode = {
-  gemGrab: 'Gem Grab',
-  soloShowdown: 'Solo Showdown',
-  brawlBall: 'Brawl Ball',
-  hotZone: 'Hot Zone',
-  duoShowdown: 'Duo Showdown',
-  knockout: 'Knockout',
-  bigGame: 'Big Game',
-  wipeout: 'Wipeout',
+  gemGrab: { name: 'Gem Grab', color: '#953be6' },
+  soloShowdown: { name: 'Solo Showdown', color: '#64a617' },
+  brawlBall: { name: 'Brawl Ball', color: '#8399e1' },
+  hotZone: { name: 'Hot Zone', color: '#d7384e' },
+  duoShowdown: { name: 'Duo Showdown', color: '#64a617' },
+  knockout: { name: 'Knockout', color: '#ff8213' },
+  bigGame: { name: 'Big Game', color: '#a60024' },
+  wipeout: { name: 'Wipeout', color: '#d62ce0' },
+  bounty: { name: 'Bounty', color: '#02cdfd' },
+  heist: { name: 'Heist', color: '#d85cd4' },
 }
