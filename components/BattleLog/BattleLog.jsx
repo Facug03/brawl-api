@@ -120,6 +120,7 @@ export default function BattleLog({
                 power={player.brawler.power}
                 player={playerProfile}
                 nameColor={nameColor}
+                battleType={battle.type}
               />
             ))}
           </div>
@@ -138,6 +139,7 @@ export default function BattleLog({
                 power={player.brawler.power}
                 player={playerProfile}
                 nameColor={nameColor}
+                battleType={battle.type}
               />
             ))}
           </div>
