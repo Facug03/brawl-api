@@ -1,0 +1,177 @@
+.article {
+    background-color: #83749e;
+    border: 2px #000 solid;
+    margin: 20px 0;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.typeMode {
+    padding: 10px 10px 5px 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: #000 -2px 2px, #000 -1px -1px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.timeAgo {
+    padding: 12px 10px 5px 0;
+    font-size: 15px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0 0 30px 0;
+    align-items: center;
+    background-color: #736a96;
+    padding: 15px 10px;
+}
+
+.mode {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.modeName {
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+}
+
+.resContainer {
+    justify-self: center;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: #000 -2px 3px, #000 -1px -1px;
+    text-transform: uppercase;
+}
+
+.win {
+    color: #30e838;
+}
+
+.lose {
+    color: #cc0303;
+}
+
+.typeContainer {
+    justify-self: end;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.type {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    text-transform: capitalize;
+}
+
+.modeContainer {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    row-gap: 30px;
+}
+
+/* .playerContainer {
+    justify-self: center;
+    position: relative;
+} */
+
+.teams {
+    background-color: #5c5274;
+    padding: 10px 10px 0 10px;
+    justify-self: center;
+}
+
+.team {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* .brawlerInfo {
+    position: relative;
+} */
+
+/* .trophiesBrawler {
+    position: absolute;
+    display: flex;
+    padding: 3px;
+    background-color: #000;
+    align-items: center;
+    gap: 2px;
+} */
+
+/* .trophies {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fdd935;
+} */
+
+/* .power {
+    position: absolute;
+    padding: 3px;
+    background-color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    left: 0;
+    bottom: 22px;
+} */
+
+.battleContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    padding: 0 10px;
+}
+
+.brawlers {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .imgBrawl {
+    object-fit: cover;
+    border: 5px #000000 solid;
+    object-position: left;
+} */
+
+/* .playerName {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    text-align: center;
+} */
+
+.vsContainer {
+    justify-self: center;
+}
+
+.vs {
+    font-size: 45px;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: #000 -2px 3px, #000 -1px -1px;
+}
+
+.battleBigBrawler {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
