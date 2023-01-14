@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 import styles from './PlayerBrawler.module.css'
+import { getPowerImg } from '../../utils/profileInfo'
 
 export default function PlayerBrawler({
   trophies,
@@ -12,20 +13,41 @@ export default function PlayerBrawler({
   vs,
   nameColor,
   player,
+  battleType,
 }) {
   // console.log(nameColor)
+
+  const powerLeague = getPowerImg(trophies)
+
   return (
     <div className={`${duo ? styles.team : styles.playerContainer}`}>
       <div className={styles.brawlerInfo}>
-        <div className={styles.trophiesBrawler}>
-          <Image
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
-            alt='trophy icon'
-            width={20}
-            height={15}
-          />
-          <span className={styles.trophies}>{trophies}</span>
-        </div>
+        {battleType?.includes('Ranked') ? (
+          <div className={styles.leagueRanked}>
+            <Image
+              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/power-${powerLeague.rank}/mini`}
+              alt={`${powerLeague.rank} power league icon`}
+              width={powerLeague.rank !== 'masters' ? 25 : 33}
+              height={powerLeague.rank !== 'masters' ? 27 : 29}
+            />
+            <span
+              className={styles.leagueLevel}
+              style={{ color: powerLeague.color }}
+            >
+              {'I'.repeat(powerLeague.level)}
+            </span>
+          </div>
+        ) : (
+          <div className={styles.trophiesBrawler}>
+            <Image
+              src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
+              alt='trophy icon'
+              width={20}
+              height={15}
+            />
+            <span className={styles.trophies}>{trophies}</span>
+          </div>
+        )}
       </div>
       <Image
         className={styles.imgBrawl}

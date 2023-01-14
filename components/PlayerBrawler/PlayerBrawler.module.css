@@ -21,6 +21,20 @@
     gap: 2px;
 }
 
+.leagueRanked {
+    position: absolute;
+    display: flex; 
+    padding: 3px;
+    align-items: center;
+    gap: 2px;
+}
+
+.leagueLevel {
+    font-size: 20px;
+    font-weight: 800;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+}
+
 .trophies {
     font-size: 14px;
     font-weight: 600;

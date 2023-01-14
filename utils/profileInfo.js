@@ -17,15 +17,79 @@ export function getRankImg(n) {
     return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/bronze/mini'
 }
 
+const bronze = {
+  trophie: 1,
+  name: 'bronze',
+  color: '#f07527',
+}
+
+const silver = {
+  trophie: 4,
+  name: 'silver',
+  color: '#a3a3ce',
+}
+const gold = {
+  trophie: 7,
+  name: 'gold',
+  color: '#ffbf21',
+}
+const diamond = {
+  trophie: 10,
+  name: 'diamond',
+  color: '#06abf6',
+}
+const mythic = {
+  trophie: 13,
+  name: 'mythic',
+  color: '#bc13e5',
+}
+const legendary = {
+  trophie: 16,
+  name: 'legendary',
+  color: '#ff2a44',
+}
+
 export function getPowerImg(n) {
-  if (n > 18) return 'masters'
-  else if (n >= 16) return 'legendary'
-  else if (n >= 13) return 'mythic'
-  else if (n >= 10) return 'diamond'
-  else if (n >= 7) return 'gold'
-  else if (n >= 4) return 'silver'
-  else n >= 1
-  return 'bronze'
+  if (n > 18)
+    return {
+      rank: 'masters',
+    }
+  else if (n >= legendary.trophie)
+    return {
+      rank: legendary.name,
+      level: -15 + n,
+      color: legendary.color,
+    }
+  else if (n >= mythic.trophie)
+    return {
+      rank: mythic.name,
+      level: -12 + n,
+      color: mythic.color,
+    }
+  else if (n >= diamond.trophie)
+    return {
+      rank: diamond.name,
+      level: -9 + n,
+      color: diamond.color,
+    }
+  else if (n >= gold.trophie)
+    return {
+      rank: gold.name,
+      level: -6 + n,
+      color: gold.color,
+    }
+  else if (n >= silver.trophie)
+    return {
+      rank: silver.name,
+      level: -3 + n,
+      color: silver.color,
+    }
+  else n >= bronze.trophie
+  return {
+    rank: bronze.name,
+    level: n,
+    color: bronze.color,
+  }
 }
 
 export const getBrawlerColor = {
