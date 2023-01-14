@@ -1,0 +1,66 @@
+.playerContainer {
+    justify-self: center;
+    position: relative;
+}
+
+.brawlerInfo {
+    position: relative;
+}
+
+.team {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.trophiesBrawler {
+    position: absolute;
+    display: flex;
+    padding: 3px;
+    background-color: #000;
+    align-items: center;
+    gap: 2px;
+}
+
+.trophies {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fdd935;
+}
+
+.imgBrawl {
+    object-fit: cover;
+    border: 5px #000000 solid;
+    object-position: left;
+}
+
+.power {
+    position: absolute;
+    padding: 3px;
+    background-color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    left: 0;
+    bottom: 22px;
+}
+
+.powerVs {
+    position: absolute;
+    padding: 3px;
+    background-color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    left: 0;
+    bottom: 26px;
+}
+
+.playerName {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    text-align: center;
+}
