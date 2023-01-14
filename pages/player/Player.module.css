@@ -113,10 +113,49 @@
 
 /* ---- */
 
+.drop {
+    background-color: #2188e8;
+    padding: 10px;
+    transform: skew(-7deg,0deg);
+    border: #000000 solid 2px;
+    cursor: pointer;
+}
+
+.open {
+    transform: rotate(90deg);
+    position: absolute;
+    left: 7px;
+}
+
+.close {
+    position: absolute;
+    left: 7px;
+}
+
+.text {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 800;
+    transform: skew(7deg,0deg);
+    padding-left: 30px;
+    position: relative;
+    text-shadow: #000 -2px 3px, #000 -1px -1px;
+    /* margin: 40px 0px 15px 0px; */
+}
+
+.error {
+    text-align: center;
+    text-shadow: #000 -2px 3px, #000 -1px -1px;
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
 .brawlers {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     row-gap: 50px;
+    margin-top: 70px;
 }
 
 .brawler {

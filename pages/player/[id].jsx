@@ -1,15 +1,18 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import { getRankImg, getBrawlerColor } from '../../utils/profileInfo'
 
 import styles from './Player.module.css'
 import Container from '../../components/Container/Container'
+import BattleLog from '../../components/BattleLog/BattleLog'
 
-export default function Player({ player }) {
-  console.log(process.env.BRAWL_API_KEY)
+export default function Player(player) {
+  const [drop, setDrop] = useState(false)
   console.log(player)
-  if (player.tag === undefined) {
-    return <h3>{player.reason}</h3>
+
+  if (player.tag === undefined && player.reason) {
+    return <h3 className={styles.error}>{player.reason}</h3>
   }
 
   const nameColor = `#${player.nameColor.slice(4)}`
@@ -21,6 +24,7 @@ export default function Player({ player }) {
           name='Brawl Stars Stats'
           content={`Brawl Stars stats of ${player.name}`}
         />
+        <link rel='icon' href='/crown.png' />
       </Head>
       <Container>
         <header className={styles.head}>
@@ -52,7 +56,7 @@ export default function Player({ player }) {
               </div>
               <div className={styles.trophies}>
                 <Image
-                  src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/custom'
+                  src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
                   alt='trophy icon'
                   width={30}
                   height={25}
@@ -90,6 +94,39 @@ export default function Player({ player }) {
             <p>{player.isQualifiedFromChampionshipChallenge ? 'Yes' : 'No'}</p>
           </div> */}
         </div>
+        <div onClick={() => setDrop(!drop)} className={styles.drop}>
+          <h3 className={styles.text}>
+            <span className={`${drop && styles.open} ${styles.close}`}>
+              {'>'}
+            </span>
+            Battle Log
+          </h3>
+        </div>
+        {drop && (
+          <div>
+            {player.items ? (
+              player.items.map((item) => {
+                if (
+                  item.battle.type?.includes('Ranked') &&
+                  !item.battle.starPlayer
+                )
+                  return
+                return (
+                  <BattleLog
+                    key={item.battleTime}
+                    nameColor={nameColor}
+                    battleTime={item.battleTime}
+                    battle={item.battle}
+                    event={item.event}
+                    playerProfile={player.name}
+                  />
+                )
+              })
+            ) : (
+              <h3 className={styles.error}>{player.reason}</h3>
+            )}
+          </div>
+        )}
         <div className={styles.brawlers}>
           {player.brawlers.map((brawler) => {
             return (
@@ -208,11 +245,25 @@ export default function Player({ player }) {
 
 export async function getServerSideProps({ params }) {
   const { id } = params
-  const res = await fetch(
-    `https://bsproxy.royaleapi.dev/v1/players/%23${id}?authorization=Bearer%20eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjM5ZTYxMTk4LTYwZWYtNDY3YS05MWVkLTY3NjU4MGVkMDJlZSIsImlhdCI6MTY3MzMxNDY3Mywic3ViIjoiZGV2ZWxvcGVyLzNhZDRhZDlkLWIwNmEtZjBkYi00YWQyLTJhYzM2MDRlYjU5YiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDUuNzkuMjE4Ljc5Il0sInR5cGUiOiJjbGllbnQifV19.IpvoeicRr4llh7naPDJk-828Vx3EIGMl8QogdYy1h7sof0u8T9IcQvoyLmEyDXiYcTGrekkp28OBG-nZuOQuFw`
-  )
-  console.log(res.status)
-  const player = await res.json()
-  // console.log(player)
-  return { props: { player } }
+
+  const fecthPlayer = [
+    fetch(
+      `https://bsproxy.royaleapi.dev/v1/players/%23${id}?authorization=Bearer%20eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjM5ZTYxMTk4LTYwZWYtNDY3YS05MWVkLTY3NjU4MGVkMDJlZSIsImlhdCI6MTY3MzMxNDY3Mywic3ViIjoiZGV2ZWxvcGVyLzNhZDRhZDlkLWIwNmEtZjBkYi00YWQyLTJhYzM2MDRlYjU5YiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDUuNzkuMjE4Ljc5Il0sInR5cGUiOiJjbGllbnQifV19.IpvoeicRr4llh7naPDJk-828Vx3EIGMl8QogdYy1h7sof0u8T9IcQvoyLmEyDXiYcTGrekkp28OBG-nZuOQuFw`
+    ).then((res) => res.json()),
+    fetch(
+      `https://bsproxy.royaleapi.dev/v1/players/%23${id}/battlelog?limit=5&authorization=Bearer%20eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjM5ZTYxMTk4LTYwZWYtNDY3YS05MWVkLTY3NjU4MGVkMDJlZSIsImlhdCI6MTY3MzMxNDY3Mywic3ViIjoiZGV2ZWxvcGVyLzNhZDRhZDlkLWIwNmEtZjBkYi00YWQyLTJhYzM2MDRlYjU5YiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDUuNzkuMjE4Ljc5Il0sInR5cGUiOiJjbGllbnQifV19.IpvoeicRr4llh7naPDJk-828Vx3EIGMl8QogdYy1h7sof0u8T9IcQvoyLmEyDXiYcTGrekkp28OBG-nZuOQuFw`
+    ).then((res) => res.json()),
+  ]
+
+  const res = await Promise.allSettled(fecthPlayer)
+
+  let player
+
+  res.forEach((resp) => {
+    if (resp.status === 'fulfilled') {
+      player = { ...player, ...resp.value }
+    }
+  })
+
+  return { props: player }
 }
