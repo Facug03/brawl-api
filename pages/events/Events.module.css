@@ -3,13 +3,14 @@
     font-weight: 800;
     font-size: 30px;
     color: #ffffff;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    text-shadow: #000 -2px 3px, #000 -1px -1px;
 }
 
 .section {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 50px;
+    justify-items: center;
 }
 
 .article {
@@ -22,7 +23,6 @@
     transform: skew(-7deg,0deg);
     border: #000 solid 3px;
     padding: 10px;
-    width: 50%;
 }
 
 .info {
@@ -36,8 +36,20 @@
 }
 
 .mode {
-    font-weight: 600;
+    font-weight: 800;
     font-size: 25px;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+}
+
+.map {
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+}
+
+.newMap {
+    font-weight: 700;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
 }
