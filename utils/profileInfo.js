@@ -177,4 +177,12 @@ export const mode = {
   wipeout: { name: 'Wipeout', color: '#d62ce0' },
   bounty: { name: 'Bounty', color: '#02cdfd' },
   heist: { name: 'Heist', color: '#d85cd4' },
+  roboRumble: { name: 'Robo Rumble', color: '#ae0026' },
+  basketBrawl: { name: 'Basket Brawl', color: '#088cf1' },
+}
+
+const brawlers = {
+  brawler: 'Buster',
+  victories: 30,
+  loses: 10,
 }
