@@ -34,7 +34,7 @@ export default function Rank({ rankings }) {
                 >
                   {player.name}
                 </h4>
-                <h5 className={styles.clubName}>{player.club.name}</h5>
+                <h5 className={styles.clubName}>{player.club?.name}</h5>
               </div>
             </div>
             <div className={styles.trophiesCont}>
