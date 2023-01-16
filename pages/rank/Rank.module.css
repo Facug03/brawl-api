@@ -1,0 +1,84 @@
+.title {
+    margin-bottom: 35px;
+    font-weight: 800;
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: #000 -2px 3px, #000 -1px -1px;
+}
+
+.section {
+    border: 1px solid #000;
+    padding: 8px;
+    background-color: #114591;
+}
+
+.article {
+    /* padding: 8px; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    border: 3px #000 solid;
+    overflow: hidden;
+}
+
+.even {
+    background-color: #897789;
+}
+
+.odd {
+    background-color: #756673;
+}
+
+.rankCont {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px;
+}
+
+.rankCenter {
+    width: 50px;
+    height: 100%;
+    background-color: #62555f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rank {
+    font-size: 27px;
+    font-weight: 700;
+    color: #a397a1;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: 700;
+    text-shadow: #000 -1px 2.5px, #000 -1px -1px;
+}
+
+.clubName {
+    /* font-size: 15px; */
+    font-weight: 700;
+}
+
+.trophiesCont {
+    /* transform: skew(-7deg,0deg); */
+    border-left: #000 solid 2px;
+    background-color: #655762;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px;
+    /* overflow: hidden; */
+}
+
+
+
+.trophies {
+    font-size: 25px;
+    font-weight: 700;
+    color: #e8ae23;
+    text-shadow: #000 -1.5px 2.5px, #000 -1px -1.3px;
+}

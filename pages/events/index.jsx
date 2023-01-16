@@ -25,7 +25,7 @@ export default function Events({ events }) {
           return (
             <article className={styles.article} key={ele.event.id}>
               <div
-                style={{ backgroundColor: mode[ele.event.mode].color }}
+                style={{ backgroundColor: mode[ele.event.mode]?.color }}
                 className={styles.div}
               >
                 <div className={styles.info}>
