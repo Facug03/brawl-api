@@ -33,6 +33,7 @@ export default function BattleLog({
             alt={`${mode[battle.mode].name} icon map brawl stars`}
             width={34}
             height={33}
+            priority={false}
           />
           <h3 className={styles.modeName}>{mode[battle.mode].name}</h3>
         </div>
@@ -62,6 +63,7 @@ export default function BattleLog({
               alt='trophy icon'
               width={20}
               height={15}
+              priority={false}
             />
             <h3 className={styles.type}>{battle.trophyChange}</h3>
           </div>
