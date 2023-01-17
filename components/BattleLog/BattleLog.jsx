@@ -27,15 +27,18 @@ export default function BattleLog({
         <h3 className={styles.timeAgo}>{timeAgo}</h3>
       </div>
       <div className={styles.container}>
-        <div className={styles.mode}>
-          <Image
-            src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${battle.mode}/mini`}
-            alt={`${mode[battle.mode].name} icon map brawl stars`}
-            width={34}
-            height={33}
-            priority={false}
-          />
-          <h3 className={styles.modeName}>{mode[battle.mode].name}</h3>
+        <div>
+          <div className={styles.mode}>
+            <Image
+              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${battle.mode}/mini`}
+              alt={`${mode[battle.mode].name} icon map brawl stars`}
+              width={34}
+              height={33}
+              priority={false}
+            />
+            <h3 className={styles.modeName}>{mode[battle.mode].name}</h3>
+          </div>
+          <h4 className={styles.mapName}>{event.map}</h4>
         </div>
         <div className={styles.resContainer}>
           {battle.mode.toLowerCase().includes('showdown') ? (
