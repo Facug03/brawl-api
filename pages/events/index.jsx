@@ -48,6 +48,10 @@ export default function Events({ events }) {
                 className={`${
                   ele.event.mode.toLowerCase().includes('showdown') &&
                   styles.showdown
+                } ${styles.img} ${
+                  (ele.event.mode === 'roboRumble' ||
+                    ele.event.mode === 'basketBrawl') &&
+                  styles.showdown
                 } ${styles.img}`}
                 src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${ele.event.id}/map`}
                 alt={`${ele.event.map}`}
@@ -66,8 +70,8 @@ export async function getServerSideProps() {
   const res = await fetch(
     'https://bsproxy.royaleapi.dev/v1/events/rotation?authorization=Bearer%20eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjM5ZTYxMTk4LTYwZWYtNDY3YS05MWVkLTY3NjU4MGVkMDJlZSIsImlhdCI6MTY3MzMxNDY3Mywic3ViIjoiZGV2ZWxvcGVyLzNhZDRhZDlkLWIwNmEtZjBkYi00YWQyLTJhYzM2MDRlYjU5YiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDUuNzkuMjE4Ljc5Il0sInR5cGUiOiJjbGllbnQifV19.IpvoeicRr4llh7naPDJk-828Vx3EIGMl8QogdYy1h7sof0u8T9IcQvoyLmEyDXiYcTGrekkp28OBG-nZuOQuFw'
   )
-  console.log(res.status)
+
   const events = await res.json()
-  // console.log(events)
+
   return { props: { events } }
 }
