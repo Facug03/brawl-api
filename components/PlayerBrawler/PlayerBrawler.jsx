@@ -29,6 +29,7 @@ export default function PlayerBrawler({
               alt={`${powerLeague.rank} power league icon`}
               width={powerLeague.rank !== 'masters' ? 25 : 33}
               height={powerLeague.rank !== 'masters' ? 27 : 29}
+              priority={false}
             />
             <span
               className={styles.leagueLevel}
@@ -44,6 +45,7 @@ export default function PlayerBrawler({
               alt='trophy icon'
               width={20}
               height={15}
+              priority={false}
             />
             <span className={styles.trophies}>{trophies}</span>
           </div>
@@ -55,6 +57,7 @@ export default function PlayerBrawler({
         alt={`Information of ${name}`}
         width={100}
         height={100}
+        priority={false}
       />
       <span className={`${vs ? styles.powerVs : styles.power}`}>
         LVL. {power}
