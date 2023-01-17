@@ -10,14 +10,15 @@ import Brawler from '../../components/Brawler/Brawler'
 
 export default function Player(player) {
   const [drop, setDrop] = useState(false)
-  console.log(player)
+  // console.log(player)
 
   useEffect(() => {
     if (player?.items) {
       const sortedBrawlers = sortBrawlers(player.items, player.name)
-
-      postBrawler(sortedBrawlers).then((res) => console.log(res))
-      // console.log(res)
+      console.log(sortedBrawlers)
+      if (sortedBrawlers) {
+        postBrawler(sortedBrawlers).then((res) => console.log(res))
+      }
     }
   }, [player.items, player.name])
 
