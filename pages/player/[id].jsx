@@ -1,15 +1,25 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import { getRankImg, getBrawlerColor } from '../../utils/profileInfo'
 
 import styles from './Player.module.css'
 import Container from '../../components/Container/Container'
 import BattleLog from '../../components/BattleLog/BattleLog'
+import { postBrawler, sortBrawlers } from '../../utils/postBrawlers'
+import Brawler from '../../components/Brawler/Brawler'
 
 export default function Player(player) {
   const [drop, setDrop] = useState(false)
   console.log(player)
+
+  useEffect(() => {
+    if (player?.items) {
+      const sortedBrawlers = sortBrawlers(player.items, player.name)
+
+      postBrawler(sortedBrawlers).then((res) => console.log(res))
+      // console.log(res)
+    }
+  }, [player.items, player.name])
 
   if (player.tag === undefined && player.reason) {
     return <h3 className={styles.error}>{player.reason}</h3>
@@ -128,115 +138,20 @@ export default function Player(player) {
           </div>
         )}
         <div className={styles.brawlers}>
-          {player.brawlers.map((brawler) => {
-            return (
-              <div key={brawler.id}>
-                <div className={styles.brawler}>
-                  <Image
-                    style={{ background: getBrawlerColor[brawler.name] }}
-                    className={styles.brawlerImg}
-                    src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawler.id}/custom`}
-                    alt={`Information of ${brawler.name}`}
-                    width={110}
-                    height={115}
-                  />
-                  <Image
-                    className={styles.rankBrawl}
-                    src={`${getRankImg(brawler.rank)}`}
-                    alt={`Brawl stars rank icon ${brawler.rank}`}
-                    width={33}
-                    height={33}
-                  />
-                  <p className={styles.rankNum}>{brawler.rank}</p>
-                  <div>
-                    <p className={styles.nameBrawl}>{brawler.name}</p>
-                    <div className={styles.infoBrawl}>
-                      <Image
-                        src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/custom'
-                        alt='trophy icon'
-                        width={25}
-                        height={20}
-                      />
-                      <p className={styles.trophy}>{brawler.trophies}</p>
-                    </div>
-                    <div className={styles.containerHigh}>
-                      <div className={styles.skew}>
-                        <p className={styles.highestTrophies}>
-                          Highest trophies
-                        </p>
-                        <div className={styles.infoBrawlHigh}>
-                          <Image
-                            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/custom'
-                            alt='trophy icon'
-                            width={25}
-                            height={20}
-                          />
-                          <p className={styles.trophy}>
-                            {brawler.highestTrophies}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.powerContainer}>
-                  <p className={styles.power}>POWER {brawler.power}</p>
-                </div>
-                {(!!brawler.gears.length ||
-                  !!brawler.gadgets.length ||
-                  !!brawler.starPowers.length) && (
-                  <div className={styles.abilities}>
-                    <div>
-                      {!!brawler.starPowers.length &&
-                        brawler.starPowers.map((star) => {
-                          return (
-                            <div key={star.id} className={styles.starContainer}>
-                              <Image
-                                src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${star.id}/mini`}
-                                alt={`logo of ${star.name} star power Brawl Stars`}
-                                width={33}
-                                height={33}
-                              />
-                              <p className={styles.starName}>{star.name}</p>
-                            </div>
-                          )
-                        })}
-                      {!!brawler.gadgets.length &&
-                        brawler.gadgets.map((gad) => {
-                          return (
-                            <div key={gad.id} className={styles.starContainer}>
-                              <Image
-                                src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${gad.id}/mini`}
-                                alt={`logo of ${gad.name} gadget Brawl Stars`}
-                                width={33}
-                                height={33}
-                              />
-                              <p className={styles.starName}>{gad.name}</p>
-                            </div>
-                          )
-                        })}
-                    </div>
-                    <div className={styles.gearContainer}>
-                      {!!brawler.gears.length &&
-                        brawler.gears.map((gear) => {
-                          return (
-                            <div key={gear.id}>
-                              <Image
-                                src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${gear.id}/mini`}
-                                alt={`logo of ${gear.name} gear Brawl Stars`}
-                                width={33}
-                                height={33}
-                              />
-                              {/* <p className={styles.starName}>{gear.name}</p> */}
-                            </div>
-                          )
-                        })}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )
-          })}
+          {player.brawlers.map((brawler) => (
+            <Brawler
+              key={brawler.id}
+              id={brawler.id}
+              name={brawler.name}
+              rank={brawler.rank}
+              power={brawler.power}
+              trophies={brawler.trophies}
+              highestTrophies={brawler.highestTrophies}
+              gears={brawler.gears}
+              gadgets={brawler.gadgets}
+              starPowers={brawler.starPowers}
+            />
+          ))}
         </div>
       </Container>
     </>
