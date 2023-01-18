@@ -1,11 +1,22 @@
 import Link from 'next/link'
-import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 
 import styles from './Card.module.css'
 
 export default function Card({ type }) {
   const [id, setId] = useState('')
-  const [loading, setLoading] = useState(false)
+  const [profile, setProfile] = useState([])
+  const router = useRouter()
+
+  useEffect(() => {
+    if (!profile.length) {
+      const saveProfile = window.localStorage.getItem('tag')
+      if (saveProfile) {
+        setProfile(JSON.parse(saveProfile))
+      }
+    }
+  }, [profile])
 
   const controlInput = ({ target }) => {
     if (
@@ -16,10 +27,17 @@ export default function Card({ type }) {
     }
   }
 
+  const playerPage = (e) => {
+    e.preventDefault()
+    if (id.length) {
+      router.push(`/player/${id}`)
+    }
+  }
+
   return (
     <article className={styles.card}>
       <h2 className={styles.search}>{type}</h2>
-      <form className={styles.form}>
+      <form onSubmit={playerPage} className={styles.form}>
         <span className={styles.hashtag}>#</span>
         <input
           value={id}
@@ -27,13 +45,22 @@ export default function Card({ type }) {
           onChange={controlInput}
           className={styles.tag}
         />
-        <Link
-          href={`/player/${id}`}
-          onClick={() => setLoading(!loading)}
-          className={styles.button}
-        >
-          Search
-        </Link>
+        <div className={styles.grid}>
+          {!!profile.length &&
+            profile.map((pro) => (
+              <Link
+                key={pro.player}
+                className={styles.playerCon}
+                href={`/player/${pro.tagPlayer.slice(1)}`}
+              >
+                <h4 style={{ color: pro.color }} className={styles.player}>
+                  {pro.player}
+                </h4>
+                <h5 className={styles.tagPlayer}>{pro.tagPlayer}</h5>
+              </Link>
+            ))}
+        </div>
+        <button className={styles.button}>Search</button>
       </form>
     </article>
   )

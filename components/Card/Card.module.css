@@ -42,10 +42,35 @@
     transform: skew(-7deg,0deg);
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.playerCon {
+    border: 2px solid #000;
+    padding: 5px;
+    text-decoration: none;
+    background-color: #353d50;
+}
+
+.player {
+    font-weight: 700;
+    text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+}
+
+.tagPlayer {
+    font-weight: 700;
+    text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+    color: #ffffff;
+    font-size: 12px;
+}
+
 .button {
     background-color: #2188e8;
     font-weight: 800;
-    text-decoration: none;
     height: 35px;
     display: block;
     padding: 5px;
@@ -53,6 +78,6 @@
     border-radius: 3px;
     font-size: 20px;
     border: solid #000000 2px;
-    width: fit-content;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
+    cursor: pointer;
 }
