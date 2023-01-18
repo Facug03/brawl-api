@@ -13,12 +13,19 @@ export default function Player(player) {
   // console.log(player)
 
   useEffect(() => {
-    if (player?.items) {
+    if (player?.items && player?.name) {
+      console.log('e')
       const sortedBrawlers = sortBrawlers(player.items, player.name)
       console.log(sortedBrawlers)
+
       if (sortedBrawlers) {
+        let start = performance.now()
         postBrawler(sortedBrawlers)
-          .then((res) => console.log(res))
+          .then((res) => {
+            console.log(res)
+            let end = performance.now()
+            console.log('Tiempo empleado:', end - start, 'milisegundos')
+          })
           .catch((err) => console.log(err))
       }
     }
