@@ -10,26 +10,57 @@ import Brawler from '../../components/Brawler/Brawler'
 
 export default function Player(player) {
   const [drop, setDrop] = useState(false)
-  // console.log(player)
 
   useEffect(() => {
-    if (player?.items && player?.name) {
-      console.log('e')
-      const sortedBrawlers = sortBrawlers(player.items, player.name)
-      console.log(sortedBrawlers)
+    if (player.name !== undefined) {
+      const getProfile = window.localStorage.getItem('tag')
+      const profile = getProfile ? JSON.parse(getProfile) : []
 
-      if (sortedBrawlers) {
-        let start = performance.now()
-        postBrawler(sortedBrawlers)
-          .then((res) => {
-            console.log(res)
-            let end = performance.now()
-            console.log('Tiempo empleado:', end - start, 'milisegundos')
-          })
-          .catch((err) => console.log(err))
+      const isRepeated = profile.some((el) => el.player === player.name)
+
+      if (profile.length < 6 && !isRepeated) {
+        window.localStorage.setItem(
+          'tag',
+          JSON.stringify([
+            {
+              player: player.name,
+              tagPlayer: player.tag,
+              color: `#${player.nameColor.slice(4)}`,
+            },
+            ...profile,
+          ])
+        )
+      }
+
+      if (profile.length === 6 && !isRepeated) {
+        window.localStorage.setItem(
+          'tag',
+          JSON.stringify([
+            { player: player.name, tagPlayer: player.tag },
+            ...profile.slice(0, -1),
+          ])
+        )
       }
     }
-  }, [player.items, player.name])
+  }, [player.name, player.tag, player.nameColor])
+  // console.log(player)
+
+  // useEffect(() => {
+  //   if (player?.items && player?.name) {
+  //     const sortedBrawlers = sortBrawlers(player.items, player.name)
+
+  //     if (sortedBrawlers) {
+  //       let start = performance.now()
+  //       postBrawler(sortedBrawlers)
+  //         .then((res) => {
+  //           console.log(res)
+  //           let end = performance.now()
+  //           console.log('Tiempo empleado:', end - start, 'milisegundos')
+  //         })
+  //         .catch((err) => console.log(err))
+  //     }
+  //   }
+  // }, [player.items, player.name])
 
   if (player.tag === undefined && player.reason) {
     return <h3 className={styles.error}>{player.reason}</h3>
