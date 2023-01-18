@@ -12,73 +12,73 @@
     background-color: #114591;
 }
 
-.article {
-    /* padding: 8px; */
+.ul {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    border: 3px #000 solid;
-    overflow: hidden;
+    list-style: none;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
 }
 
-.even {
+.li {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 21px;
+    text-decoration: none;
+    text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+}
+
+.selected {
+    color: #e60302;
+}
+
+.drop {
+    background-color: #2188e8;
+    padding: 10px;
+    transform: skew(-7deg,0deg);
+    border: #000000 solid 2px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.location {
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 800;
+    transform: skew(7deg,0deg);
+    padding-left: 30px;
+    position: relative;
+    text-shadow: #000 -2px 3px, #000 -1.5px -1.5px;
+}
+
+.open {
+    transform: rotate(90deg);
+    position: absolute;
+    left: 7px;
+}
+
+.close {
+    position: absolute;
+    left: 7px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    border: 1px solid #000;
+    margin-bottom: 30px;
     background-color: #897789;
 }
 
-.odd {
-    background-color: #756673;
+.country {
+    border: 1px solid #000;
+    padding: 10px 5px;
+    cursor: pointer;
 }
 
-.rankCont {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 8px;
-}
-
-.rankCenter {
-    width: 50px;
-    height: 100%;
-    background-color: #62555f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.rank {
-    font-size: 27px;
+.countryName {
+    font-size: 15px;
+    color: #ffffff;
     font-weight: 700;
-    color: #a397a1;
-}
-
-.name {
-    font-size: 26px;
-    font-weight: 700;
-    text-shadow: #000 -1px 2.5px, #000 -1px -1px;
-}
-
-.clubName {
-    /* font-size: 15px; */
-    font-weight: 700;
-}
-
-.trophiesCont {
-    /* transform: skew(-7deg,0deg); */
-    border-left: #000 solid 2px;
-    background-color: #655762;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 8px;
-    /* overflow: hidden; */
-}
-
-
-
-.trophies {
-    font-size: 25px;
-    font-weight: 700;
-    color: #e8ae23;
-    text-shadow: #000 -1.5px 2.5px, #000 -1px -1.3px;
+    text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+    text-align: center;
 }
