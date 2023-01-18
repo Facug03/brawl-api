@@ -6,6 +6,6 @@ export default async function handler(req, res) {
 
     res.status(200).json(brawlers)
   } catch (error) {
-    res.status(200).json(error)
+    res.status(404).json(error)
   }
 }
