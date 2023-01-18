@@ -1,6 +1,5 @@
 export async function postBrawler(brawlers) {
-  console.log(brawlers)
-  const res = await fetch('https://brawl-api-psi.vercel.app/api/rate', {
+  const res = await fetch('http://localhost:3001/api/rate', {
     headers: {
       'Content-Type': 'application/json',
     },
