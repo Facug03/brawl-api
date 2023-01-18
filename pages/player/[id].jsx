@@ -17,7 +17,9 @@ export default function Player(player) {
       const sortedBrawlers = sortBrawlers(player.items, player.name)
       console.log(sortedBrawlers)
       if (sortedBrawlers) {
-        postBrawler(sortedBrawlers).then((res) => console.log(res))
+        postBrawler(sortedBrawlers)
+          .then((res) => console.log(res))
+          .catch((err) => console.log(err))
       }
     }
   }, [player.items, player.name])
