@@ -1,27 +1,26 @@
-import Link from 'next/link'
 import styles from './Nav.module.css'
 
 export default function Nav() {
   return (
     <header className={styles.header}>
-      <Link href='/' className={styles.logo}>
+      <a href='https://www.brawlpro.com/' className={styles.logo}>
         <h1 className={styles.game}>
           Brawl <span className={styles.pro}>Pro</span>
         </h1>
-      </Link>
+      </a>
       <ul className={styles.nav}>
         <li>
-          <Link className={styles.li} href='/events'>
+          <a className={styles.li} href='https://www.brawlpro.com/events'>
             Best Brawlers
-          </Link>
+          </a>
         </li>
         <li>
-          <Link className={styles.li} href='/events'>
+          <a className={styles.li} href='https://www.brawlpro.com//events'>
             Events
-          </Link>
+          </a>
         </li>
         <li>
-          <a className={styles.li} href='http://localhost:3000/rank'>
+          <a className={styles.li} href='https://www.brawlpro.com/rank'>
             Rankings
           </a>
         </li>
