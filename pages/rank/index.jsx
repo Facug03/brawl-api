@@ -19,8 +19,7 @@ export default function Rank({ rankings }) {
   const [brawler, setBrawler] = useState('')
 
   useEffect(() => {
-    console.log(brawler)
-    if (location.name !== 'Global' || brawler.length) {
+    if (location.name !== 'Global' || brawler.length || selected === 'clubs') {
       setLoading(true)
       fetch(
         `http://localhost:3000/api/players?location=${location.code}&selected=${selected}&brawler=${brawler}`
@@ -56,7 +55,7 @@ export default function Rank({ rankings }) {
         })
     }
   }
-  console.log(brawler)
+
   return (
     <>
       <Head>
@@ -74,9 +73,10 @@ export default function Rank({ rankings }) {
             <li
               onClick={() => {
                 setSelected(el)
+                setDrop(false)
                 if (el === 'brawlers') {
                   setBrawler('16000000')
-                } else if (el === 'players') {
+                } else if (el !== 'brawlers') {
                   setBrawler('')
                 }
               }}
@@ -166,12 +166,17 @@ export default function Rank({ rankings }) {
                       key={player.tag}
                       tag={player.tag}
                       index={index}
-                      id={player.icon.id}
+                      id={player.icon ? player.icon.id : player.badgeId}
                       name={player.name}
                       rank={player.rank}
                       clubName={player.club?.name}
-                      nameColor={`#${player.nameColor.slice(4)}`}
+                      nameColor={
+                        player.nameColor
+                          ? `#${player.nameColor.slice(4)}`
+                          : '#ffffff'
+                      }
                       trophies={player.trophies}
+                      memberCount={player?.memberCount}
                     />
                   ))}
                   {data.paging.cursors?.after && (
