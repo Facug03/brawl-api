@@ -22,7 +22,7 @@ export default function Rank({ rankings }) {
     if (location.name !== 'Global' || brawler.length || selected === 'clubs') {
       setLoading(true)
       fetch(
-        `http://localhost:3000/api/players?location=${location.code}&selected=${selected}&brawler=${brawler}`
+        `https://brawlpro.com/api/players?location=${location.code}&selected=${selected}&brawler=${brawler}`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -41,9 +41,10 @@ export default function Rank({ rankings }) {
   }, [location, selected, brawler])
 
   const nextPage = () => {
+    const url = `http://localhost:3000/api/players?location=${location.code}&after=${data.paging.cursors.after}&brawler=${brawler}&selected=${selected}`
     if (data.paging.cursors?.after) {
       fetch(
-        `http://localhost:3000/api/players?location=${location.code}&after=${data.paging.cursors.after}&brawler=${brawler}&selected=${selected}`
+        `https://brawlpro.com/api/players?location=${location.code}&after=${data.paging.cursors.after}&brawler=${brawler}&selected=${selected}`
       )
         .then((res) => res.json())
         .then((res) => {
