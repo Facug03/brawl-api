@@ -11,12 +11,12 @@ export default function Card({ type }) {
 
   useEffect(() => {
     if (!profile.length) {
-      const saveProfile = window.localStorage.getItem('tag')
+      const saveProfile = window.localStorage.getItem(type)
       if (saveProfile) {
         setProfile(JSON.parse(saveProfile))
       }
     }
-  }, [profile])
+  }, [profile, type])
 
   const controlInput = ({ target }) => {
     if (
@@ -30,7 +30,7 @@ export default function Card({ type }) {
   const playerPage = (e) => {
     e.preventDefault()
     if (id.length) {
-      router.push(`/player/${id}`)
+      router.push(`/${type}/${id}`)
     }
   }
 
@@ -51,7 +51,7 @@ export default function Card({ type }) {
               <Link
                 key={pro.player}
                 className={styles.playerCon}
-                href={`/player/${pro.tagPlayer.slice(1)}`}
+                href={`/${type}/${pro.tagPlayer.slice(1)}`}
               >
                 <h4 style={{ color: pro.color }} className={styles.player}>
                   {pro.player}
