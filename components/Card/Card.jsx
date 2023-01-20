@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 
@@ -48,7 +47,7 @@ export default function Card({ type }) {
         <div className={styles.grid}>
           {!!profile.length &&
             profile.map((pro) => (
-              <Link
+              <a
                 key={pro.player}
                 className={styles.playerCon}
                 href={`/${type}/${pro.tagPlayer.slice(1)}`}
@@ -57,7 +56,7 @@ export default function Card({ type }) {
                   {pro.player}
                 </h4>
                 <h5 className={styles.tagPlayer}>{pro.tagPlayer}</h5>
-              </Link>
+              </a>
             ))}
         </div>
         <button className={styles.button}>Search</button>

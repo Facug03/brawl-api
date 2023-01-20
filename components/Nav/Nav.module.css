@@ -1,9 +1,9 @@
 .header {
     padding: 20px 25px;
     display: flex;
-    justify-content: space-between;
     height: 100px;
     color: #ffffff;
+    flex-direction: column;
 }
 
 .logo {
@@ -34,7 +34,7 @@
     opacity: 80%;
     color: #ffffff;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 13.5px;
     text-decoration: none;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     transition: cubic-bezier(.4,0,.2,1);
@@ -49,6 +49,12 @@
 @media (min-width: 410px) {
     .header {
         padding: 20px 27px;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .li {
+        font-size: 14.5px;
     }
 }
 
