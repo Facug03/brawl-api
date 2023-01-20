@@ -61,6 +61,10 @@
     /* overflow: hidden; */
 }
 
+.clubs {
+    width: 175px;
+}
+
 .trophies {
     font-size: 25px;
     font-weight: 700;
