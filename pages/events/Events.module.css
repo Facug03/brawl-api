@@ -8,15 +8,9 @@
 
 .section {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 50px;
     justify-items: center;
-}
-
-.article {
-    /* transform: skew(-7deg,0deg);
-    border: #000 solid 3px;
-    padding: 20px; */
 }
 
 .div {
@@ -58,7 +52,12 @@
     object-fit: contain;
 }
 
-/* .article {
-    margin: 0 auto;
-} */
+@media (min-width: 650px) {
+    .section {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 50px;
+        justify-items: center;
+    }
+}
 

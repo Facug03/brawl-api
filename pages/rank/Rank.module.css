@@ -1,7 +1,7 @@
 .title {
     margin-bottom: 35px;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 25px;
     color: #ffffff;
     text-shadow: #000 -2px 3px, #000 -1px -1px;
 }
@@ -11,12 +11,19 @@
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 30px;
+    justify-content: center;
+}
+
+.imgCont {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    border: 5px #000000 solid;
 }
 
 .brawlerImg {
     object-fit: cover;
-    border: 5px #000000 solid;
-    cursor: pointer;
 }
 .selectedBrawler {
     border: 5px #e60302 solid;
@@ -38,7 +45,7 @@
 .li {
     color: #ffffff;
     font-weight: 600;
-    font-size: 21px;
+    font-size: 19px;
     text-decoration: none;
     text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
     text-transform: capitalize;
@@ -59,7 +66,7 @@
 }
 
 .location {
-    font-size: 30px;
+    font-size: 25px;
     color: #ffffff;
     font-weight: 800;
     transform: skew(7deg,0deg);
@@ -81,7 +88,7 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     border: 1px solid #000;
     margin-bottom: 30px;
     background-color: #897789;
@@ -94,10 +101,10 @@
 }
 
 .countryName {
-    font-size: 15px;
+    font-size: 13px;
     color: #ffffff;
     font-weight: 700;
-    text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
     text-align: center;
 }
 
@@ -121,4 +128,61 @@
     text-shadow: #000 -2px 3px, #000 -1.5px -1.5px;
     border: 3px solid #000;
     cursor: pointer;
+}
+
+/* @media (min-width: 400px) {
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .countryName {
+        font-size: 13px;
+    }
+} */
+
+@media (min-width: 420px) {
+    .title {
+        font-size: 27px; 
+    }
+
+    .li {
+        font-size: 21px;
+    }
+
+    .location {
+        font-size: 27px;
+    }
+}
+
+@media (min-width: 525px) {
+    .grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
+    .imgCont {
+        width: 60px;
+        height: 60px;
+    }
+
+    .countryName {
+        font-size: 15px;
+        text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+    }
+}
+
+@media (min-width: 800px) {
+    .grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .imgCont {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 1048px) {
+    .grid {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    }
 }

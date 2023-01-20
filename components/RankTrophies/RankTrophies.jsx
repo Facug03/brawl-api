@@ -25,14 +25,14 @@ export default function RankTrophies({
         <div className={styles.rankCenter}>
           <h4 className={styles.rank}>{rank}</h4>
         </div>
-        <Image
-          className={styles.img}
-          src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
-          alt={`profile of the ${rank} in the world of Brawl Stars`}
-          width={60}
-          height={60}
-        />
-        <div>
+        <div className={styles.imgContainer}>
+          <Image
+            src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
+            alt={`profile of the ${rank} in the world of Brawl Stars`}
+            fill={true}
+          />
+        </div>
+        <div className={styles.nameCon}>
           <a className={styles.name} href={`/${type}/${tag.slice(1)}`}>
             <h4 style={{ color: nameColor }}>{name}</h4>
           </a>
@@ -42,12 +42,13 @@ export default function RankTrophies({
         </div>
       </div>
       <div className={`${styles.trophiesCont} ${memberCount && styles.clubs}`}>
-        <Image
-          src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
-          alt='trophy icon'
-          width={30}
-          height={25}
-        />
+        <div className={styles.trophyImg}>
+          <Image
+            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
+            alt='trophy icon'
+            fill={true}
+          />
+        </div>
         <h4 className={styles.trophies}>{trophies}</h4>
       </div>
     </article>

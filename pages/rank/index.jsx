@@ -125,18 +125,21 @@ export default function Rank({ rankings }) {
         {selected === 'brawlers' && (
           <div className={styles.brawlerContainer}>
             {BRAWLERS.map((brawl) => (
-              <Image
-                onClick={() => setBrawler(`${brawl.id}`)}
-                key={brawl.id}
-                style={{ background: getBrawlerColor[brawl.name] }}
-                className={`${styles.brawlerImg} ${
+              <div
+                className={`${styles.imgCont} ${
                   brawl.id == brawler && styles.selectedBrawler
                 }`}
-                src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawl.id}/custom`}
-                alt={`best players with ${brawl.name} in brawl stars`}
-                width={70}
-                height={70}
-              />
+                onClick={() => setBrawler(`${brawl.id}`)}
+                key={brawl.id}
+              >
+                <Image
+                  style={{ background: getBrawlerColor[brawl.name] }}
+                  className={styles.brawlerImg}
+                  src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawl.id}/custom`}
+                  alt={`best players with ${brawl.name} in brawl stars`}
+                  fill={true}
+                />
+              </div>
             ))}
           </div>
         )}
