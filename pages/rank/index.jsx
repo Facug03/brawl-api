@@ -153,6 +153,7 @@ export default function Rank({ rankings }) {
                 clubName={player.club?.name}
                 nameColor={`#${player.nameColor.slice(4)}`}
                 trophies={player.trophies}
+                type={'player'}
               />
             ))
           ) : (
@@ -177,6 +178,7 @@ export default function Rank({ rankings }) {
                       }
                       trophies={player.trophies}
                       memberCount={player?.memberCount}
+                      type={player.memberCount ? 'club' : 'player'}
                     />
                   ))}
                   {data.paging.cursors?.after && (
