@@ -6,10 +6,15 @@ export default function Nav() {
     <header className={styles.header}>
       <Link href='/' className={styles.logo}>
         <h1 className={styles.game}>
-          Brawl<span className={styles.pro}>Pro</span>
+          Brawl <span className={styles.pro}>Pro</span>
         </h1>
       </Link>
       <ul className={styles.nav}>
+        <li>
+          <Link className={styles.li} href='/events'>
+            Best Brawlers
+          </Link>
+        </li>
         <li>
           <Link className={styles.li} href='/events'>
             Events
@@ -18,11 +23,6 @@ export default function Nav() {
         <li>
           <Link className={styles.li} href='/rank'>
             Rankings
-          </Link>
-        </li>
-        <li>
-          <Link className={styles.li} href='/clubs'>
-            Clubs
           </Link>
         </li>
       </ul>
