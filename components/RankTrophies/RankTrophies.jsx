@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import styles from './RankTrophies.module.css'
 
@@ -10,6 +11,7 @@ export default function RankTrophies({
   nameColor,
   clubName,
   trophies,
+  tag,
 }) {
   return (
     <article
@@ -29,9 +31,9 @@ export default function RankTrophies({
           height={60}
         />
         <div>
-          <h4 className={styles.name} style={{ color: nameColor }}>
-            {name}
-          </h4>
+          <Link className={styles.name} href={`/player/${tag.slice(1)}`}>
+            <h4 style={{ color: nameColor }}>{name}</h4>
+          </Link>
           <h5 className={styles.clubName}>{clubName}</h5>
         </div>
       </div>
