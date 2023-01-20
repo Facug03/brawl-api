@@ -33,9 +33,9 @@ export default function RankTrophies({
           height={60}
         />
         <div>
-          <Link className={styles.name} href={`/${type}/${tag.slice(1)}`}>
+          <a className={styles.name} href={`/${type}/${tag.slice(1)}`}>
             <h4 style={{ color: nameColor }}>{name}</h4>
-          </Link>
+          </a>
           <h5 className={styles.clubName}>
             {memberCount ? `${memberCount}/30` : clubName}
           </h5>

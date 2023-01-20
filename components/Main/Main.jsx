@@ -30,27 +30,29 @@ export default function Main() {
             <p className={styles.p}>
               Enter to your profile <span className={styles.stats}>here</span>
             </p>
-            <Image
-              className={styles.center}
-              width={490}
-              height={245}
-              src={whereIs}
-              alt='where is the profile'
-              priority={false}
-            />
+            <div className={styles.imgSize}>
+              <Image
+                className={styles.center}
+                fill={true}
+                src={whereIs}
+                alt='where is the profile'
+                priority={false}
+              />
+            </div>
           </div>
           <div className={styles.div}>
             <p className={styles.p}>
               Here is the <span className={styles.stats}>ID</span> that you need
             </p>
-            <Image
-              className={styles.center}
-              width={490}
-              height={245}
-              src={profile}
-              alt='profile of brawl stars'
-              priority={false}
-            />
+            <div className={styles.imgSize}>
+              <Image
+                className={styles.center}
+                fill={true}
+                src={profile}
+                alt='profile of brawl stars'
+                priority={false}
+              />
+            </div>
           </div>
         </Tutorial>
         <Tutorial drop={dropClub} setDrop={setDropClub} type='Club'>
@@ -58,27 +60,29 @@ export default function Main() {
             <p className={styles.p}>
               Enter to your profile <span className={styles.stats}>here</span>
             </p>
-            <Image
-              className={styles.center}
-              width={490}
-              height={245}
-              src={whereIs}
-              alt='where is the profile'
-              priority={false}
-            />
+            <div className={styles.imgSize}>
+              <Image
+                className={styles.center}
+                fill={true}
+                src={whereIs}
+                alt='where is the profile'
+                priority={false}
+              />
+            </div>
           </div>
           <div className={styles.div}>
             <p className={styles.p}>
               Here is the <span className={styles.stats}>ID</span> that you need
             </p>
-            <Image
-              className={styles.center}
-              width={490}
-              height={245}
-              src={profile}
-              alt='profile of brawl stars'
-              priority={false}
-            />
+            <div className={styles.imgSize}>
+              <Image
+                className={styles.center}
+                fill={true}
+                src={profile}
+                alt='profile of brawl stars'
+                priority={false}
+              />
+            </div>
           </div>
         </Tutorial>
         <TopBrawlers />

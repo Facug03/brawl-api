@@ -21,9 +21,9 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link className={styles.li} href='/rank'>
+          <a className={styles.li} href='http://localhost:3000/rank'>
             Rankings
-          </Link>
+          </a>
         </li>
       </ul>
     </header>

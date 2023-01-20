@@ -1,7 +1,7 @@
 .card {
-    border: #000000 solid;
+    border: #000000 solid 2px;
     padding: 20px;
-    width: 361px;
+    width: 100%;
     background-color: #e60302;
     /* transform: skew(-7deg,0deg) */
 }
@@ -10,7 +10,7 @@
 .search {
     margin-bottom: 15px;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 23px;
     background: radial-gradient(circle farthest-corner at center center, #FCE832 58%, #FCB900 89%, #FCDA7B 0%);
     color: transparent;
     -webkit-background-clip: text;
@@ -60,13 +60,17 @@
 .player {
     font-weight: 700;
     text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
 }
 
 .tagPlayer {
     font-weight: 700;
     text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
     color: #ffffff;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .button {
@@ -77,8 +81,74 @@
     padding: 5px;
     color: #ffffff;
     border-radius: 3px;
-    font-size: 20px;
+    font-size: 18px;
     border: solid #000000 2px;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     cursor: pointer;
+}
+
+@media (min-width: 400px) {
+    .search {
+        font-size: 24px;
+    }
+
+    .card {
+        width: 350px;
+    }
+}
+
+@media (min-width: 575px) {
+    .card {
+        width: 250px;
+    }
+
+    .search {
+        font-size: 27px;
+    }
+    
+}
+
+@media (min-width: 630px) {
+    .card {
+        width: 280px;
+    }
+}
+
+@media (min-width: 775px) {
+    .card {
+        width: 300px;
+        border: #000000 solid 3px;
+    }
+
+    .player {
+        font-weight: 700;
+        text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .tagPlayer {
+        font-weight: 700;
+        text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+        color: #ffffff;
+        font-size: 12px;
+    }
+
+    .button {
+        font-size: 20px;
+    }
+    
+}
+
+@media (min-width: 870px) {
+    .card {
+        width: 350px;
+    }
+}
+
+
+@media (min-width: 900px) {
+    .card {
+        width: 361px;
+    }
 }

@@ -118,6 +118,7 @@ export default function Club(club) {
               nameColor={`#${member.nameColor.slice(4)}`}
               tag={member.tag}
               trophies={member.trophies}
+              type={'player'}
             />
           ))}
         </div>

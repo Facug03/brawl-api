@@ -17,7 +17,7 @@
 }
 
 .text {
-    font-size: 30px;
+    font-size: 25px;
     color: #ffffff;
     font-weight: 800;
     transform: skew(7deg,0deg);
@@ -39,7 +39,26 @@
 }
 
 .tutorial {
-    display: grid;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-auto-flow: column;
+    
+}
+
+@media (min-width: 420px) {
+    .text {
+        font-size: 27px;
+    }
+}
+
+
+@media (min-width: 500px) {
+    .text {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1180px) {
+    .tutorial {
+        display: grid;
+        grid-auto-columns: minmax(0, 1fr);
+        grid-auto-flow: column;
+    }
 }
