@@ -13,6 +13,7 @@ export default function RankTrophies({
   trophies,
   tag,
   memberCount,
+  type,
 }) {
   return (
     <article
@@ -32,7 +33,7 @@ export default function RankTrophies({
           height={60}
         />
         <div>
-          <Link className={styles.name} href={`/player/${tag.slice(1)}`}>
+          <Link className={styles.name} href={`/${type}/${tag.slice(1)}`}>
             <h4 style={{ color: nameColor }}>{name}</h4>
           </Link>
           <h5 className={styles.clubName}>
