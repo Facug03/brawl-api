@@ -6,6 +6,22 @@
     text-shadow: #000 -2px 3px, #000 -1px -1px;
 }
 
+.brawlerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.brawlerImg {
+    object-fit: cover;
+    border: 5px #000000 solid;
+    cursor: pointer;
+}
+.selectedBrawler {
+    border: 5px #e60302 solid;
+}
+
 .section {
     border: 1px solid #000;
     padding: 8px;
@@ -25,6 +41,8 @@
     font-size: 21px;
     text-decoration: none;
     text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+    text-transform: capitalize;
+    cursor: pointer;
 }
 
 .selected {
@@ -81,4 +99,26 @@
     font-weight: 700;
     text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
     text-align: center;
+}
+
+.loading {
+    font-size: 25px;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: #000 -2px 3px, #000 -1.5px -1.5px;
+    margin: 20px 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.load {
+    width: 100%;
+    padding: 15px;
+    background-color: #655762;
+    font-weight: 700;
+    font-size: 22px;
+    color: #ffffff;
+    text-shadow: #000 -2px 3px, #000 -1.5px -1.5px;
+    border: 3px solid #000;
+    cursor: pointer;
 }
