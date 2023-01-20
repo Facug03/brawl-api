@@ -90,6 +90,11 @@
     box-shadow: #0e0e16 0px 3px 9px;
 }
 
+.infoClub {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .infoPlayer {
     padding: 0 3px;
     transform: skew(7deg,0deg);

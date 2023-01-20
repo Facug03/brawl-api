@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 
 import styles from './Player.module.css'
@@ -13,14 +14,14 @@ export default function Player(player) {
 
   useEffect(() => {
     if (player.name !== undefined) {
-      const getProfile = window.localStorage.getItem('tag')
+      const getProfile = window.localStorage.getItem('player')
       const profile = getProfile ? JSON.parse(getProfile) : []
 
       const isRepeated = profile.some((el) => el.player === player.name)
 
       if (profile.length < 6 && !isRepeated) {
         window.localStorage.setItem(
-          'tag',
+          'player',
           JSON.stringify([
             {
               player: player.name,
@@ -34,7 +35,7 @@ export default function Player(player) {
 
       if (profile.length === 6 && !isRepeated) {
         window.localStorage.setItem(
-          'tag',
+          'player',
           JSON.stringify([
             { player: player.name, tagPlayer: player.tag },
             ...profile.slice(0, -1),
@@ -62,8 +63,8 @@ export default function Player(player) {
   //   }
   // }, [player.items, player.name])
 
-  if (player.tag === undefined && player.reason) {
-    return <h3 className={styles.error}>{player.reason}</h3>
+  if (player.tag === undefined) {
+    return <h3 className={styles.error}>Error</h3>
   }
 
   const nameColor = `#${player.nameColor.slice(4)}`
@@ -118,24 +119,48 @@ export default function Player(player) {
           </div>
         </header>
         <div className={styles.info}>
+          {player?.club?.tag && (
+            <div className={styles.statsProfile}>
+              <h3 className={styles.infoPlayer} style={{ color: nameColor }}>
+                Club
+              </h3>
+
+              <Link
+                className={styles.infoClub}
+                href={`/club/${player.club.tag.slice(1)}`}
+              >
+                <p className={styles.stats}>{player.club.name}</p>
+              </Link>
+            </div>
+          )}
           <div className={styles.statsProfile}>
-            <h3 className={styles.infoPlayer}>Highest trophies </h3>
+            <h3 className={styles.infoPlayer} style={{ color: nameColor }}>
+              Highest trophies
+            </h3>
             <p className={styles.stats}>{player.highestTrophies}</p>
           </div>
           <div className={styles.statsProfile}>
-            <h3 className={styles.infoPlayer}>3 vs 3 victories</h3>
+            <h3 className={styles.infoPlayer} style={{ color: nameColor }}>
+              3 vs 3 victories
+            </h3>
             <p className={styles.stats}>{player['3vs3Victories']}</p>
           </div>
           <div className={styles.statsProfile}>
-            <h3 className={styles.infoPlayer}>Duo victories</h3>
+            <h3 className={styles.infoPlayer} style={{ color: nameColor }}>
+              Duo victories
+            </h3>
             <p className={styles.stats}>{player.duoVictories}</p>
           </div>
           <div className={styles.statsProfile}>
-            <h3 className={styles.infoPlayer}>Solo victories</h3>
+            <h3 className={styles.infoPlayer} style={{ color: nameColor }}>
+              Solo victories
+            </h3>
             <p className={styles.stats}>{player.soloVictories}</p>
           </div>
           <div className={styles.statsProfile}>
-            <h3 className={styles.infoPlayer}>Exp points</h3>
+            <h3 className={styles.infoPlayer} style={{ color: nameColor }}>
+              Exp points
+            </h3>
             <p className={styles.stats}>{player.expPoints}</p>
           </div>
           {/* <div className={styles.statsProfile}>
