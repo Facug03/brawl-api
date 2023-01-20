@@ -22,8 +22,8 @@ export default function Main() {
           <span className={styles.stats}> stats</span>!
         </h2>
         <section className={styles.section}>
-          <Card type='Player' />
-          <Card type='Club' />
+          <Card type='player' />
+          <Card type='club' />
         </section>
         <Tutorial drop={dropPlayer} setDrop={setDropPlayer} type='Player'>
           <div className={styles.div}>
