@@ -15,7 +15,7 @@ export default function Events({ events }) {
         <title>Event Rotation | Brawl Stars Maps & Modes</title>
         <meta
           name='description'
-          content='Brawl Stars event rotation maps and modes like brawl ball, gem grab and more!'
+          content='Brawl Stars maps, event rotation and modes like brawl ball, gem grab and more!'
         />
         <link rel='icon' href='/crown.png' />
       </Head>
