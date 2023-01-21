@@ -73,7 +73,7 @@ export default function Player(player) {
       <Head>
         <title>{player.name + ' profile | Brawl Stars Stats'}</title>
         <meta
-          name='Brawl Stars Stats'
+          name='Brawl pro profile stats'
           content={`Brawl Stars stats of ${player.name}`}
         />
         <link rel='icon' href='/crown.png' />

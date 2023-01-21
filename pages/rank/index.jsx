@@ -60,9 +60,9 @@ export default function Rank({ rankings }) {
   return (
     <>
       <Head>
-        <title>{'Leaderboards | Brawl Stars Stats & Best Players'}</title>
+        <title>Leaderboards | Brawl Stars Stats & Best Players</title>
         <meta
-          name='Brawl Stars Leaderboards'
+          name='description'
           content='Brawl Stars leaderboards where you can find the best players in the world or in any country'
         />
         <link rel='icon' href='/crown.png' />

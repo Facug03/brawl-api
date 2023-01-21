@@ -51,7 +51,7 @@ export default function Club(club) {
       <Head>
         <title>{club.name + ' club | Brawl Stars Stats'}</title>
         <meta
-          name='Brawl Stars Stats'
+          name='description'
           content={`Brawl Stars stats of the club ${club.name}`}
         />
         <link rel='icon' href='/crown.png' />
