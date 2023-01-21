@@ -51,9 +51,25 @@ export default function Club(club) {
       <Head>
         <title>{club.name + ' club | Brawl Stars Stats'}</title>
         <meta
-          name='description'
-          content={`Brawl Stars stats of the club ${club.name}`}
+          property='og:title'
+          content={club.name + ' club | Brawl Stars Stats'}
         />
+        <meta
+          name='description'
+          content={`Brawl Stars stats of the club ${club.name} and members.`}
+        />
+        <meta
+          property='og:description'
+          content={`Brawl Stars stats of the club ${club.name} and members.`}
+        />
+        <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
+        <meta
+          property='og:url'
+          content={`https://www.brawlpro.com/club/${club.tag}`}
+        />
+        <meta property='og:site_name' content='Brawl Pro' />
+        <meta property='og:type' content='website' />
+        <meta name='theme-color' content='#363b4e' />
         <link rel='icon' href='/crown.png' />
       </Head>
       <Container>

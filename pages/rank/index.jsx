@@ -62,9 +62,22 @@ export default function Rank({ rankings }) {
       <Head>
         <title>Leaderboards | Brawl Stars Stats & Best Players</title>
         <meta
-          name='description'
-          content='Brawl Stars leaderboards where you can find the best players in the world or in any country'
+          property='og:title'
+          content='Leaderboards | Brawl Stars Stats & Best Players'
         />
+        <meta
+          name='description'
+          content='Brawl Stars leaderboards where you can find the best players in the world or in any country.'
+        />
+        <meta
+          property='og:description'
+          content='Brawl Stars leaderboards where you can find the best players in the world or in any country.'
+        />
+        <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
+        <meta property='og:url' content='https://www.brawlpro.com/rank' />
+        <meta property='og:site_name' content='Brawl Pro' />
+        <meta property='og:type' content='website' />
+        <meta name='theme-color' content='#363b4e' />
         <link rel='icon' href='/crown.png' />
       </Head>
       <Container>

@@ -73,9 +73,25 @@ export default function Player(player) {
       <Head>
         <title>{player.name + ' profile | Brawl Stars Stats'}</title>
         <meta
-          name='Brawl pro profile stats'
-          content={`Brawl Stars stats of ${player.name}`}
+          property='og:title'
+          content={player.name + ' profile | Brawl Stars Stats'}
         />
+        <meta
+          name='description'
+          content={`Brawl Stars stats of ${player.name}, battle log, brawlers and more info!.`}
+        />
+        <meta
+          property='og:description'
+          content={`Brawl Stars stats of ${player.name}, battle log, brawlers and more info!.`}
+        />
+        <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
+        <meta
+          property='og:url'
+          content={`https://www.brawlpro.com/player/${player.tag}`}
+        />
+        <meta property='og:site_name' content='Brawl Pro' />
+        <meta property='og:type' content='website' />
+        <meta name='theme-color' content='#363b4e' />
         <link rel='icon' href='/crown.png' />
       </Head>
       <Container>
