@@ -15,11 +15,11 @@ export default function Events({ events }) {
         <title>Event Rotation | Brawl Stars Maps & Modes</title>
         <meta
           property='og:title'
-          content={player.name + ' profile | Brawl Stars Stats'}
+          content='Event Rotation | Brawl Stars Maps & Modes'
         />
         <meta
           name='description'
-          content='Brawl Stars maps, event rotation and modes like brawl ball, gem grab and more!.'
+          content='Brawl Stars maps, event rotation and modes like brawl ball, gem grab and you can know when a challengue stars!.'
         />
         <meta
           property='og:description'
