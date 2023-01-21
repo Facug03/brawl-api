@@ -20,22 +20,23 @@ export default function Brawler({
   return (
     <div>
       <div className={styles.brawler}>
-        <Image
-          style={{ background: getBrawlerColor[name] }}
-          className={styles.brawlerImg}
-          src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
-          alt={`Information of ${name}`}
-          width={110}
-          height={115}
-        />
-        <Image
-          className={styles.rankBrawl}
-          src={`${getRankImg(rank)}`}
-          alt={`Brawl stars rank icon ${rank}`}
-          width={33}
-          height={33}
-        />
-        <p className={styles.rankNum}>{rank}</p>
+        <div className={styles.brawlerContainer}>
+          <Image
+            style={{ background: getBrawlerColor[name] }}
+            className={styles.brawlerImg}
+            src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
+            alt={`Information of ${name}`}
+            fill={true}
+          />
+          <Image
+            className={styles.rankBrawl}
+            src={`${getRankImg(rank)}`}
+            alt={`Brawl stars rank icon ${rank}`}
+            width={33}
+            height={33}
+          />
+          <p className={styles.rankNum}>{rank}</p>
+        </div>
         <div>
           <p className={styles.nameBrawl}>{name}</p>
           <div className={styles.infoBrawl}>

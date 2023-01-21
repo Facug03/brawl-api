@@ -1,29 +1,31 @@
 .head {
     display: flex;
-    padding: 5px 50px;
-    gap: 100px;
+    padding: 5px 10px;
+    justify-content: space-between;
 }
-
-/* .img {
-    object-fit: fill;
-} */
 
 .icon {
     position: relative;
 }
 
+.imgProfile {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
 .tag {
     position: absolute;
-    bottom: -12px;
+    bottom: -8px;
     left: 0px;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 700;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
 }
 
 .profile {
-    padding: 10px 100px;
+    padding: 10px 20px;
     border: 3px solid #000000;
     transform: skew(-7deg,0deg);
     background-color: #353d50;
@@ -36,12 +38,12 @@
 
 .nameContainer {
     display: flex;
-    gap: 25px;
+    gap: 5px;
     align-items: center;
 }
 
 .name {
-    font-size: 28px;
+    font-size: 16px;
     font-weight: 700;
     /* text-shadow: #000 -1px 2px, #000 -1px -1px; */
     padding-bottom: 6px;
@@ -51,14 +53,20 @@
     position: relative;
 }
 
+.imgExp {
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
 .level {
     position: absolute;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 700;
     color: #ffffff;
     text-shadow: #000 -0.5px 1px, #000 -1px -0.5px;
-    bottom: 19px;
-    left: 10px;
+    bottom: 11px;
+    left: 6px;
 }
 
 .trophies {
@@ -67,8 +75,14 @@
     align-items: center;
 }
 
+.imgTrophy {
+    position: relative;
+    width: 25px;
+    height: 20px;
+}
+
 .number {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
@@ -77,7 +91,7 @@
 .info {
     margin: 75px 0;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 40px;
 }
 
@@ -98,7 +112,7 @@
 .infoPlayer {
     padding: 0 3px;
     transform: skew(7deg,0deg);
-    font-size: 24px;
+    font-size: 22px;
     position: absolute;
     top: -16px;
     left: 8px;
@@ -110,7 +124,7 @@
 
 .stats {
     transform: skew(7deg,0deg);
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
@@ -158,10 +172,221 @@
 
 .brawlers {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
     row-gap: 50px;
+    column-gap: 25px;
     margin-top: 70px;
 }
+
+
+@media (min-width: 390px) {
+    .head {
+        padding: 5px 15px;
+    }
+
+    .name {
+        font-size: 23px;
+    }
+
+    .imgTrophy {
+        width: 25px;
+        height: 20px;
+    }
+
+    .number {
+        font-size: 18px;
+    }
+
+
+    .imgProfile {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tag {
+        bottom: -10px;
+        left: 0px;
+        font-size: 16px;
+    }
+
+    .profile {
+        padding: 10px 20px;
+    }
+    
+    .imgExp {
+        width: 40px;
+        height: 40px;
+    }
+
+    .infoPlayer {
+        font-size: 23px;
+    }
+
+    .stats {
+        font-size: 19px;
+    }
+
+    .level {
+        bottom: 11px;
+        left: 6px;
+        font-size: 14px;
+    }
+
+    .info {
+        grid-template-columns: repeat(1, minmax(0, 0.7fr));
+        justify-content: center;
+    }
+    
+}
+
+
+@media (min-width: 460px) {
+    .head {
+        padding: 5px 20px;
+    }
+
+    .name {
+        font-size: 25px;
+    }
+
+    .imgTrophy {
+        width: 30px;
+        height: 25px;
+    }
+
+    .number {
+        font-size: 18px;
+    }
+
+    .imgProfile {
+        width: 100px;
+        height: 100px;
+    }
+
+    .tag {
+        bottom: -15px;
+        left: 0px;
+        font-size: 17px;
+    }
+
+    .profile {
+        padding: 10px 30px;
+    }
+
+    .imgExp {
+        width: 40px;
+        height: 40px;
+    }
+
+    .level {
+        bottom: 11px;
+        left: 6px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 595px) {
+    .head {
+        padding: 5px 30px;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .number {
+        font-size: 20px;
+    }
+
+    .imgProfile {
+        width: 120px;
+        height: 120px;
+    }
+
+    .tag {
+        bottom: -12px;
+        left: 0px;
+        font-size: 20px;
+    }
+
+    .imgExp {
+        width: 50px;
+        height: 50px;
+    }  
+
+    .level {
+        bottom: 15px;
+        left: 10px;
+        font-size: 15px;
+    }
+
+    .info {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .infoPlayer {
+        font-size: 24px;
+    }
+
+    .stats {
+        font-size: 20px;
+    }
+    
+    .brawlers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 10px;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .head {
+        padding: 5px 50px;
+    }
+
+    .profile {
+        padding: 10px 50px;
+    }
+
+    .nameContainer {
+        gap: 15px;
+    }
+
+    .brawlers {
+        column-gap: 0px;
+    }
+}
+
+
+
+
+@media (min-width: 915px) {
+    .head {
+        justify-content: unset;
+        gap: 100px;
+    }
+
+    .profile {
+        padding: 10px 100px;
+    }
+
+    .nameContainer {
+        gap: 25px;
+    }
+
+    .info {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    } 
+}
+
+
+@media (min-width: 1000px) {
+    .brawlers {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
 
 
 

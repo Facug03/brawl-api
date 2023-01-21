@@ -81,13 +81,14 @@ export default function Player(player) {
       <Container>
         <header className={styles.head}>
           <div className={styles.icon}>
-            <Image
-              className={styles.img}
-              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${player.icon.id}/profile`}
-              alt='profile picture of Brawl Stars'
-              width={120}
-              height={120}
-            />
+            <div className={styles.imgProfile}>
+              <Image
+                className={styles.img}
+                src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${player.icon.id}/profile`}
+                alt='profile picture of Brawl Stars'
+                fill={true}
+              />
+            </div>
             <p className={styles.tag}>{player.tag}</p>
           </div>
           <div className={styles.profile}>
@@ -97,22 +98,24 @@ export default function Player(player) {
                   {player.name}
                 </h2>
                 <div className={styles.exp}>
-                  <Image
-                    src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/player-level/custom'
-                    alt='player level icon of Brawl Stars'
-                    width={50}
-                    height={50}
-                  />
+                  <div className={styles.imgExp}>
+                    <Image
+                      src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/player-level/custom'
+                      alt='player level icon of Brawl Stars'
+                      fill={true}
+                    />
+                  </div>
                   <p className={styles.level}>{player.expLevel}</p>
                 </div>
               </div>
               <div className={styles.trophies}>
-                <Image
-                  src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
-                  alt='trophy icon'
-                  width={30}
-                  height={25}
-                />
+                <div className={styles.imgTrophy}>
+                  <Image
+                    src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
+                    alt='trophy icon'
+                    fill={true}
+                  />
+                </div>
                 <p className={styles.number}>{player.trophies}</p>
               </div>
             </div>
