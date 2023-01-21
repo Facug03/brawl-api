@@ -87,7 +87,7 @@ export default function Player(player) {
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta
           property='og:url'
-          content={`https://www.brawlpro.com/player/${player.tag}`}
+          content={`https://www.brawlpro.com/player/${player.tag.slice(1)}`}
         />
         <meta property='og:site_name' content='Brawl Pro' />
         <meta property='og:type' content='website' />

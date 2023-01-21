@@ -65,7 +65,7 @@ export default function Club(club) {
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta
           property='og:url'
-          content={`https://www.brawlpro.com/club/${club.tag}`}
+          content={`https://www.brawlpro.com/club/${club.tag.slice(1)}`}
         />
         <meta property='og:site_name' content='Brawl Pro' />
         <meta property='og:type' content='website' />
