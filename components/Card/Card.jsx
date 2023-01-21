@@ -27,6 +27,9 @@ export default function Card({ type }) {
 
   const playerPage = (e) => {
     e.preventDefault()
+    if (id.length) {
+      window.location.href = `https://www.brawlpro.com/${type}/${id}`
+    }
   }
 
   return (
@@ -55,13 +58,7 @@ export default function Card({ type }) {
               </a>
             ))}
         </div>
-        {id.length ? (
-          <a className={styles.button} href={`/${type}/${id}`}>
-            <p>Search</p>
-          </a>
-        ) : (
-          <h4 className={styles.button}>Search</h4>
-        )}
+        <button className={styles.button}>Search</button>
       </form>
     </article>
   )
