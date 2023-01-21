@@ -6,7 +6,6 @@ import styles from './Card.module.css'
 export default function Card({ type }) {
   const [id, setId] = useState('')
   const [profile, setProfile] = useState([])
-  const router = useRouter()
 
   useEffect(() => {
     if (!profile.length) {
@@ -28,9 +27,6 @@ export default function Card({ type }) {
 
   const playerPage = (e) => {
     e.preventDefault()
-    if (id.length) {
-      router.push(`/${type}/${id}`)
-    }
   }
 
   return (
@@ -59,7 +55,13 @@ export default function Card({ type }) {
               </a>
             ))}
         </div>
-        <button className={styles.button}>Search</button>
+        {id.length ? (
+          <a className={styles.button} href={`/${type}/${id}`}>
+            <p>Search</p>
+          </a>
+        ) : (
+          <h4 className={styles.button}>Search</h4>
+        )}
       </form>
     </article>
   )

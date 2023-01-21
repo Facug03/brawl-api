@@ -75,15 +75,17 @@
 
 .button {
     background-color: #2188e8;
-    font-weight: 800;
+    font-weight: 700;
     height: 35px;
+    width: fit-content;
     display: block;
     padding: 5px;
     color: #ffffff;
     border-radius: 3px;
-    font-size: 18px;
+    font-size: 17px;
     border: solid #000000 2px;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
+    text-decoration: none;
     cursor: pointer;
 }
 
