@@ -1,5 +1,5 @@
 export async function postBrawler(brawlers) {
-  const res = await fetch('https://wwww.brawlpro.com/api/rate', {
+  const res = await fetch('https://www.brawlpro.com/api/rate', {
     headers: {
       'Content-Type': 'application/json',
     },
