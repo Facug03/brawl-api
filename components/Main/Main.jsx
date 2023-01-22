@@ -85,7 +85,6 @@ export default function Main() {
             </div>
           </div>
         </Tutorial>
-        <TopBrawlers />
         <BrawlTalk />
       </Container>
     </main>
