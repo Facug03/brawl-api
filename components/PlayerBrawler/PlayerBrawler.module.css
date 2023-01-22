@@ -47,6 +47,10 @@
     object-position: left;
 }
 
+.link {
+    text-decoration: none;
+}
+
 .power {
     position: absolute;
     padding: 3px;

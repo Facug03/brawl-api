@@ -79,6 +79,7 @@ export default function BattleLog({
             {battle.players.map((player) => (
               <PlayerBrawler
                 key={player.tag}
+                tag={player.tag}
                 trophies={player.brawler.trophies}
                 id={player.brawler.id}
                 name={player.brawler.name}
@@ -96,6 +97,7 @@ export default function BattleLog({
                 {team.map((player) => (
                   <PlayerBrawler
                     key={player.tag}
+                    tag={player.tag}
                     trophies={player.brawler.trophies}
                     duo={true}
                     id={player.brawler.id}
@@ -117,6 +119,7 @@ export default function BattleLog({
             {battle.teams[0].map((player) => (
               <PlayerBrawler
                 key={player.tag}
+                tag={player.tag}
                 trophies={player.brawler.trophies}
                 vs={true}
                 id={player.brawler.id}
@@ -136,6 +139,7 @@ export default function BattleLog({
             {battle.teams[1].map((player) => (
               <PlayerBrawler
                 key={player.tag}
+                tag={player.tag}
                 trophies={player.brawler.trophies}
                 vs={true}
                 id={player.brawler.id}
@@ -155,6 +159,7 @@ export default function BattleLog({
         <div className={styles.battleBigBrawler}>
           <PlayerBrawler
             key={battle.bigBrawler.tag}
+            tag={player.tag}
             trophies={battle.bigBrawler.brawler.trophies}
             vs={true}
             id={battle.bigBrawler.brawler.id}
@@ -170,6 +175,7 @@ export default function BattleLog({
           {battle.players.map((player) => (
             <PlayerBrawler
               key={player.tag}
+              tag={player.tag}
               trophies={player.brawler.trophies}
               vs={true}
               id={player.brawler.id}
@@ -188,6 +194,7 @@ export default function BattleLog({
           {battle.players.map((player) => (
             <PlayerBrawler
               key={player.tag}
+              tag={player.tag}
               trophies={player.brawler.trophies}
               vs={true}
               id={player.brawler.id}

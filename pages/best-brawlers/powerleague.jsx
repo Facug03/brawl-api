@@ -5,6 +5,8 @@ import styles from './PowerLeague.module.css'
 import Container from '../../components/Container/Container'
 import { modes, bestBrawlers } from '../../utils/maps'
 import { getBrawlers } from '../../lib/redis'
+import { mode } from '../../utils/profileInfo'
+import { BRAWLERS } from '../../utils/rankings'
 
 export default function PowerLeague(leagueBrawlers) {
   console.log(leagueBrawlers)
@@ -41,33 +43,76 @@ export default function PowerLeague(leagueBrawlers) {
             height={50}
           />
         </div>
-        {/* <section>
-          {modes.map((mode) => (
-            <article key={mode.name}>
-              <h2>{mode.name}</h2>
-              {mode.maps.map((brawlMap) => (
-                <div key={brawlMap.id}>
-                  <h4>{brawlMap.name}</h4>
-                  {leagueBrawlers[brawlMap.id] &&
-                    leagueBrawlers[brawlMap.id].map((br) => (
-                      <div key={br.name}>
-                        <h4>
-                          {br.name} {br.winRate}
-                        </h4>
+        <section className={styles.section}>
+          {modes.map((gameMode) => (
+            <article className={styles.article} key={gameMode.name}>
+              {gameMode.maps.map((brawlMap) => (
+                <div className={styles.container} key={brawlMap.id}>
+                  <div
+                    className={styles.div}
+                    style={{ backgroundColor: mode[gameMode.name].color }}
+                  >
+                    <div className={styles.info}>
+                      <div className={styles.modeContainer}>
+                        <Image
+                          src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${gameMode.name}/mini`}
+                          alt={`${
+                            mode[gameMode.name].name
+                          } icon map brawl stars`}
+                          width={33}
+                          height={29}
+                        />
+                        <h2 className={styles.mode}>
+                          {mode[gameMode.name].name}
+                        </h2>
                       </div>
-                    ))}
-                  <Image
-                    className={styles.img}
-                    src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawlMap.id}/map`}
-                    alt={`${map.name}`}
-                    width={200}
-                    height={350}
-                  />
+                      <h3 className={styles.map}>{brawlMap.name}</h3>
+                    </div>
+                  </div>
+                  <div className={styles.mapCont}>
+                    {leagueBrawlers[brawlMap.id]?.length ? (
+                      <div className={styles.brawlers}>
+                        {leagueBrawlers[brawlMap.id]
+                          .slice(0, 10)
+                          .map((brawler) => (
+                            <div key={brawler.name}>
+                              <div className={styles.brawlerContainer}>
+                                <Image
+                                  className={styles.brawlerImg}
+                                  src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
+                                    BRAWLERS.find(
+                                      (brawl) => brawl.name === brawler.name
+                                    ).id
+                                  }/custom`}
+                                  alt={`Information of ${brawler.name}`}
+                                  fill={true}
+                                />
+                                <h4 className={styles.winRate}>
+                                  {brawler.winRate}%
+                                </h4>
+                              </div>
+                            </div>
+                          ))}
+                      </div>
+                    ) : (
+                      <div className={styles.dataCont}>
+                        <h3 className={styles.data}>There is no data yet</h3>
+                      </div>
+                    )}
+                    <div className={styles.imgCont}>
+                      <Image
+                        className={styles.img}
+                        src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawlMap.id}/map`}
+                        alt={`${brawlMap.name}`}
+                        fill={true}
+                      />
+                    </div>
+                  </div>
                 </div>
               ))}
             </article>
           ))}
-        </section> */}
+        </section>
       </Container>
     </>
   )

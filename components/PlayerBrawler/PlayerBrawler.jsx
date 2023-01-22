@@ -5,6 +5,7 @@ import { getPowerImg } from '../../utils/profileInfo'
 
 export default function PlayerBrawler({
   trophies,
+  tag,
   id,
   name,
   power,
@@ -51,23 +52,45 @@ export default function PlayerBrawler({
           </div>
         )}
       </div>
-      <Image
-        className={styles.imgBrawl}
-        src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
-        alt={`Information of ${name}`}
-        width={100}
-        height={100}
-        priority={false}
-      />
-      <span className={`${vs ? styles.powerVs : styles.power}`}>
-        LVL. {power}
-      </span>
-      <p
-        style={{ color: playerName === player ? nameColor : '#ffffff' }}
-        className={styles.playerName}
-      >
-        {playerName.length > 13 ? `${playerName.slice(0, 10)}...` : playerName}
-      </p>
+      {playerName === player ? (
+        <div>
+          <Image
+            className={styles.imgBrawl}
+            src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
+            alt={`Information of ${name}`}
+            width={100}
+            height={100}
+            priority={false}
+          />
+          <span className={`${vs ? styles.powerVs : styles.power}`}>
+            LVL. {power}
+          </span>
+          <p style={{ color: nameColor }} className={styles.playerName}>
+            {playerName.length > 13
+              ? `${playerName.slice(0, 10)}...`
+              : playerName}
+          </p>
+        </div>
+      ) : (
+        <a className={styles.link} href={`${tag.slice(1)}`}>
+          <Image
+            className={styles.imgBrawl}
+            src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
+            alt={`Information of ${name}`}
+            width={100}
+            height={100}
+            priority={false}
+          />
+          <span className={`${vs ? styles.powerVs : styles.power}`}>
+            LVL. {power}
+          </span>
+          <p style={{ color: '#ffffff' }} className={styles.playerName}>
+            {playerName.length > 13
+              ? `${playerName.slice(0, 10)}...`
+              : playerName}
+          </p>
+        </a>
+      )}
     </div>
   )
 }

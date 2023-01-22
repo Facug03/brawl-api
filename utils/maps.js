@@ -34,12 +34,13 @@ export function bestBrawlers(arr) {
           ...brawlers[brawl],
           {
             name: ar.name,
-            winRate:
+            winRate: Math.round(
               (Number(ar[brawl][0]) /
                 (Number(ar[brawl][0]) + Number(ar[brawl][1]))) *
-              100,
+                100
+            ),
           },
-        ]
+        ].sort((a, b) => b.winRate - a.winRate)
       }
     })
   }
@@ -49,7 +50,7 @@ export function bestBrawlers(arr) {
 
 export const modes = [
   {
-    name: 'Balon Brawl',
+    name: 'brawlBall',
     maps: [
       { name: 'Sneaky Fields', id: '15000050' },
       { name: 'Pinhole Punt', id: '15000026' },
@@ -57,7 +58,7 @@ export const modes = [
     ],
   },
   {
-    name: 'Gem Grab',
+    name: 'gemGrab',
     maps: [
       { name: 'Hard Rock Mine', id: '15000007' },
       { name: 'Double Swoosh', id: '15000115' },
@@ -65,7 +66,7 @@ export const modes = [
     ],
   },
   {
-    name: 'Bounty',
+    name: 'bounty',
     maps: [
       { name: 'Canal Grande', id: '15000054' },
       { name: 'Shooting Star', id: '15000005' },
@@ -73,15 +74,15 @@ export const modes = [
     ],
   },
   {
-    name: 'Knockout',
+    name: 'knockout',
     maps: [
-      { name: 'Out In The Open', id: '1500054}8' },
+      { name: 'Out In The Open', id: '15000548' },
       { name: 'Goldarm Gulch', id: '15000367' },
       { name: 'Belles Rock', id: '15000368' },
     ],
   },
   {
-    name: 'Hot Zone',
+    name: 'hotZone',
     maps: [
       { name: 'Dueling Beetles', id: '15000306' },
       { name: 'Ring Of Fire', id: '15000300' },
@@ -89,7 +90,7 @@ export const modes = [
     ],
   },
   {
-    name: 'Heist',
+    name: 'heist',
     maps: [
       { name: 'Safe Zone', id: '15000019' },
       { name: 'Pit Stop', id: '15000137' },
