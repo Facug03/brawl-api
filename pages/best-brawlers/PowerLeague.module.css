@@ -1,0 +1,28 @@
+.head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: #000 -2px 3px, #000 -1px -1px;
+}
+
+.power {
+    color: #ea1219;
+    text-shadow: #000 -2px 4px, #000 -2px -1px;
+}
+
+.league {
+    color: #0e83f8;
+    margin-left: 5px;
+    text-shadow: #000 -2px 4px, #000 -2px -1px;
+}
+
+.showdown {
+    object-fit: contain;
+}

@@ -15,7 +15,7 @@ export default function Nav() {
           </a>
         </li>
         <li>
-          <a className={styles.li} href='https://www.brawlpro.com//events'>
+          <a className={styles.li} href='https://www.brawlpro.com/events'>
             Events
           </a>
         </li>

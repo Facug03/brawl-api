@@ -13,6 +13,21 @@ export default function Player(player) {
   const [drop, setDrop] = useState(false)
 
   useEffect(() => {
+    if (player?.items && player?.name) {
+      const sortedBrawlers = sortBrawlers(player.items, player.name)
+      console.log(sortedBrawlers)
+      if (sortedBrawlers) {
+        let start = performance.now()
+        postBrawler(sortedBrawlers)
+          .then((res) => {
+            console.log(res)
+            let end = performance.now()
+            console.log('Tiempo empleado:', end - start, 'milisegundos')
+          })
+          .catch((err) => console.log(err))
+      }
+    }
+
     if (player.name !== undefined) {
       const getProfile = window.localStorage.getItem('player')
       const profile = getProfile ? JSON.parse(getProfile) : []
@@ -47,25 +62,7 @@ export default function Player(player) {
         )
       }
     }
-  }, [player.name, player.tag, player.nameColor])
-  // console.log(player)
-
-  // useEffect(() => {
-  //   if (player?.items && player?.name) {
-  //     const sortedBrawlers = sortBrawlers(player.items, player.name)
-
-  //     if (sortedBrawlers) {
-  //       let start = performance.now()
-  //       postBrawler(sortedBrawlers)
-  //         .then((res) => {
-  //           console.log(res)
-  //           let end = performance.now()
-  //           console.log('Tiempo empleado:', end - start, 'milisegundos')
-  //         })
-  //         .catch((err) => console.log(err))
-  //     }
-  //   }
-  // }, [player.items, player.name])
+  }, [player.name, player.tag, player.nameColor, player.items])
 
   if (player.tag === undefined) {
     return <h3 className={styles.error}>Error</h3>
@@ -255,7 +252,7 @@ export async function getServerSideProps({ params }) {
       `https://bsproxy.royaleapi.dev/v1/players/%23${id}?authorization=Bearer%20eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjM5ZTYxMTk4LTYwZWYtNDY3YS05MWVkLTY3NjU4MGVkMDJlZSIsImlhdCI6MTY3MzMxNDY3Mywic3ViIjoiZGV2ZWxvcGVyLzNhZDRhZDlkLWIwNmEtZjBkYi00YWQyLTJhYzM2MDRlYjU5YiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDUuNzkuMjE4Ljc5Il0sInR5cGUiOiJjbGllbnQifV19.IpvoeicRr4llh7naPDJk-828Vx3EIGMl8QogdYy1h7sof0u8T9IcQvoyLmEyDXiYcTGrekkp28OBG-nZuOQuFw`
     ).then((res) => res.json()),
     fetch(
-      `https://bsproxy.royaleapi.dev/v1/players/%23${id}/battlelog?limit=5&authorization=Bearer%20eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjM5ZTYxMTk4LTYwZWYtNDY3YS05MWVkLTY3NjU4MGVkMDJlZSIsImlhdCI6MTY3MzMxNDY3Mywic3ViIjoiZGV2ZWxvcGVyLzNhZDRhZDlkLWIwNmEtZjBkYi00YWQyLTJhYzM2MDRlYjU5YiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDUuNzkuMjE4Ljc5Il0sInR5cGUiOiJjbGllbnQifV19.IpvoeicRr4llh7naPDJk-828Vx3EIGMl8QogdYy1h7sof0u8T9IcQvoyLmEyDXiYcTGrekkp28OBG-nZuOQuFw`
+      `https://bsproxy.royaleapi.dev/v1/players/%23${id}/battlelog?limit=9&authorization=Bearer%20eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjM5ZTYxMTk4LTYwZWYtNDY3YS05MWVkLTY3NjU4MGVkMDJlZSIsImlhdCI6MTY3MzMxNDY3Mywic3ViIjoiZGV2ZWxvcGVyLzNhZDRhZDlkLWIwNmEtZjBkYi00YWQyLTJhYzM2MDRlYjU5YiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDUuNzkuMjE4Ljc5Il0sInR5cGUiOiJjbGllbnQifV19.IpvoeicRr4llh7naPDJk-828Vx3EIGMl8QogdYy1h7sof0u8T9IcQvoyLmEyDXiYcTGrekkp28OBG-nZuOQuFw`
     ).then((res) => res.json()),
   ]
 

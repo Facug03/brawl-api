@@ -1,5 +1,5 @@
 export async function postBrawler(brawlers) {
-  const res = await fetch('http://localhost:3001/api/rate', {
+  const res = await fetch('http://localhost:3000/api/rate', {
     headers: {
       'Content-Type': 'application/json',
     },
@@ -73,20 +73,22 @@ export function sortBrawlers(items, player) {
   })
 
   showdown.forEach((map) => {
-    const winners = map.battle.players
-      .slice(0, 4)
-      .map((player) => player.brawler.name)
-    const losers = map.battle.players
-      .slice(4)
-      .map((player) => player.brawler.name)
+    if (map.event.map) {
+      const winners = map.battle.players
+        .slice(0, 4)
+        .map((player) => player.brawler.name)
+      const losers = map.battle.players
+        .slice(4)
+        .map((player) => player.brawler.name)
 
-    brawlersVictory = {
-      ...brawlersVictory,
-      [map.event.id]: [...(brawlersVictory[map.event.id] || []), ...winners],
-    }
-    brawlersDefeat = {
-      ...brawlersDefeat,
-      [map.event.id]: [...(brawlersDefeat[map.event.id] || []), ...losers],
+      brawlersVictory = {
+        ...brawlersVictory,
+        [map.event.id]: [...(brawlersVictory[map.event.id] || []), ...winners],
+      }
+      brawlersDefeat = {
+        ...brawlersDefeat,
+        [map.event.id]: [...(brawlersDefeat[map.event.id] || []), ...losers],
+      }
     }
   })
 
