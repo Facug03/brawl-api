@@ -5,5 +5,7 @@
 }
 
 body {
+  max-width: 1450px;
+  margin: 0 auto;
   background-color: #363b4e;
 }
