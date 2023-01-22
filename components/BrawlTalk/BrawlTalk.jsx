@@ -16,23 +16,27 @@ export default function BrawlTalk() {
           <span className={styles.info}> February 2023</span>, it was confirmed
           by Supercell in the last one.
         </p>
-        <h3 className={styles.text}>What is going to contain?</h3>
-        <p className={styles.p}>
-          We don&apos;t know yet but one feature that probably will be added is
-          <span className={styles.info}> masteries </span>
-          because we had a little skeak peek in The Brawlies 2022 and it was a
-          thing that they wanted to add as they told ous in season 14 Brawl
-          Talk.
-        </p>
-        {/* <h3 className={styles.text}>Masteries</h3> */}
-
-        <Image
-          className={styles.img}
-          src={masteries}
-          alt='masteries brawl stars'
-          width={375}
-          height={200}
-        />
+        <h3 className={styles.text}>
+          What is going to <span className={styles.info}>contain</span>?
+        </h3>
+        <div className={styles.masteCont}>
+          <p className={styles.p}>
+            We don&apos;t know yet but one feature that probably will be added
+            is
+            <span className={styles.info}> masteries </span>
+            because we had a little skeak peek in The Brawlies 2022 and it was a
+            thing that they wanted to add as they told ous in season 14 Brawl
+            Talk.
+          </p>
+          <div className={styles.imgCont}>
+            <Image
+              className={styles.img}
+              src={masteries}
+              alt='masteries in brawl stars'
+              fill={true}
+            />
+          </div>
+        </div>
       </article>
     </section>
   )
