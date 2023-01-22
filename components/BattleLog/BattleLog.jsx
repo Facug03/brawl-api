@@ -182,6 +182,24 @@ export default function BattleLog({
           ))}
         </div>
       )}
+
+      {battle.mode === 'roboRumble' && (
+        <div className={styles.battleBigBrawler}>
+          {battle.players.map((player) => (
+            <PlayerBrawler
+              key={player.tag}
+              trophies={player.brawler.trophies}
+              vs={true}
+              id={player.brawler.id}
+              name={player.brawler.name}
+              playerName={player.name}
+              power={player.brawler.power}
+              player={playerProfile}
+              nameColor={nameColor}
+            />
+          ))}
+        </div>
+      )}
     </article>
   )
 }
