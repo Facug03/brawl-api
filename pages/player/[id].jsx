@@ -37,7 +37,11 @@ export default function Player(player) {
         window.localStorage.setItem(
           'player',
           JSON.stringify([
-            { player: player.name, tagPlayer: player.tag },
+            {
+              player: player.name,
+              tagPlayer: player.tag,
+              color: `#${player.nameColor.slice(4)}`,
+            },
             ...profile.slice(0, -1),
           ])
         )
