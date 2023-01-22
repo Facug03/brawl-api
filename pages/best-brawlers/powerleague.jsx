@@ -41,7 +41,7 @@ export default function PowerLeague(leagueBrawlers) {
             height={50}
           />
         </div>
-        <section>
+        {/* <section>
           {modes.map((mode) => (
             <article key={mode.name}>
               <h2>{mode.name}</h2>
@@ -67,7 +67,7 @@ export default function PowerLeague(leagueBrawlers) {
               ))}
             </article>
           ))}
-        </section>
+        </section> */}
       </Container>
     </>
   )
