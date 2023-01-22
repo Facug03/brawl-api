@@ -9,22 +9,29 @@ import { mode } from '../../utils/profileInfo'
 import { BRAWLERS } from '../../utils/rankings'
 
 export default function PowerLeague(leagueBrawlers) {
-  console.log(leagueBrawlers)
   return (
     <>
       <Head>
-        <title>{' profile | Brawl Stars Stats'}</title>
-        <meta property='og:title' content={' profile | Brawl Stars Stats'} />
+        <title>
+          Best brawlers for Power Legue | Brawl Stars Stats & database
+        </title>
+        <meta
+          property='og:title'
+          content=' Best brawlers for Power League | Brawl Stars Database & Stats'
+        />
         <meta
           name='description'
-          content={`Brawl Stars stats of , battle log, brawlers and more info!.`}
+          content='Best brawlers for power league, maps so you can see what is the best pick.'
         />
         <meta
           property='og:description'
-          content={`Brawl Stars stats of , battle log, brawlers and more info!.`}
+          content='Best brawlers for power league, maps so you can see what is the best pick.'
         />
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
-        <meta property='og:url' content={`https://www.brawlpro.com/player/`} />
+        <meta
+          property='og:url'
+          content='https://www.brawlpro.com/brawlers/powerleague'
+        />
         <meta property='og:site_name' content='Brawl Pro' />
         <meta property='og:type' content='website' />
         <meta name='theme-color' content='#363b4e' />
@@ -32,6 +39,7 @@ export default function PowerLeague(leagueBrawlers) {
       </Head>
       <Container>
         <div className={styles.head}>
+          <h2>Still recolecting data, so this picks may not be accurate</h2>
           <h2 className={styles.title}>
             Best brawlers for <span className={styles.power}>Power</span>
             <span className={styles.league}>League</span>
@@ -48,7 +56,6 @@ export default function PowerLeague(leagueBrawlers) {
           <div className={styles.links}>
             {modes.map((brawlMap) => (
               <a
-                // style={{ backgroundColor: mode[brawlMap.name].color }}
                 className={styles.link}
                 key={'#' + brawlMap.name}
                 href={`#${brawlMap.name}`}
