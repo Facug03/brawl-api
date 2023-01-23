@@ -179,8 +179,12 @@ export const mode = {
   heist: { name: 'Heist', color: '#d85cd4' },
   roboRumble: { name: 'Robo Rumble', color: '#ae0026' },
   basketBrawl: { name: 'Basket Brawl', color: '#088cf1' },
-  duels: { name: 'Duels', color: '#088cf1' },
-  bossFight: { name: 'Boss Fight', color: '#088cf1' },
+  duels: {
+    name: 'Duels',
+    color:
+      'linear-gradient(133deg, rgba(60,118,229,1) 15%, rgba(119,216,229,0.9570027840237657) 49%, rgba(231,33,14,0.9205882181974352) 50%, rgba(240,34,16,1) 88%)',
+  },
+  bossFight: { name: 'Boss Fight', color: '#d22122' },
 }
 
 const brawlers = {

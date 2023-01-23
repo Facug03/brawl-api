@@ -41,7 +41,9 @@ export default function Player(player) {
             {
               player: player.name,
               tagPlayer: player.tag,
-              color: `#${player.nameColor.slice(4)}`,
+              color: player.nameColor
+                ? `#${player.nameColor.slice(4)}`
+                : '#ffffff',
             },
             ...profile,
           ])
@@ -55,7 +57,9 @@ export default function Player(player) {
             {
               player: player.name,
               tagPlayer: player.tag,
-              color: `#${player.nameColor.slice(4)}`,
+              color: player.nameColor
+                ? `#${player.nameColor.slice(4)}`
+                : '#ffffff',
             },
             ...profile.slice(0, -1),
           ])
@@ -68,7 +72,9 @@ export default function Player(player) {
     return <h3 className={styles.error}>Error</h3>
   }
 
-  const nameColor = `#${player.nameColor.slice(4)}`
+  const nameColor = player.nameColor
+    ? `#${player.nameColor.slice(4)}`
+    : '#ffffff'
   return (
     <>
       <Head>

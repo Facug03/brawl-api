@@ -112,6 +112,12 @@ export default function PowerLeague(leagueBrawlers) {
                                   }/custom`}
                                   alt={`Information of ${brawler.name}`}
                                   fill={true}
+                                  sizes='60px,
+                                  (min-width: 400px) 70px,
+                                  (min-width: 450px) 75px,
+                                  (min-width: 730px) 62px, 
+                                  (min-width: 775px) 72px, 
+                                  (min-width: 915px) 67px'
                                 />
                                 <h4 className={styles.winRate}>
                                   {brawler.winRate}%
@@ -131,6 +137,7 @@ export default function PowerLeague(leagueBrawlers) {
                         src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawlMap.id}/map`}
                         alt={`${brawlMap.name}`}
                         fill={true}
+                        sizes='200px, (min-width: 915px) 200px'
                       />
                     </div>
                   </div>

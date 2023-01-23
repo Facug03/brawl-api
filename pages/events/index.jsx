@@ -38,7 +38,7 @@ export default function Events({ events }) {
           return (
             <article className={styles.article} key={ele.event.id}>
               <div
-                style={{ backgroundColor: mode[ele.event.mode]?.color }}
+                style={{ background: mode[ele.event.mode]?.color }}
                 className={styles.div}
               >
                 <div className={styles.info}>
@@ -49,7 +49,9 @@ export default function Events({ events }) {
                       width={33}
                       height={35}
                     />
-                    <h3 className={styles.mode}>{mode[ele.event.mode].name}</h3>
+                    <h3 className={styles.mode}>
+                      {mode[ele.event.mode]?.name}
+                    </h3>
                   </div>
                   <h4 className={styles.map}>{ele.event.map}</h4>
                   <h5 className={styles.newMap}>
@@ -63,7 +65,8 @@ export default function Events({ events }) {
                   styles.showdown
                 } ${styles.img} ${
                   (ele.event.mode === 'roboRumble' ||
-                    ele.event.mode === 'basketBrawl') &&
+                    ele.event.mode === 'basketBrawl' ||
+                    ele.event.mode === 'bossFight') &&
                   styles.showdown
                 } ${styles.img}`}
                 src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${ele.event.id}/map`}
