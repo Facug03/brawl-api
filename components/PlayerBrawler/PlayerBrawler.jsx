@@ -54,14 +54,15 @@ export default function PlayerBrawler({
       </div>
       {playerName === player ? (
         <div>
-          <Image
-            className={styles.imgBrawl}
-            src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
-            alt={`Information of ${name}`}
-            width={100}
-            height={100}
-            priority={false}
-          />
+          <div className={styles.imgCont}>
+            <Image
+              className={styles.imgBrawl}
+              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
+              alt={`Information of ${name}`}
+              fill={true}
+              priority={false}
+            />
+          </div>
           <span className={`${vs ? styles.powerVs : styles.power}`}>
             LVL. {power}
           </span>
@@ -73,14 +74,15 @@ export default function PlayerBrawler({
         </div>
       ) : (
         <a className={styles.link} href={`${tag.slice(1)}`}>
-          <Image
-            className={styles.imgBrawl}
-            src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
-            alt={`Information of ${name}`}
-            width={100}
-            height={100}
-            priority={false}
-          />
+          <div className={styles.imgCont}>
+            <Image
+              className={styles.imgBrawl}
+              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
+              alt={`Information of ${name}`}
+              fill={true}
+              priority={false}
+            />
+          </div>
           <span className={`${vs ? styles.powerVs : styles.power}`}>
             LVL. {power}
           </span>

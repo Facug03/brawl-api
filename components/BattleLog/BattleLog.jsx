@@ -29,13 +29,14 @@ export default function BattleLog({
       <div className={styles.container}>
         <div>
           <div className={styles.mode}>
-            <Image
-              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${battle.mode}/mini`}
-              alt={`${mode[battle.mode].name} icon map brawl stars`}
-              width={34}
-              height={33}
-              priority={false}
-            />
+            <div className={styles.iconCont}>
+              <Image
+                src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${battle.mode}/mini`}
+                alt={`${mode[battle.mode].name} icon map brawl stars`}
+                fill={true}
+                priority={false}
+              />
+            </div>
             <h3 className={styles.modeName}>{mode[battle.mode].name}</h3>
           </div>
           <h4 className={styles.mapName}>{event.map}</h4>
@@ -91,7 +92,7 @@ export default function BattleLog({
             ))}
           </div>
         ) : (
-          <div className={styles.modeContainer}>
+          <div className={styles.duoContainer}>
             {battle.teams.map((team) => (
               <div className={styles.teams} key={team[0].name}>
                 {team.map((player) => (

@@ -13,6 +13,7 @@
 }
 
 .trophiesBrawler {
+    z-index: 50;
     position: absolute;
     display: flex;
     padding: 3px;
@@ -22,6 +23,7 @@
 }
 
 .leagueRanked {
+    z-index: 50;
     position: absolute;
     display: flex; 
     padding: 3px;
@@ -41,6 +43,12 @@
     color: #fdd935;
 }
 
+.imgCont {
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
 .imgBrawl {
     object-fit: cover;
     border: 5px #000000 solid;
@@ -55,30 +63,102 @@
     position: absolute;
     padding: 3px;
     background-color: #000;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     left: 0;
-    bottom: 22px;
+    bottom: 15px;
 }
 
 .powerVs {
     position: absolute;
     padding: 3px;
     background-color: #000;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     left: 0;
-    bottom: 26px;
+    bottom: 17px;
 }
 
 .playerName {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     text-align: center;
 }
+
+
+@media (min-width: 500px) {
+    .playerName {
+        font-size: 13px;
+    }
+
+    .power {
+        bottom: 15px;
+    }
+    
+    .powerVs {
+        bottom: 19px;
+    }
+}
+
+@media (min-width: 700px) {
+    .playerName {
+        font-size: 15px;
+    }
+
+    .power {
+        font-size: 14px;
+        bottom: 22px;
+    }
+    
+    .powerVs {
+        font-size: 14px;
+        bottom: 20px;
+    }
+
+    .imgCont {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+@media (min-width: 1380px) {
+    .power {
+        position: absolute;
+        padding: 3px;
+        background-color: #000;
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+        text-shadow: #000 -1px 2px, #000 -1px -1px;
+        left: 0;
+        bottom: 22px;
+    }
+    
+    .powerVs {
+        position: absolute;
+        padding: 3px;
+        background-color: #000;
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+        text-shadow: #000 -1px 2px, #000 -1px -1px;
+        left: 0;
+        bottom: 26px;
+    }
+
+    .playerName {
+        font-size: 15px;
+        font-weight: 600;
+        color: #ffffff;
+        text-shadow: #000 -1px 2px, #000 -1px -1px;
+        text-align: center;
+    }
+}
+

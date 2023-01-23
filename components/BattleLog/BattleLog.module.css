@@ -7,18 +7,18 @@
 }
 
 .typeMode {
-    padding: 10px 10px 5px 0;
-    font-size: 20px;
+    padding: 5px 5px 2.5px 5px;
+    font-size: 15px;
     font-weight: 700;
     color: #ffffff;
     text-shadow: #000 -2px 2px, #000 -1px -1px;
     text-transform: capitalize;
-    text-align: center;
+    text-align: left;
 }
 
 .timeAgo {
-    padding: 12px 10px 5px 0;
-    font-size: 15px;
+    padding: 7px 5px 2.5px 0;
+    font-size: 9.5px;
     font-weight: 700;
     position: absolute;
     top: 0;
@@ -27,7 +27,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     margin: 0 0 30px 0;
     align-items: center;
     background-color: #736a96;
@@ -40,18 +40,24 @@
     gap: 5px;
 }
 
+.iconCont {
+    position: relative;
+    width: 24px;
+    height: 23px;
+}
+
 .modeName {
     font-weight: 700;
+    font-size: 14px;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
 }
 
 .mapName {
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 600;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
-    padding-left: 40px;
 }
 
 .resContainer {
@@ -59,9 +65,9 @@
 }
 
 .result {
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 700;
-    text-shadow: #000 -2px 3px, #000 -1px -1px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
     text-transform: uppercase;
 }
 
@@ -90,7 +96,13 @@
 
 .modeContainer {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 30px;
+}
+
+.duoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: 30px;
 }
 
@@ -141,16 +153,16 @@
     bottom: 22px;
 } */
 
-.battleContainer {
+/* .battleContainer {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
     padding: 0 10px;
-}
+} */
 
 .brawlers {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 /* .imgBrawl {
@@ -172,8 +184,9 @@
 }
 
 .vs {
-    font-size: 45px;
+    font-size: 30px;
     font-weight: 800;
+    text-align: center;
     color: #ffffff;
     text-shadow: #000 -2px 3px, #000 -1px -1px;
 }
@@ -183,3 +196,176 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+@media (min-width: 350px) {
+    .typeMode {
+        font-size: 17px;
+    }
+    
+    .timeAgo {
+        font-size: 11px;
+    }
+
+    .modeName {
+        font-size: 15px;
+    }
+    
+    .mapName {
+        font-size: 11px;
+    } 
+    
+    .result {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 400px) {
+    .typeMode {
+        text-align: center;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    
+    .modeName {
+        font-size: 15px;
+    }
+
+    .modeContainer {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    
+    .mapName {
+        font-size: 11px;
+    } 
+    
+    .result {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 500px) {
+    .typeMode {
+        text-align: center;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    
+    .modeName {
+        font-size: 16px;
+    }
+    
+    .mapName {
+        font-size: 12px;
+    } 
+
+    .duoContainer {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .brawlers {
+        justify-content: space-evenly;
+    }
+    
+    .result {
+        font-size: 22px;
+    }
+}
+
+
+@media (min-width: 700px) {
+    .typeMode {
+        font-size: 20px;
+    }
+
+    .timeAgo {
+        font-size: 15px;
+    }
+
+    .iconCont {
+        width: 34px;
+        height: 33px;
+    }
+    
+    .modeName {
+        font-size: 20px;
+    }
+    
+    .mapName {
+        font-size: 12px;
+        padding-left: 40px;
+    } 
+
+    .brawler {
+        justify-content: space-between;
+    }
+
+
+    .duoContainer {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .result {
+        font-size: 24px;
+    }
+
+    .vs {
+        font-size: 40px;
+    }
+}
+
+
+@media (min-width: 900px) {
+    .duoContainer {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+
+@media (min-width: 1175px) {
+    .typeMode {
+        padding: 10px 10px 5px 0;
+        font-size: 20px;
+    }
+    
+    .timeAgo {
+        padding: 12px 10px 5px 0;
+        font-size: 15px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin: 0 0 30px 0;
+        align-items: center;
+        background-color: #736a96;
+        padding: 15px 10px;
+    }
+
+    .modeContainer {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    
+    .mapName {
+        font-size: 13px;
+    }
+
+    .brawlers {
+        justify-content: space-evenly;
+    }
+
+    .vs {
+        font-size: 45px;
+    }
+
+    .battleContainer {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: center;
+        padding: 0 10px;
+    }
+}
+
