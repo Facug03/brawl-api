@@ -180,6 +180,7 @@ export const mode = {
   roboRumble: { name: 'Robo Rumble', color: '#ae0026' },
   basketBrawl: { name: 'Basket Brawl', color: '#088cf1' },
   duels: { name: 'Duels', color: '#088cf1' },
+  bossFight: { name: 'Boss Fight', color: '#088cf1' },
 }
 
 const brawlers = {
