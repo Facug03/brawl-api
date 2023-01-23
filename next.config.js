@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
-  webpack: (config) => {
-  config.experiments = {
+  experiments = {
     topLevelAwait: true,
   },
   images: {
