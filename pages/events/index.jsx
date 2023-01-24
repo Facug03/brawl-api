@@ -19,11 +19,11 @@ export default function Events({ events }) {
         />
         <meta
           name='description'
-          content='Brawl Stars maps, event rotation and modes like brawl ball, gem grab and you can know when a challengue stars!.'
+          content='Brawl Stars maps, event rotation and modes like brawl ball, gem grab, duels and you can know when a challengue stars!.'
         />
         <meta
           property='og:description'
-          content='Brawl Stars maps, event rotation and modes like brawl ball, gem grab and you can know when a challengue stars!.'
+          content='Brawl Stars maps, event rotation and modes like brawl ball, gem grab, duels and you can know when a challengue stars!.'
         />
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta property='og:url' content='https://www.brawlpro.com/events' />
