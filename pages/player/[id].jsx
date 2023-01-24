@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import Image from 'next/image'
 
 import styles from './Player.module.css'
@@ -151,12 +150,12 @@ export default function Player(player) {
                 Club
               </h3>
 
-              <Link
+              <a
                 className={styles.infoClub}
                 href={`/club/${player.club.tag.slice(1)}`}
               >
                 <p className={styles.stats}>{player.club.name}</p>
-              </Link>
+              </a>
             </div>
           )}
           <div className={styles.statsProfile}>

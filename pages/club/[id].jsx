@@ -75,25 +75,26 @@ export default function Club(club) {
       <Container>
         <header className={styles.head}>
           <div className={styles.icon}>
-            <Image
-              className={styles.img}
-              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${club.badgeId}/profile`}
-              alt='profile picture of Brawl Stars'
-              width={110}
-              height={120}
-            />
+            <div className={styles.imgCont}>
+              <Image
+                src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${club.badgeId}/profile`}
+                alt='profile picture of Brawl Stars'
+                fill={true}
+              />
+            </div>
             <p className={styles.tag}>{club.tag}</p>
           </div>
           <div className={styles.profile}>
             <div className={styles.profileContainer}>
               <h2 className={styles.name}>{club.name}</h2>
               <div className={styles.trophies}>
-                <Image
-                  src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
-                  alt='trophy icon'
-                  width={30}
-                  height={25}
-                />
+                <div className={styles.imgTro}>
+                  <Image
+                    src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
+                    alt='trophy icon'
+                    fill={true}
+                  />
+                </div>
                 <p className={styles.number}>{club.trophies}</p>
               </div>
             </div>
@@ -105,13 +106,16 @@ export default function Club(club) {
             <p className={styles.stats}>{club.type}</p>
           </div>
           <div className={styles.statTrophies}>
-            <h3 className={styles.infoPlayer}>Required Trophies</h3>
-            <Image
-              src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
-              alt='trophy icon'
-              width={30}
-              height={25}
-            />
+            <h3 className={`${styles.infoPlayer} ${styles.reqTro}`}>
+              Required Trophies
+            </h3>
+            <div className={styles.imgTro}>
+              <Image
+                src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
+                alt='trophy icon'
+                fill={true}
+              />
+            </div>
             <p className={styles.stats}>{club.requiredTrophies}</p>
           </div>
         </div>
