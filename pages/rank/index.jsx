@@ -60,7 +60,7 @@ export default function Rank({ rankings }) {
   return (
     <>
       <Head>
-        <title>Leaderboards | Brawl Stars Stats & Best Players</title>
+        <title>Leaderboards Top Global Players | Brawl Pro</title>
         <meta
           property='og:title'
           content='Leaderboards Top Global Players | Brawl Pro'
