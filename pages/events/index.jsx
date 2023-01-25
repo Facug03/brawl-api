@@ -12,7 +12,7 @@ export default function Events({ events }) {
   return (
     <Container>
       <Head>
-        <title>Event Rotation | Brawl Stars Maps & Modes</title>
+        <title>Event Rotation, Maps & Modes | Brawl Pro</title>
         <meta
           property='og:title'
           content='Event Rotation, Maps & Modes | Brawl Pro'
