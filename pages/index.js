@@ -7,15 +7,15 @@ export default function Home() {
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Brawl Pro | Brawl Stars Stats</title>
+        <title>Best Brawlers Database, Information About Brawl Talk | Brawl Pro</title>
         <meta name='application-name' content='Brawl Pro' />
         <meta
           name='description'
-          content='Brawl Pro. Brawl Stars Stats, information about Brawl Talk, best Brawlers for power league and showdown. Search your profile statistics, battle log, see leaderboard from the world and each country'
+          content='Brawl Stars Stats, information about Brawl Talk, best Brawlers for power league and showdown. Search your profile statistics, battle log, see leaderboard from the world and each country'
         />
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
-        <meta property='og:title' content='Brawl Pro | Brawl Stars Stats' />
-        <meta property='og:url' content='https://www.brawlpro.com' />
+        <meta property='og:title' content='Brawl Stars Stats, Database & Maps | Brawl Pro' />
+        <meta property='og:url' content='https://brawlpro.com' />
         <meta property='og:site_name' content='Brawl Pro' />
         <meta property='og:type' content='website' />
         <meta name='theme-color' content='#363b4e' />
