@@ -13,7 +13,7 @@ export default function PowerLeague(leagueBrawlers) {
     <>
       <Head>
         <title>
-          Best brawlers for Power Legue | Brawl Stars Stats & database
+          Best Brawlers for Power League Database | Brawl Pro
         </title>
         <meta
           property='og:title'
