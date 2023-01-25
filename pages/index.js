@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <title>Best Brawlers Database, Information About Brawl Talk | Brawl Pro</title>
+        <title>Brawl Stars Stats, Database & Maps | Brawl Pro</title>
         <meta name='application-name' content='Brawl Pro' />
         <meta
           name='description'
