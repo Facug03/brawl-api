@@ -1,3 +1,23 @@
+.modes {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.linkMode {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    text-shadow: #000 -2px 3px, #000 -1.5px -1.5px;
+}
+
+.actualPage {
+    color: #e60302;
+    font-size: 15px;
+    text-shadow: #000 -2px 3px, #000 -1.5px -1.5px;
+}
+
 .head {
     display: flex;
     align-items: center;
@@ -59,10 +79,6 @@
     font-size: 12px;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     border-left: #000 2px solid;
-}
-
-.showdown {
-    object-fit: contain;
 }
 
 .container {
@@ -161,6 +177,15 @@
 }
 
 @media (min-width: 450px) {
+    .linkMode {
+        font-size: 18px;
+    }
+    
+    .actualPage {
+        font-size: 18px;
+    }
+
+
     .title {
         font-size: 27px;
     }
@@ -195,6 +220,14 @@
 }
 
 @media (min-width: 700px) {
+    .linkMode {
+        font-size: 20px;
+    }
+    
+    .actualPage {
+        font-size: 20px;
+    }
+
     .title {
         font-size: 30px;
     }

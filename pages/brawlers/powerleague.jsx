@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import styles from './PowerLeague.module.css'
 import Container from '../../components/Container/Container'
@@ -9,12 +10,11 @@ import { mode } from '../../utils/profileInfo'
 import { BRAWLERS } from '../../utils/rankings'
 
 export default function PowerLeague(leagueBrawlers) {
+  const { pathname } = useRouter()
   return (
     <>
       <Head>
-        <title>
-          Best Brawlers for Power League Database | Brawl Pro
-        </title>
+        <title>Best Brawlers for Power League Database | Brawl Pro</title>
         <meta
           property='og:title'
           content=' Best brawlers for Power League | Brawl Stars Database & Stats'
@@ -38,6 +38,25 @@ export default function PowerLeague(leagueBrawlers) {
         <link rel='icon' href='/crown.png' />
       </Head>
       <Container>
+        {pathname.includes('showdown') ? (
+          <div className={styles.modes}>
+            <h3>
+              <a className={styles.linkMode} href='powerleague'>
+                Power League
+              </a>
+            </h3>
+            <h3 className={styles.actualPage}>Showdown</h3>
+          </div>
+        ) : (
+          <div className={styles.modes}>
+            <h3 className={styles.actualPage}>Power League</h3>
+            <h3>
+              <a className={styles.linkMode} href='showdown'>
+                Showdown
+              </a>
+            </h3>
+          </div>
+        )}
         <h2>Still recolecting data, so this picks may not be accurate.</h2>
         <div className={styles.head}>
           <h2 className={styles.title}>

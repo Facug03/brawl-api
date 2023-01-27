@@ -99,12 +99,17 @@ export const modes = [
   },
 ]
 
-const showdown = [
-  { name: '', id: '15000014' },
-  { name: '', id: '15000101' },
-  { name: '', id: '15000013' },
-  { name: '', id: '15000043' },
-  { name: '', id: '15000033' },
-  { name: '', id: '15000032' },
-  { name: '', id: '15000016' },
+export const showdown = [
+  {
+    name: 'showdown',
+    maps: [
+      { name: 'Scorched Stone', id: '15000014' },
+      { name: 'Dark Passage', id: '15000101' },
+      { name: 'Skull Creek', id: '15000013' },
+      { name: 'Double Trouble', id: '15000043' },
+      { name: 'Cavern Churn', id: '15000033' },
+      { name: 'Acid Lakes', id: '15000032' },
+      { name: 'Feast or Famine', id: '15000016' },
+    ],
+  },
 ]
