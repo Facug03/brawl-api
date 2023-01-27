@@ -77,10 +77,10 @@ export default function Player(player) {
   return (
     <>
       <Head>
-        <title>{player.name + ' profile | Brawl Stars Stats'}</title>
+        <title>{player.name + ' Profile Stats & Battle Log | Brawl Pro'}</title>
         <meta
           property='og:title'
-          content={player.name + ' profile | Brawl Stars Stats'}
+          content={player.name + ' Profile Stats & Battle Log | Brawl Pro'}
         />
         <meta
           name='description'

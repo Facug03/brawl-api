@@ -49,7 +49,7 @@ export default function Club(club) {
   return (
     <>
       <Head>
-        <title>{club.name + ' club | Brawl Stars Stats'}</title>
+        <title>{club.name + ' Club Stats & Members | Brawl Pro'}</title>
         <meta
           property='og:title'
           content={club.name + ' club | Brawl Stars Stats'}
