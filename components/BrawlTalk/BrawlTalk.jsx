@@ -13,9 +13,10 @@ export default function BrawlTalk() {
       </h2>
       <article className={styles.article}>
         <p className={styles.p}>
-          Next Brawl Talk is going to in
-          <span className={styles.info}> February 25</span> because this image
-          was posted in the official Brawl Stars account.
+          Next Brawl Talk will be on
+          <span className={styles.info}> February 25</span> because the official
+          Brawl Stars account posted this image that hides a hint as they always
+          do.
         </p>
         <div className={`${styles.imgCont} ${styles.margin}`}>
           <Image
@@ -26,7 +27,7 @@ export default function BrawlTalk() {
           />
         </div>
         <p className={styles.p}>
-          As you can see in the top middle, there is a hint, but what does it
+          As you can see in the top middle, there is a number, but what does it
           mean?.
         </p>
         <p className={styles.p}>
@@ -43,7 +44,7 @@ export default function BrawlTalk() {
         </h3>
         <div className={styles.masteCont}>
           <p className={styles.p}>
-            We don&apos;t know yet but one feature that probably will be added
+            We don&apos;t know yet, but one feature that probably will be added
             is
             <span className={styles.info}> masteries </span>
             because we had a little skeak peek in The Brawlies 2022 and it was a
