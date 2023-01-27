@@ -11,9 +11,14 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Script
-        async={true}
-        crossOrigin='anonymous'
+        id='Adsense-id'
+        async='true'
+        strategy='afterInteractive'
         src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8963046990416483'
+        crossOrigin='anonymous'
+        onError={(e) => {
+          console.error('Script failed to load', e)
+        }}
       />
       <div className={rubik.className}>
         <Nav />
