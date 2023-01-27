@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 import styles from './BrawlTalk.module.css'
 import masteries from '../../public/masteries.jpg'
+import nextTalk from '../../public/brawltalk.jpeg'
 
 export default function BrawlTalk() {
   return (
@@ -13,8 +14,29 @@ export default function BrawlTalk() {
       <article className={styles.article}>
         <p className={styles.p}>
           Next Brawl Talk is going to in
-          <span className={styles.info}> February 2023</span>, it was confirmed
-          by Supercell in the last one.
+          <span className={styles.info}> February 25</span> because this image
+          was posted in the official Brawl Stars account.
+        </p>
+        <div className={`${styles.imgCont} ${styles.margin}`}>
+          <Image
+            className={styles.img}
+            src={nextTalk}
+            alt='masteries in brawl stars'
+            fill={true}
+          />
+        </div>
+        <p className={styles.p}>
+          As you can see in the top middle, there is a hint, but what does it
+          mean?.
+        </p>
+        <p className={styles.p}>
+          <span className={styles.info}>8</span> = B - Brawl
+        </p>
+        <p className={styles.p}>
+          <span className={styles.info}>7</span> = T - Talk
+        </p>
+        <p className={styles.p}>
+          <span className={styles.info}>25022023</span> = 25/02/2023
         </p>
         <h3 className={styles.text}>
           What is going to <span className={styles.info}>contain</span>?

@@ -205,6 +205,10 @@
         font-size: 23px;
     }
 
+    .text {
+        font-size: 23px;
+    }
+
     .imgTrophy {
         width: 25px;
         height: 20px;
@@ -266,6 +270,11 @@
     }
 
     .name {
+        font-size: 25px;
+    }
+
+
+    .text {
         font-size: 25px;
     }
 
@@ -338,6 +347,10 @@
         font-size: 28px;
     }
 
+    .text {
+        font-size: 28px;
+    }
+
     .number {
         font-size: 20px;
     }
@@ -393,9 +406,6 @@
     }
 }
 
-
-
-
 @media (min-width: 915px) {
     .head {
         justify-content: unset;
@@ -414,7 +424,6 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
     } 
 }
-
 
 @media (min-width: 1000px) {
     .brawlers {
