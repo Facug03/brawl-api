@@ -28,7 +28,7 @@ export default function Card({ type }) {
   const playerPage = (e) => {
     e.preventDefault()
     if (id.length) {
-      window.location.href = `https://www.brawlpro.com/${type}/${id}`
+      window.location.href = `https://brawlpro.com/${type}/${id}`
     }
   }
 

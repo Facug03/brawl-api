@@ -3,7 +3,7 @@ import styles from './Nav.module.css'
 export default function Nav() {
   return (
     <header className={styles.header}>
-      <a href='https://www.brawlpro.com/' className={styles.logo}>
+      <a href='https://brawlpro.com/' className={styles.logo}>
         <h1 className={styles.game}>
           Brawl <span className={styles.pro}>Pro</span>
         </h1>
@@ -12,18 +12,18 @@ export default function Nav() {
         <li>
           <a
             className={styles.li}
-            href='https://www.brawlpro.com/brawlers/powerleague'
+            href='https://brawlpro.com/brawlers/powerleague'
           >
             Best Brawlers
           </a>
         </li>
         <li>
-          <a className={styles.li} href='https://www.brawlpro.com/events'>
+          <a className={styles.li} href='https://brawlpro.com/events'>
             Events
           </a>
         </li>
         <li>
-          <a className={styles.li} href='https://www.brawlpro.com/rank'>
+          <a className={styles.li} href='https://brawlpro.com/rank'>
             Rankings
           </a>
         </li>

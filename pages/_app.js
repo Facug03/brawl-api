@@ -3,7 +3,7 @@ import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
 
 import Nav from '../components/Nav/Nav'
-import Footer from '../components/Footer/Footer'
+// import Footer from '../components/Footer/Footer'
 import '../styles/globals.css'
 
 const rubik = Rubik({ subsets: ['latin'] })

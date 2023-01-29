@@ -30,7 +30,7 @@ export default function PowerLeague(leagueBrawlers) {
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta
           property='og:url'
-          content='https://www.brawlpro.com/brawlers/powerleague'
+          content='https://brawlpro.com/brawlers/powerleague'
         />
         <meta property='og:site_name' content='Brawl Pro' />
         <meta property='og:type' content='website' />
