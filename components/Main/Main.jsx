@@ -6,6 +6,7 @@ import Tutorial from '../Tutorial/Tutorial'
 import Card from '../Card/Card'
 import Container from '../Container/Container'
 import BrawlTalk from '../BrawlTalk/BrawlTalk'
+import NewGame from '../NewGame/NewGame'
 
 export default function Main() {
   const [dropPlayer, setDropPlayer] = useState(false)
@@ -82,6 +83,7 @@ export default function Main() {
             </div>
           </div>
         </Tutorial>
+        <NewGame />
         <BrawlTalk />
       </Container>
     </main>
