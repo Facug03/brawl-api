@@ -2,7 +2,7 @@
 module.exports = {
   siteUrl: 'https://brawlpro.com',
   generateRobotsTxt: true,
-  changefreq: 'weekly',
+  changefreq: 'daily',
   additionalPaths: async (config) => {
     const result = []
 
