@@ -4,7 +4,7 @@ import styles from './Footer.module.css'
 export default function Footer() {
   return (
     <Container>
-      <footer>
+      <footer className={styles.footer}>
         <p>If you want to suggest any idea of send me some feedback:</p>
         <p>brawlprocontact@gmail.com</p>
         <p>
