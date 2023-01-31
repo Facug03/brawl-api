@@ -35,7 +35,7 @@ export default function Shodown(leagueBrawlers) {
         <meta property='og:site_name' content='Brawl Pro' />
         <meta property='og:type' content='website' />
         <meta name='theme-color' content='#363b4e' />
-        <link rel='icon' href='/crown.png' />
+        <link rel='icon' href='/logo.png' />
         <link rel='canonical' href='https://brawlpro.com/brawlers/showdown' />
       </Head>
       <Container>
