@@ -31,6 +31,7 @@ export default function Events({ events }) {
         <meta property='og:type' content='website' />
         <meta name='theme-color' content='#363b4e' />
         <link rel='icon' href='/crown.png' />
+        <link rel='canonical' href='https://brawlpro.com/events' />
       </Head>
       <h2 className={styles.title}>Events Rotation</h2>
       <section className={styles.section}>

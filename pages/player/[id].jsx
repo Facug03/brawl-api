@@ -99,6 +99,10 @@ export default function Player(player) {
         <meta property='og:type' content='website' />
         <meta name='theme-color' content='#363b4e' />
         <link rel='icon' href='/crown.png' />
+        <link
+          rel='canonical'
+          href={`https://brawlpro.com/player/${player.tag.slice(1)}`}
+        />
       </Head>
       <Container>
         <header className={styles.head}>

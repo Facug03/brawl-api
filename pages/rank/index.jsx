@@ -79,6 +79,7 @@ export default function Rank({ rankings }) {
         <meta property='og:type' content='website' />
         <meta name='theme-color' content='#363b4e' />
         <link rel='icon' href='/crown.png' />
+        <link rel='canonical' href='https://brawlpro.com/rank' />
       </Head>
       <Container>
         <h2 className={styles.title}>Leaderboards</h2>
