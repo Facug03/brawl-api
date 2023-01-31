@@ -1,6 +1,6 @@
 import { Rubik } from '@next/font/google'
 import { Analytics } from '@vercel/analytics/react'
-import Script from 'next/script'
+// import Script from 'next/script'
 
 import Nav from '../components/Nav/Nav'
 // import Footer from '../components/Footer/Footer'
@@ -11,7 +11,7 @@ const rubik = Rubik({ subsets: ['latin'] })
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Script
+      {/* <Script
         id='Adsense-id'
         async='true'
         strategy='afterInteractive'
@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
         onError={(e) => {
           console.error('Script failed to load', e)
         }}
-      />
+      /> */}
       <div className={rubik.className}>
         <Nav />
         <Component {...pageProps} />
