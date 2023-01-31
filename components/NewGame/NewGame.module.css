@@ -41,13 +41,13 @@
     text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
 }
 
-.blur {
+/* .blur {
     height: 468px;
     width: 100%;
     background-color: #15202b;
     opacity: 80%;
     filter: blur(2px);
-}
+} */
 
 .imgCont {
     position: relative;
@@ -105,10 +105,10 @@
         text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
     }
 
-    .blur {
+    /* .blur {
         height: 548px;
         width: 612px;
-    }
+    } */
     
     .imgCont {
         width: 80%;
