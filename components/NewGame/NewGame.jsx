@@ -12,19 +12,22 @@ export default function NewGame() {
           className={styles.img}
           src={squad}
           alt='squad busters new Supercell game'
+          sizes='100%,
+          (min-width: 500px) 80%,
+          (min-width: 850px) 60%'
           fill={true}
         />
       </div>
       <article className={styles.article}>
         <p className={styles.p}>
           Squad Busters is a new Supercell game where all characters from all
-          games are together in a new squad building action game!. There will be
+          games are together in a new squad building action game. There will be
           a <span className={styles.info}> closed beta </span> test in Canada
           between <span className={styles.info}> February 6th-16th </span>, the
           game is still in early stage of development.
         </p>
         <h3 className={styles.text}>Trailer:</h3>
-        <blockquote class='twitter-tweet'>
+        <blockquote className='twitter-tweet'>
           <p lang='en' dir='ltr'>
             Our beloved Supercell characters come together for the first time
             ever! 🥳

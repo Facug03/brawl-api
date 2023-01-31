@@ -22,7 +22,11 @@ export default function BrawlTalk() {
           <Image
             className={styles.img}
             src={nextTalk}
-            alt='masteries in brawl stars'
+            alt='when is brawl talk'
+            sizes='16/9,
+            (min-width: 420px) 350px,
+            (min-width: 850px) 340px,
+            (min-width: 1100px) 390px'
             fill={true}
           />
         </div>
@@ -56,6 +60,10 @@ export default function BrawlTalk() {
               className={styles.img}
               src={masteries}
               alt='masteries in brawl stars'
+              sizes='16/9,
+              (min-width: 420px) 350px,
+              (min-width: 850px) 340px,
+              (min-width: 1100px) 390px'
               fill={true}
             />
           </div>

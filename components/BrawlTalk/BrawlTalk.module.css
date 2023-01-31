@@ -14,17 +14,6 @@
     margin-bottom: 20px;
 }
 
-.brawl {
-    text-shadow: #000 -2px 3px, #000 -2px -1px;
-}
-
-.talk {
-    color: #ea1219;
-    margin-left: 5px;
-    /* text-shadow: #000 -1px 3px 1px; */
-    text-shadow: #000 -2px 3px, #000 -2px -1px;
-}
-
 .masteCont {
     display: flex;
     flex-direction: column;
@@ -33,10 +22,10 @@
 
 .p {
     color: #ffffff;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 13px;
     margin-bottom: 10px;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    /* text-shadow: #000 -1px 2px, #000 -1px -1px; */
 }
 
 .info {
