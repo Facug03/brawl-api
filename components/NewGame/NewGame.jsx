@@ -30,15 +30,15 @@ export default function NewGame() {
             ever! 🥳
             <a href='https://twitter.com/hashtag/SquadBusters?src=hash&amp;ref_src=twsrc%5Etfw'>
               #SquadBusters
-            </a>{' '}
+            </a>
             Closed Beta starts on February 6th until the 16th, only in Canada!
             🇨🇦 <a href='https://t.co/iwCtyPBtze'>pic.twitter.com/iwCtyPBtze</a>
           </p>
-          &mdash; Squad Busters (@Squad_Busters){' '}
+          &mdash; Squad Busters (@Squad_Busters)
           <a href='https://twitter.com/Squad_Busters/status/1620406577911181313?ref_src=twsrc%5Etfw'>
             January 31, 2023
           </a>
-        </blockquote>{' '}
+        </blockquote>
         <script
           async
           src='https://platform.twitter.com/widgets.js'
