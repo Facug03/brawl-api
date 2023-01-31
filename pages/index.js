@@ -22,12 +22,13 @@ export default function Home() {
           property='og:title'
           content='Brawl Stars Stats, Database & Maps | Brawl Pro'
         />
-        <meta property='og:url' content='https://brawlpro.com' />
+        <meta property='og:url' content='https://brawlpro.com/' />
         <meta property='og:site_name' content='Brawl Pro' />
         <meta property='og:type' content='website' />
         <meta name='theme-color' content='#363b4e' />
         <meta name='google' content='notranslate' />
         <link rel='icon' href='/crown.png' />
+        <link rel='canonical' href='https://brawlpro.com/' />
         <link rel='manifest' href='/manifest.json' />
       </Head>
       <Main />
