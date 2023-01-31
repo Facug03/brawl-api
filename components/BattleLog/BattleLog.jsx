@@ -137,7 +137,7 @@ export default function BattleLog({
             <h3 className={styles.vs}>VS</h3>
           </div>
           <div className={styles.brawlers}>
-            {battle.teams[1].map((player) => (
+            {battle.teams[1]?.map((player) => (
               <PlayerBrawler
                 key={player.tag}
                 tag={player.tag}
