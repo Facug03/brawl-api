@@ -27,7 +27,7 @@ export default function Home() {
         <meta property='og:type' content='website' />
         <meta name='theme-color' content='#363b4e' />
         <meta name='google' content='notranslate' />
-        <link rel='icon' href='/crown.png' />
+        <link rel='icon' href='/logo.png' />
         <link rel='canonical' href='https://brawlpro.com/' />
         <link rel='manifest' href='/manifest.json' />
       </Head>
