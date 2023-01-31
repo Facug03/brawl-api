@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import TweetEmbed from 'react-tweet-embed'
 
 import styles from './NewGame.module.css'
 import squad from '../../public/squadbusters.jpeg'
@@ -27,26 +28,7 @@ export default function NewGame() {
           game is still in early stage of development.
         </p>
         <h3 className={styles.text}>Trailer:</h3>
-        <blockquote className='twitter-tweet'>
-          <p lang='en' dir='ltr'>
-            Our beloved Supercell characters come together for the first time
-            ever! 🥳
-            <a href='https://twitter.com/hashtag/SquadBusters?src=hash&amp;ref_src=twsrc%5Etfw'>
-              #SquadBusters
-            </a>
-            Closed Beta starts on February 6th until the 16th, only in Canada!
-            🇨🇦 <a href='https://t.co/iwCtyPBtze'>pic.twitter.com/iwCtyPBtze</a>
-          </p>
-          &mdash; Squad Busters (@Squad_Busters)
-          <a href='https://twitter.com/Squad_Busters/status/1620406577911181313?ref_src=twsrc%5Etfw'>
-            January 31, 2023
-          </a>
-        </blockquote>
-        <script
-          async
-          src='https://platform.twitter.com/widgets.js'
-          charset='utf-8'
-        ></script>
+        <TweetEmbed tweetId='1620406577911181313' options={{ theme: 'dark' }} />
       </article>
     </section>
   )
