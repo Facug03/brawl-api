@@ -84,11 +84,11 @@ export default function Player(player) {
         />
         <meta
           name='description'
-          content={`Brawl Stars stats of ${player.name}, battle log, brawlers and more info!.`}
+          content={`Brawl Stars stats of ${player.name}, battle log of every mode, trophies, all brawlers gadgets and star powers and more info!.`}
         />
         <meta
           property='og:description'
-          content={`Brawl Stars stats of ${player.name}, battle log, brawlers and more info!.`}
+          content={`Brawl Stars stats of ${player.name}, battle log of every mode, trophies, all brawlers gadgets and star powers and more info!.`}
         />
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta
