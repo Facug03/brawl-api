@@ -1,0 +1,145 @@
+.title {
+    font-weight: 800;
+    font-size: 25px;
+    color: #ffffff;
+    text-shadow: #000 -2px 3px, #000 -1px -1px;
+}
+
+.section {
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 10px;
+    row-gap: 15px;
+    justify-items: center;
+}
+
+.imgCont {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.brawlerName {
+    font-size: 15px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+}
+
+.rarity {
+    font-size: 13px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+    color: #ffffff;
+}
+
+.p {
+    font-size: 10px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+@media (min-width: 475px) {
+    .title {
+        font-size: 27px;
+    }
+
+    .section {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+    }    
+}
+
+@media (min-width: 600px) {
+    .title {
+        font-size: 30px;
+    }
+
+    .section {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    } 
+    
+    .imgCont {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .brawlerName {
+        font-size: 16px;
+    }
+    
+    .rarity {
+        font-size: 14px;
+    }
+    
+    .p {
+        font-size: 11px;
+    }
+}
+
+
+@media (min-width: 800px) {
+    .section {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        row-gap: 20px;
+    } 
+    
+    .imgCont {
+        width: 85px;
+        height: 85px;
+    }
+    
+    .brawlerName {
+        font-size: 17px;
+        text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+    }
+    
+    .rarity {
+        font-size: 15px;
+        text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+    }
+    
+    .p {
+        font-size: 12px;
+        text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+    }
+}
+
+@media (min-width: 950px) {
+    .section {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    } 
+
+    .brawlerName {
+        font-size: 18px;
+    }
+    
+    .rarity {
+        font-size: 16px;
+    }
+    
+    .p {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .section {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    } 
+}
+
+@media (min-width: 1200px) {
+    .section {
+        grid-template-columns: repeat(7, minmax(0, 1fr));
+    } 
+}
+
+@media (min-width: 1300px) {
+    .section {
+        grid-template-columns: repeat(8, minmax(0, 1fr));
+    } 
+}
+
