@@ -186,9 +186,3 @@ export const mode = {
   },
   bossFight: { name: 'Boss Fight', color: '#d22122' },
 }
-
-const brawlers = {
-  brawler: 'Buster',
-  victories: 30,
-  loses: 10,
-}
