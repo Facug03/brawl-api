@@ -11,11 +11,11 @@ export default function Home() {
         <meta name='application-name' content='Brawl Pro' />
         <meta
           name='description'
-          content='Brawl Stars Stats, information about Brawl Talk, best Brawlers for power league and showdown. Search your profile statistics, battle log, see leaderboard from the world and each country.'
+          content='Brawl Stars Stats, information about Brawl Talk, best Brawlers for power league and showdown. Search your profile statistics, battle log and leaderboards.'
         />
         <meta
           property='og:description'
-          content='Brawl Stars Stats, information about Brawl Talk, best Brawlers for power league and showdown. Search your profile statistics, battle log, see leaderboard from the world and each country'
+          content='Brawl Stars Stats, information about Brawl Talk, best Brawlers for power league and showdown. Search your profile statistics, battle log and leaderboards.'
         />
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta
