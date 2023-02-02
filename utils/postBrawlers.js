@@ -23,57 +23,82 @@ export function sortBrawlers(items, player) {
   let brawlersDefeat = {}
 
   soloRanked.forEach((map) => {
-    if (map.battle.teams[0].some((ele) => ele.name === player)) {
-      const team0 = map.battle.teams[0].map((team) => team.brawler.name)
-      const team1 = map.battle.teams[1].map((team) => team.brawler.name)
+    const isMythicPlayer = map.battle.teams[0]?.some(
+      (player) => player.brawler.trophies >= 13
+    )
 
-      if (map.battle.result === 'victory') {
-        brawlersVictory = {
-          ...brawlersVictory,
-          [map.event.id]: [...(brawlersVictory[map.event.id] || []), ...team0],
-        }
-        brawlersDefeat = {
-          ...brawlersDefeat,
-          [map.event.id]: [...(brawlersDefeat[map.event.id] || []), ...team1],
+    const isMythicPlayerSecondTeam = map.battle.teams[1]?.some(
+      (player) => player.brawler.trophies >= 13
+    )
+
+    if (isMythicPlayer || isMythicPlayerSecondTeam) {
+      if (map.battle.teams[0].some((ele) => ele.name === player)) {
+        const team0 = map.battle.teams[0].map((team) => team.brawler.name)
+        const team1 = map.battle.teams[1].map((team) => team.brawler.name)
+
+        if (map.battle.result === 'victory') {
+          brawlersVictory = {
+            ...brawlersVictory,
+            [map.event.id]: [
+              ...(brawlersVictory[map.event.id] || []),
+              ...team0,
+            ],
+          }
+          brawlersDefeat = {
+            ...brawlersDefeat,
+            [map.event.id]: [...(brawlersDefeat[map.event.id] || []), ...team1],
+          }
+        } else {
+          brawlersVictory = {
+            ...brawlersVictory,
+            [map.event.id]: [
+              ...(brawlersVictory[map.event.id] || []),
+              ...team1,
+            ],
+          }
+          brawlersDefeat = {
+            ...brawlersDefeat,
+            [map.event.id]: [...(brawlersDefeat[map.event.id] || []), ...team0],
+          }
         }
       } else {
-        brawlersVictory = {
-          ...brawlersVictory,
-          [map.event.id]: [...(brawlersVictory[map.event.id] || []), ...team1],
-        }
-        brawlersDefeat = {
-          ...brawlersDefeat,
-          [map.event.id]: [...(brawlersDefeat[map.event.id] || []), ...team0],
-        }
-      }
-    } else {
-      const team0 = map.battle.teams[0].map((team) => team.brawler.name)
-      const team1 = map.battle.teams[1].map((team) => team.brawler.name)
+        const team0 = map.battle.teams[0].map((team) => team.brawler.name)
+        const team1 = map.battle.teams[1].map((team) => team.brawler.name)
 
-      if (map.battle.result === 'victory') {
-        brawlersVictory = {
-          ...brawlersVictory,
-          [map.event.id]: [...(brawlersVictory[map.event.id] || []), ...team1],
-        }
-        brawlersDefeat = {
-          ...brawlersDefeat,
-          [map.event.id]: [...(brawlersDefeat[map.event.id] || []), ...team0],
-        }
-      } else {
-        brawlersVictory = {
-          ...brawlersVictory,
-          [map.event.id]: [...(brawlersVictory[map.event.id] || []), ...team0],
-        }
-        brawlersDefeat = {
-          ...brawlersDefeat,
-          [map.event.id]: [...(brawlersDefeat[map.event.id] || []), ...team1],
+        if (map.battle.result === 'victory') {
+          brawlersVictory = {
+            ...brawlersVictory,
+            [map.event.id]: [
+              ...(brawlersVictory[map.event.id] || []),
+              ...team1,
+            ],
+          }
+          brawlersDefeat = {
+            ...brawlersDefeat,
+            [map.event.id]: [...(brawlersDefeat[map.event.id] || []), ...team0],
+          }
+        } else {
+          brawlersVictory = {
+            ...brawlersVictory,
+            [map.event.id]: [
+              ...(brawlersVictory[map.event.id] || []),
+              ...team0,
+            ],
+          }
+          brawlersDefeat = {
+            ...brawlersDefeat,
+            [map.event.id]: [...(brawlersDefeat[map.event.id] || []), ...team1],
+          }
         }
       }
     }
   })
 
   showdown.forEach((map) => {
-    if (map.event.map) {
+    if (
+      map.event.map &&
+      map.battle.players.some((player) => player.brawler.trophies >= 600)
+    ) {
       const winners = map.battle.players
         .slice(0, 4)
         .map((player) => player.brawler.name)
