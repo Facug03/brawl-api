@@ -1,11 +1,11 @@
 .footer {
-    margin-top: 50px;
-    padding: 15px 0;
+    margin-top: 40px;
+    padding: 20px 0;
 }
 
 .p {
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 500;
+    font-size: 13px;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     text-align: center;
@@ -13,8 +13,8 @@
 
 .mail {
     display: block;
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 500;
+    font-size: 13px;
     color: #2188e8;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     text-align: center;
@@ -23,8 +23,8 @@
 }
 
 .policy {
-    font-weight: 600;
-    font-size: 13px;
+    font-weight: 500;
+    font-size: 11px;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     text-align: center;
@@ -33,3 +33,36 @@
 .link {
     color: #ffffff;
 }
+
+
+@media (min-width: 420px) {
+    .p {
+        font-size: 14px;
+    }
+
+    .mail {
+        font-size: 14px;
+    }
+    
+    .policy {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 500px) {
+    .p {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .mail {
+        font-size: 15px;
+        font-weight: 600;
+    }
+    
+    .policy {
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+
