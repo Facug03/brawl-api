@@ -4,8 +4,8 @@ import Image from 'next/image'
 import styles from './Brawlers.module.css'
 import Container from '../../components/Container/Container'
 
-export default function Brawlers(brawlers) {
-  console.log(brawlers)
+export default function Brawlers({ brawlers }) {
+  // console.log(brawlers)
   return (
     <>
       <Head>
@@ -33,7 +33,7 @@ export default function Brawlers(brawlers) {
       <Container>
         <h2 className={styles.title}>All Brawlers</h2>
         <section className={styles.section}>
-          {brawlers.list.map((brawler) => (
+          {brawlers.map((brawler) => (
             <article key={brawler.id}>
               <div className={styles.imgCont}>
                 <Image
@@ -47,8 +47,8 @@ export default function Brawlers(brawlers) {
               </div>
               <h3 className={styles.brawlerName}>{brawler.name}</h3>
               <h4 className={styles.rarity}>Rarity:</h4>
-              <p style={{ color: brawler.rarity.color }} className={styles.p}>
-                {brawler.rarity.name}
+              <p style={{ color: brawler.rarityColor }} className={styles.p}>
+                {brawler.rarity}
               </p>
             </article>
           ))}
@@ -61,7 +61,17 @@ export default function Brawlers(brawlers) {
 export async function getStaticProps() {
   const res = await fetch('https://api.brawlapi.com/v1/brawlers')
 
-  const brawlers = await res.json()
+  const data = await res.json()
 
-  return { props: brawlers }
+  const brawlers = data.list.map((brawl) => {
+    return {
+      name: brawl.name,
+      avatarId: brawl.avatarId,
+      id: brawl.id,
+      rarity: brawl.rarity.name,
+      rarityColor: brawl.rarity.color,
+    }
+  })
+
+  return { props: { brawlers } }
 }
