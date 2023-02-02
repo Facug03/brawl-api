@@ -4,13 +4,14 @@ import { useRouter } from 'next/router'
 
 import styles from './PowerLeague.module.css'
 import Container from '../../components/Container/Container'
-import { modes, bestBrawlers } from '../../utils/maps'
+import { modes, bestBrawlers, mostUsedInMaps, vsMaps } from '../../utils/maps'
 import { getBrawlers } from '../../lib/redis'
 import { mode } from '../../utils/profileInfo'
-import { BRAWLERS } from '../../utils/rankings'
+import BrawlerStats from '../../components/BrawlerStats/BrawlerStats'
 
-export default function PowerLeague(leagueBrawlers) {
+export default function PowerLeague({ leagueBrawlers, mostUsed }) {
   const { pathname } = useRouter()
+  console.log(mostUsed)
   return (
     <>
       <Head>
@@ -120,34 +121,29 @@ export default function PowerLeague(leagueBrawlers) {
                   </div>
                   <div className={styles.mapCont}>
                     {leagueBrawlers[brawlMap.id]?.length ? (
-                      <div className={styles.brawlers}>
-                        {leagueBrawlers[brawlMap.id]
-                          .slice(0, 10)
-                          .map((brawler) => (
-                            <div key={brawler.name}>
-                              <div className={styles.brawlerContainer}>
-                                <Image
-                                  className={styles.brawlerImg}
-                                  src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
-                                    BRAWLERS.find(
-                                      (brawl) => brawl.name === brawler.name
-                                    ).id
-                                  }/custom`}
-                                  alt={`Information of ${brawler.name}`}
-                                  fill={true}
-                                  sizes='60px,
-                                  (min-width: 400px) 70px,
-                                  (min-width: 450px) 75px,
-                                  (min-width: 730px) 62px, 
-                                  (min-width: 775px) 72px, 
-                                  (min-width: 915px) 67px'
-                                />
-                                <h4 className={styles.winRate}>
-                                  {brawler.winRate}%
-                                </h4>
-                              </div>
-                            </div>
+                      <div>
+                        <h3 className={styles.stats}>Win Rate</h3>
+                        <div className={styles.brawlers}>
+                          {leagueBrawlers[brawlMap.id].map((brawler) => (
+                            <BrawlerStats
+                              key={brawler.name}
+                              name={brawler.name}
+                              stats={brawler.winRate + '%'}
+                            />
                           ))}
+                        </div>
+                        <h3 className={`${styles.stats} ${styles.stat}`}>
+                          Most Used
+                        </h3>
+                        <div className={styles.brawlers}>
+                          {mostUsed[brawlMap.id].map((brawler) => (
+                            <BrawlerStats
+                              key={brawler.name}
+                              name={brawler.name}
+                              stats={brawler.used}
+                            />
+                          ))}
+                        </div>
                       </div>
                     ) : (
                       <div className={styles.dataCont}>
@@ -179,5 +175,7 @@ export async function getStaticProps() {
 
   const leagueBrawlers = bestBrawlers(brawlers)
 
-  return { props: leagueBrawlers }
+  const mostUsed = mostUsedInMaps(brawlers, vsMaps)
+
+  return { props: { leagueBrawlers, mostUsed } }
 }

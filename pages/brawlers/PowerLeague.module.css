@@ -120,33 +120,24 @@
     margin: 20px 0;
 }
 
+.stats {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+}
+
+.stat {
+    margin-top: 25px;
+}
+
 .brawlers {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     column-gap: 10px;
     row-gap: 20px;
     margin-bottom: 22px;
-}
-
-.brawlerContainer {
-    position: relative; 
-    width: 60px;
-    height: 47.5px;
-}
-
-.brawlerImg {
-    border: 3px #000 solid;
-}
-
-.winRate {
-    font-size: 16px;
-    font-weight: 700;
-    color: #ffffff;
-    background-color: #000;
-    text-align: center;
-    position: absolute;
-    bottom: -17px;
-    width: 100%;
 }
 
 .data {
@@ -168,11 +159,6 @@
 @media (min-width: 400px) {
     .link {
         font-size: 14px;
-    }
-
-    .brawlerContainer {
-        width: 70px;
-        height: 57.5px;
     }
 }
 
@@ -205,10 +191,9 @@
     .map {
         font-size: 14px;
     }
-    
-    .brawlerContainer {
-        width: 75px;
-        height: 62.5px;
+
+    .stats {
+        font-size: 17px;
     }
 
     .brawlers {
@@ -265,6 +250,15 @@
     .mapCont {
         display: flex;
         gap: 10px;
+        margin-bottom: 35px;
+    }
+
+    .stat {
+        margin-top: 25px;
+    }
+
+    .stats {
+        font-size: 18px;
     }
 
     .brawlers {
@@ -275,20 +269,6 @@
     }
 }
 
-@media (min-width: 730px) {
-    .brawlerContainer {
-        width: 62px;
-        height: 53.5px;
-    }
-}
-
-@media (min-width: 775px) {
-    .brawlerContainer {
-        width: 72px;
-        height: 59.5px;
-    }
-}
-
 @media (min-width: 915px) {
     .article {
         display: flex;
@@ -296,13 +276,9 @@
         margin-bottom: 30px;
     }
 
-    .brawlerContainer {
-        width: 67px;
-        height: 55.5px;
-    }
-
     .mapCont {
         display: block;
+        margin: 10px 0;
     }
 
     .brawlers {
@@ -316,6 +292,10 @@
     .imgCont {
         width: 200px;
         height: 325px;
+    }
+
+    .stat {
+        margin-top: 25px;
     }
 
     .data {
