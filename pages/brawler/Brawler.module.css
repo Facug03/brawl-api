@@ -1,0 +1,520 @@
+.working {
+    margin-top: 10px;
+}
+
+.brawlCont {
+    display: flex;
+    gap: 10px;
+}
+
+.imgCont {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.brawlName {
+    font-size: 20px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+}
+
+.class {
+    font-size: 14px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+}
+
+.rarity {
+    font-size: 13px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    text-transform: uppercase;
+}
+
+.description {
+    margin: 20px 0;
+    font-weight: 500;
+    font-size: 13px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+}
+
+.abilities {
+    font-size: 17px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.abiliCont {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.starCont {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.starName {
+    font-weight: 600;
+    font-size: 14px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+}
+
+.starColor {
+    color: #face3e;
+}
+
+.gadgetColor {
+    color: #41e03c;
+}
+
+.starDescrip {
+    padding: 7px;
+    font-weight: 500;
+    font-size: 13px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 19px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.order {
+    font-weight: 600;
+    font-size: 13px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.selectCont {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.select {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+}
+
+.selected {
+    border-bottom: 2px #ffffff solid;
+}
+
+.brawlersCont {
+    border: 2px #000 solid;
+    padding: 5px;
+}
+
+.div {
+    padding: 3px;
+    display: flex;
+    margin-bottom: 5px;
+    border: 3px #000 solid;
+    justify-content: space-between;
+}
+
+.even {
+    background-color: #897789;
+}
+
+.odd {
+    background-color: #756673;
+}
+
+.sameBrawler {
+    background-color: #2188e8;
+}
+
+.brawlStats {
+    display: flex;
+    gap: 3px;
+}
+
+.positionCenter {
+    width: 30px;
+    background-color: #62555f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brawlerIndexCont {
+    background-color: #1b5286;
+}
+
+.position {
+    font-size: 18px;
+    font-weight: 700;
+    color: #a397a1;
+}
+
+.brawlerIndex {
+    color: #ffffff;
+}
+
+
+.imgList {
+    position: relative;
+    border: 2px #000 solid;
+    width: 49px;
+    height: 42px;
+}
+
+.name {
+    font-size: 15px;
+    font-weight: 700;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    color: #ffffff;
+    align-self: center;
+}
+
+.statBrawl {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e8ae23;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    align-self: center;
+}
+
+@media (min-width: 400px) {
+    .imgCont {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .brawlName {
+        font-size: 21px;
+        margin-bottom: 5px;
+    }
+    
+    .class {
+        font-size: 15px;
+        margin-bottom: 3px;
+    }
+    
+    .rarity {
+        font-size: 14px;
+    }
+    
+    .description {
+        font-size: 14px;
+    }
+    
+    .abilities {
+        font-size: 18px;
+    }
+    
+    .starName {
+        font-size: 15px;
+    }
+    
+    .starDescrip {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+    
+    .order {
+        font-size: 14px;
+    }
+    
+    .select {
+        font-size: 15px;
+    }
+
+    .position {
+        font-size: 19px;
+    }
+    
+    .imgList {
+        width: 51px;
+        height: 44px;
+    }
+    
+    .name {
+        font-size: 16px;
+    }
+    
+    .statBrawl {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 600px) {
+    .imgCont {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .brawlName {
+        font-size: 22px;
+    }
+    
+    .class {
+        font-size: 16px;
+    }
+    
+    .rarity {
+        font-size: 15px;
+    }
+    
+    .description {
+        font-weight: 600;
+        font-size: 15px;
+    }
+    
+    .abilities {
+        font-size: 19px;
+    }
+    
+    .starName {
+        font-size: 16px;
+    }
+    
+    .starDescrip {
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    .statsCont {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 21px;
+    }
+    
+    .order {
+        font-size: 15px;
+    }
+    
+    .select {
+        font-size: 16px;
+    }
+
+    .position {
+        font-size: 20px;
+    }
+    
+    .imgList {
+        width: 56px;
+        height: 49px;
+    }
+    
+    .name {
+        font-size: 17px;
+        text-shadow: #000 -1px 2px, #000 -1.5px -1.5px;
+    }
+    
+    .statBrawl {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 900px) {
+    .working {
+        margin-top: 30px;
+    }
+
+    .brawlName {
+        font-size: 23px;
+    }
+    
+    .class {
+        font-size: 17px;
+    }
+    
+    .rarity {
+        font-size: 16px;
+    }
+    
+    .description {
+        font-size: 16px;
+    }
+    
+    .powersCont {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .abilities {
+        font-size: 20px;
+    }
+
+    .abiliCont {
+        margin-bottom: 0px;
+    }
+    
+    
+    .starName {
+        font-size: 17px;
+    }
+    
+    .starDescrip {
+        font-size: 16px;
+    }
+
+    /* .statsCont {
+        margin-top: 30px;
+    } */
+
+    .title {
+        font-size: 22px;
+    }
+    
+    .order {
+        font-size: 16px;
+    }
+    
+    .select {
+        font-size: 17px;
+    }
+
+    .positionCenter {
+        width: 40px;
+    }
+
+    .position {
+        font-size: 21px;
+    }
+    
+    .name {
+        font-size: 18px;
+    }
+    
+    .statBrawl {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .imgCont {
+        width: 105px;
+        height: 105px;
+    }
+    
+    .brawlName {
+        font-size: 24px;
+    }
+    
+    .class {
+        font-size: 18px;
+    }
+    
+    .rarity {
+        font-size: 17px;
+    }
+
+    .abilities {
+        font-size: 21px;
+    }
+    
+    .starName {
+        font-size: 18px;
+    }
+
+    .title {
+        font-size: 23px;
+    }
+    
+    .order {
+        font-size: 17px;
+    }
+    
+    .select {
+        font-size: 18px;
+    }
+
+    .position {
+        font-size: 22px;
+    }
+    
+    .name {
+        font-size: 19px;
+    }
+    
+    .statBrawl {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .imgCont {
+        width: 115px;
+        height: 115px;
+    }
+    
+    .brawlName {
+        font-size: 25px;
+    }
+    
+    .class {
+        font-size: 19px;
+    }
+    
+    .rarity {
+        font-size: 18px;
+    }
+
+    .abilities {
+        font-size: 22px;
+    }
+    
+    .starName {
+        font-size: 19px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+    
+    .order {
+        font-size: 18px;
+    }
+    
+    .select {
+        font-size: 19px;
+    }
+
+    .position {
+        font-size: 23px;
+    }
+    
+    .name {
+        font-size: 20px;
+    }
+    
+    .statBrawl {
+        font-size: 19px;
+    }
+}
+
