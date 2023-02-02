@@ -1,0 +1,35 @@
+.footer {
+    margin-top: 50px;
+    padding: 15px 0;
+}
+
+.p {
+    font-weight: 600;
+    font-size: 15px;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    text-align: center;
+}
+
+.mail {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    color: #2188e8;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.policy {
+    font-weight: 600;
+    font-size: 13px;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    text-align: center;
+}
+
+.link {
+    color: #ffffff;
+}
