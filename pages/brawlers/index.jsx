@@ -35,21 +35,29 @@ export default function Brawlers({ brawlers }) {
         <section className={styles.section}>
           {brawlers.map((brawler) => (
             <article key={brawler.id}>
-              <div className={styles.imgCont}>
-                <Image
-                  src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawler.avatarId}/profile`}
-                  alt={`${brawler.name} avatar image in brawl stars`}
-                  sizes='85px,
+              <a
+                className={styles.link}
+                href={`brawler/${brawler.name
+                  .toLowerCase()
+                  .split(' ')
+                  .join('')}`}
+              >
+                <div className={styles.imgCont}>
+                  <Image
+                    src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawler.avatarId}/profile`}
+                    alt={`${brawler.name} avatar image in brawl stars`}
+                    sizes='85px,
                   (min-width: 600px) 75px,
                   (min-width: 0px) 60px'
-                  fill={true}
-                />
-              </div>
-              <h3 className={styles.brawlerName}>{brawler.name}</h3>
-              <h4 className={styles.rarity}>Rarity:</h4>
-              <p style={{ color: brawler.rarityColor }} className={styles.p}>
-                {brawler.rarity}
-              </p>
+                    fill={true}
+                  />
+                </div>
+                <h3 className={styles.brawlerName}>{brawler.name}</h3>
+                <h4 className={styles.rarity}>Rarity:</h4>
+                <p style={{ color: brawler.rarityColor }} className={styles.p}>
+                  {brawler.rarity}
+                </p>
+              </a>
             </article>
           ))}
         </section>
