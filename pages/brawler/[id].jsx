@@ -8,7 +8,6 @@ import { mostUsedBrawlers, vsMaps, showdownMaps } from '../../utils/maps'
 import { getBrawlers } from '../../lib/redis'
 
 export default function Brawler({ brawler, mostUsed, mostUsedSd }) {
-  console.log(mostUsedSd)
   return (
     <>
       <Head>
@@ -262,7 +261,7 @@ export async function getStaticPaths() {
 
   const paths = brawlers.list.map((brawler) => {
     return {
-      params: { id: brawler.name.toLowerCase() },
+      params: { id: brawler.name.toLowerCase().split(' ').join('') },
     }
   })
 
@@ -273,7 +272,7 @@ export async function getStaticProps({ params }) {
   const { id } = params
 
   const brawlerId = BRAWLERS.find(
-    (brawler) => brawler.name.toLocaleLowerCase() === id
+    (brawler) => brawler.name.toLocaleLowerCase().split(' ').join('') === id
   )
 
   const brawlers = await getBrawlers()
