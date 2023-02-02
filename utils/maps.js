@@ -1,3 +1,81 @@
+export const showdownMaps = [
+  '15000014',
+  '15000101',
+  '15000013',
+  '15000043',
+  '15000033',
+  '15000032',
+  '15000016',
+]
+
+export const vsMaps = [
+  '15000050',
+  '15000026',
+  '15000051',
+  '15000007',
+  '15000115',
+  '15000008',
+  '15000054',
+  '15000005',
+  '15000082',
+  '15000548',
+  '15000367',
+  '15000368',
+  '15000306',
+  '15000300',
+  '15000527',
+  '15000019',
+  '15000137',
+  '15000072',
+]
+
+export function mostUsedInMaps(brawlers, maps) {
+  let mapsFilter = {}
+
+  brawlers.forEach((brawler) => {
+    for (let brawl in brawler.entityFields) {
+      if (maps.some((map) => map === brawl)) {
+        const sum = brawler[brawl].reduce((a, b) => Number(a) + Number(b), 0)
+
+        mapsFilter = {
+          ...mapsFilter,
+          [brawl]: [
+            ...(mapsFilter[brawl] || []),
+            { name: brawler.name, used: sum },
+          ],
+        }
+      }
+    }
+  })
+
+  for (let map in mapsFilter) {
+    mapsFilter[map] = mapsFilter[map]
+      .sort((a, b) => b.used - a.used)
+      .slice(0, 10)
+  }
+
+  return mapsFilter
+}
+
+export function mostUsedBrawlers(brawlers, maps) {
+  const brawlersFilter = brawlers.map((brawler) => {
+    let brawlerFilter = { name: brawler.name, used: 0 }
+
+    for (let brawl in brawler.entityFields) {
+      if (maps.some((map) => map === brawl)) {
+        const used =
+          brawler[brawl].reduce((a, b) => Number(a) + Number(b), 0) +
+          brawlerFilter.used
+        brawlerFilter = { ...brawlerFilter, used }
+      }
+    }
+
+    return brawlerFilter
+  })
+
+  return brawlersFilter.sort((a, b) => b.used - a.used)
+}
+
 export function bestBrawlers(arr) {
   let brawlers = {
     15000050: [],
@@ -40,7 +118,9 @@ export function bestBrawlers(arr) {
                 100
             ),
           },
-        ].sort((a, b) => b.winRate - a.winRate)
+        ]
+          .sort((a, b) => b.winRate - a.winRate)
+          .slice(0, 10)
       }
     })
   }
