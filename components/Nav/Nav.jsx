@@ -10,6 +10,11 @@ export default function Nav() {
       </a>
       <ul className={styles.nav}>
         <li>
+          <a className={styles.li} href='https://brawlpro.com/brawlers'>
+            Brawlers
+          </a>
+        </li>
+        <li>
           <a
             className={styles.li}
             href='https://brawlpro.com/brawlers/powerleague'

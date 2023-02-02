@@ -48,13 +48,11 @@
 
 @media (min-width: 410px) {
     .header {
-        padding: 20px 27px;
-        justify-content: space-between;
-        flex-direction: row;
+        gap: 8px;
     }
 
     .li {
-        font-size: 14.5px;
+        font-size: 14px;
     }
 }
 
@@ -62,6 +60,9 @@
 @media (min-width: 500px) {
     .header {
         padding: 20px 30px;
+        gap: 0px;
+        justify-content: space-between;
+        flex-direction: row;
     }
 
     .game {
@@ -81,12 +82,6 @@
     }
 }
 
-@media (min-width: 500px) {
-    .li {
-        font-size: 15px;
-    }
-}
-
 @media (min-width: 550px) {
     .li {
         font-size: 17px;
@@ -95,8 +90,13 @@
 
 @media (min-width: 730px) {
     .header {
+        padding: 20px 80px;
+    }
+}
+
+@media (min-width: 850px) {
+    .header {
         gap: 200px;
         justify-content: unset;
-        padding: 20px 80px;
     }
 }
