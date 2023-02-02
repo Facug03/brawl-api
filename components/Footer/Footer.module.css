@@ -66,3 +66,20 @@
     }
 }
 
+@media (min-width: 900px) {
+    .p {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .mail {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    
+    .policy {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
