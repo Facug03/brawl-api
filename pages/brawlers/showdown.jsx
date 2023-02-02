@@ -4,28 +4,33 @@ import { useRouter } from 'next/router'
 
 import styles from './Showdown.module.css'
 import Container from '../../components/Container/Container'
-import { showdown, bestBrawlers } from '../../utils/maps'
+import {
+  showdown,
+  bestBrawlers,
+  mostUsedInMaps,
+  showdownMaps,
+} from '../../utils/maps'
 import { getBrawlers } from '../../lib/redis'
-import { BRAWLERS } from '../../utils/rankings'
+import BrawlerStats from '../../components/BrawlerStats/BrawlerStats'
 
-export default function Shodown(leagueBrawlers) {
+export default function Shodown({ leagueBrawlers, mostUsed }) {
   const { pathname } = useRouter()
-  console.log(pathname)
+
   return (
     <>
       <Head>
         <title>Best Brawlers for Showdown Database | Brawl Pro</title>
         <meta
           property='og:title'
-          content=' Best brawlers for Showdown | Brawl Stars Database & Stats'
+          content='Best Brawlers for Showdown Database | Brawl Pro'
         />
         <meta
           name='description'
-          content='Best brawlers for showdown, here you can fin the current maps so you can see what is the best pick for every map.'
+          content='Best brawlers for showdown, here you can fin the current maps so you can see what is the best pick for every map and the most used brawlers directly from our database.'
         />
         <meta
           property='og:description'
-          content='Best brawlers for showdown, here you can fin the current maps so you can see what is the best pick for every map.'
+          content='Best brawlers for showdown, here you can fin the current maps so you can see what is the best pick for every map and the most used brawlers directly from our database.'
         />
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta
@@ -98,34 +103,29 @@ export default function Shodown(leagueBrawlers) {
                   </div>
                   <div className={styles.mapCont}>
                     {leagueBrawlers[brawlMap.id]?.length ? (
-                      <div className={styles.brawlers}>
-                        {leagueBrawlers[brawlMap.id]
-                          .slice(0, 10)
-                          .map((brawler) => (
-                            <div key={brawler.name}>
-                              <div className={styles.brawlerContainer}>
-                                <Image
-                                  className={styles.brawlerImg}
-                                  src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
-                                    BRAWLERS.find(
-                                      (brawl) => brawl.name === brawler.name
-                                    ).id
-                                  }/custom`}
-                                  alt={`Information of ${brawler.name}`}
-                                  fill={true}
-                                  sizes='60px,
-                                  (min-width: 400px) 70px,
-                                  (min-width: 450px) 75px,
-                                  (min-width: 730px) 62px, 
-                                  (min-width: 775px) 72px, 
-                                  (min-width: 915px) 67px'
-                                />
-                                <h4 className={styles.winRate}>
-                                  {brawler.winRate}%
-                                </h4>
-                              </div>
-                            </div>
+                      <div>
+                        <h3 className={styles.stats}>Win Rate</h3>
+                        <div className={styles.brawlers}>
+                          {leagueBrawlers[brawlMap.id].map((brawler) => (
+                            <BrawlerStats
+                              key={brawler.name}
+                              name={brawler.name}
+                              stats={brawler.winRate + '%'}
+                            />
                           ))}
+                        </div>
+                        <h3 className={`${styles.stats} ${styles.stat}`}>
+                          Most Used
+                        </h3>
+                        <div className={styles.brawlers}>
+                          {mostUsed[brawlMap.id].map((brawler) => (
+                            <BrawlerStats
+                              key={brawler.name}
+                              name={brawler.name}
+                              stats={brawler.used}
+                            />
+                          ))}
+                        </div>
                       </div>
                     ) : (
                       <div className={styles.dataCont}>
@@ -138,7 +138,7 @@ export default function Shodown(leagueBrawlers) {
                         src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawlMap.id}/map`}
                         alt={`${brawlMap.name}`}
                         fill={true}
-                        sizes='200px, (min-width: 915px) 200px'
+                        sizes='280px, (min-width: 915px) 280px, (min-width: 0px) 220px'
                       />
                     </div>
                   </div>
@@ -157,5 +157,7 @@ export async function getStaticProps() {
 
   const leagueBrawlers = bestBrawlers(brawlers)
 
-  return { props: leagueBrawlers }
+  const mostUsed = mostUsedInMaps(brawlers, showdownMaps)
+
+  return { props: { leagueBrawlers, mostUsed } }
 }

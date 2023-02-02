@@ -91,6 +91,18 @@
     margin: 20px 0;
 }
 
+.stats {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+}
+
+.stat {
+    margin-top: 25px;
+}
+
 .brawlers {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -169,6 +181,10 @@
         height: 62.5px;
     }
 
+    .stats {
+        font-size: 17px;
+    }
+
     .brawlers {
         width: 390px;
         margin: 0 auto;
@@ -209,7 +225,17 @@
     .mapCont {
         display: flex;
         gap: 10px;
+        align-items: center;
     }
+
+    .stat {
+        margin-top: 25px;
+    }
+
+    .stats {
+        font-size: 18px;
+    }
+
 
     .brawlers {
         margin: 0;
@@ -266,6 +292,10 @@
     .imgCont {
         width: 280px;
         height: 280px;
+    }
+
+    .stat {
+        margin-top: 25px;
     }
 
     .data {
