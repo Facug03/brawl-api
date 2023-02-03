@@ -6,7 +6,7 @@ import styles from './Showdown.module.css'
 import Container from '../../components/Container/Container'
 import {
   showdown,
-  bestBrawlers,
+  bestBrawlersInMaps,
   mostUsedInMaps,
   showdownMaps,
 } from '../../utils/maps'
@@ -159,7 +159,7 @@ export default function Shodown({ leagueBrawlers, mostUsed }) {
 export async function getStaticProps() {
   const brawlers = await getBrawlers()
 
-  const leagueBrawlers = bestBrawlers(brawlers)
+  const leagueBrawlers = bestBrawlersInMaps(brawlers)
 
   const mostUsed = mostUsedInMaps(brawlers, showdownMaps)
 

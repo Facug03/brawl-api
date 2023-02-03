@@ -4,14 +4,19 @@ import { useRouter } from 'next/router'
 
 import styles from './PowerLeague.module.css'
 import Container from '../../components/Container/Container'
-import { modes, bestBrawlers, mostUsedInMaps, vsMaps } from '../../utils/maps'
+import {
+  modes,
+  bestBrawlersInMaps,
+  mostUsedInMaps,
+  vsMaps,
+} from '../../utils/maps'
 import { getBrawlers } from '../../lib/redis'
 import { mode } from '../../utils/profileInfo'
 import BrawlerStats from '../../components/BrawlerStats/BrawlerStats'
 
 export default function PowerLeague({ leagueBrawlers, mostUsed }) {
   const { pathname } = useRouter()
-  console.log(mostUsed)
+
   return (
     <>
       <Head>
@@ -175,7 +180,7 @@ export default function PowerLeague({ leagueBrawlers, mostUsed }) {
 export async function getStaticProps() {
   const brawlers = await getBrawlers()
 
-  const leagueBrawlers = bestBrawlers(brawlers)
+  const leagueBrawlers = bestBrawlersInMaps(brawlers)
 
   const mostUsed = mostUsedInMaps(brawlers, vsMaps)
 
