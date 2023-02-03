@@ -79,13 +79,11 @@ export default function PowerLeague({ leagueBrawlers, mostUsed }) {
           <h3 className={styles.select}>Select Mode</h3>
           <div className={styles.links}>
             {modes.map((brawlMap) => (
-              <a
-                className={styles.link}
-                key={'#' + brawlMap.name}
-                href={`#${brawlMap.name}`}
-              >
-                {mode[brawlMap.name].name}
-              </a>
+              <p className={styles.link} key={'#' + brawlMap.name}>
+                <a className={styles.a} href={`#${brawlMap.name}`}>
+                  {mode[brawlMap.name].name}
+                </a>
+              </p>
             ))}
           </div>
         </div>
