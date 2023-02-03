@@ -18,11 +18,11 @@ export default function Brawler({ brawler, mostUsed, mostUsedSd }) {
         />
         <meta
           name='description'
-          content={`${brawler.name} brawl stars star powers, gadgets, you can find statistics in all modes, what's the brawler's win rate and how used it is.`}
+          content={`${brawler.name} star powers, gadgets and you can find statistics in all modes, what's the brawler's win rate and how used it is.`}
         />
         <meta
           property='og:description'
-          content={`${brawler.name} brawl stars star powers, gadgets, you can find statistics in all modes, what's the brawler's win rate and how used it is.`}
+          content={`${brawler.name} star powers, gadgets and you can find statistics in all modes, what's the brawler's win rate and how used it is.`}
         />
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta

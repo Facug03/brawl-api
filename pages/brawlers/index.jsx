@@ -9,18 +9,15 @@ export default function Brawlers({ brawlers }) {
   return (
     <>
       <Head>
-        <title>All Brawlers in Brawl Stars | Brawl Pro</title>
-        <meta
-          property='og:title'
-          content='All Brawlers in Brawl Stars | Brawl Pro'
-        />
+        <title>Brawlers Brawl Stars | Brawl Pro</title>
+        <meta property='og:title' content='Brawlers Brawl Stars | Brawl Pro' />
         <meta
           name='description'
-          content='All brawlers, star power and gadgets, find out when a brawler is released and see which brawler is the best for 3v3 mode.'
+          content="Find out when a brawl stars character is released and see which brawler is the best for 3v3 mode and showdown, we have a database that's better than a tierlist."
         />
         <meta
           property='og:description'
-          content='All brawlers, star power and gadgets, find out when a brawler is released and see which brawler is the best for 3v3 mode.'
+          content="Find out when a brawl stars character is released and see which brawler is the best for 3v3 mode and showdown, we have a database that's better than a tierlist."
         />
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta property='og:url' content='https://brawlpro.com/brawlers' />

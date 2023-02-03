@@ -22,11 +22,11 @@ export default function PowerLeague({ leagueBrawlers, mostUsed }) {
         />
         <meta
           name='description'
-          content='Best brawlers for power league, maps so you can see what is the best pick. We have a database where we collect all data from power league matches from mythic to masters, you can find the brawlers win rate or the most used.'
+          content="You can see what's the best pick in brawl stars. We have a database where we save all data from pl matches, you can find the characters win rate or the most used."
         />
         <meta
           property='og:description'
-          content='Best brawlers for power league, maps so you can see what is the best pick. We have a database where we collect all data from power league matches from mythic to masters, you can find the brawlers win rate or the most used.'
+          content="You can see what's the best pick in brawl stars. We have a database where we save all data from pl matches, you can find the characters win rate or the most used."
         />
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta
