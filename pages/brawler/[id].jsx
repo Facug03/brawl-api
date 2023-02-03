@@ -1,13 +1,28 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
 import styles from './Brawler.module.css'
 import Container from '../../components/Container/Container'
 import { BRAWLERS } from '../../utils/rankings'
-import { mostUsedBrawlers, vsMaps, showdownMaps } from '../../utils/maps'
+import {
+  mostUsedBrawlers,
+  BestBrawlers,
+  vsMaps,
+  showdownMaps,
+} from '../../utils/maps'
 import { getBrawlers } from '../../lib/redis'
 
-export default function Brawler({ brawler, mostUsed, mostUsedSd }) {
+export default function Brawler({
+  brawler,
+  mostUsed,
+  mostUsedSd,
+  bestBrawlers,
+  bestBrawlersSd,
+}) {
+  const [select, setSelect] = useState(true)
+  const [selectSd, setSelectSd] = useState(true)
+
   return (
     <>
       <Head>
@@ -122,125 +137,239 @@ export default function Brawler({ brawler, mostUsed, mostUsedSd }) {
           </div>
         </div>
 
-        <h4 className={styles.working}>
-          Win rate is not available yet but it&apos;ll be in a few days.
-        </h4>
-
         <div className={styles.statsCont}>
           <div>
             <h2 className={styles.title}>3 vs 3 Modes</h2>
             <h4 className={styles.order}>Order By:</h4>
             <div className={styles.selectCont}>
-              <h3 className={`${styles.select} ${styles.selected}`}>
+              <h3
+                onClick={() => setSelect(true)}
+                className={`${styles.select} ${select && styles.selected}`}
+              >
                 Most Used
               </h3>
-              <h3 className={`${styles.select}`}>Win Rate</h3>
+              <h3
+                onClick={() => setSelect(false)}
+                className={`${styles.select} ${!select && styles.selected}`}
+              >
+                Win Rate
+              </h3>
             </div>
             <div className={styles.brawlersCont}>
-              {mostUsed.map((brawl, index) => {
-                return (
-                  <div
-                    className={`${styles.div} ${
-                      index % 2 === 0 ? styles.even : styles.odd
-                    } ${
-                      brawler.name.toUpperCase() === brawl.name &&
-                      styles.sameBrawler
-                    }`}
-                    key={brawl.name}
-                  >
-                    <div className={styles.brawlStats}>
+              {select
+                ? mostUsed.map((brawl, index) => {
+                    return (
                       <div
-                        className={`${styles.positionCenter} ${
+                        className={`${styles.div} ${
+                          index % 2 === 0 ? styles.even : styles.odd
+                        } ${
                           brawler.name.toUpperCase() === brawl.name &&
-                          styles.brawlerIndexCont
+                          styles.sameBrawler
                         }`}
+                        key={brawl.name}
                       >
-                        <h3
-                          className={`${styles.position} ${
-                            brawler.name.toUpperCase() === brawl.name &&
-                            styles.brawlerIndex
-                          }`}
-                        >
-                          {index + 1}
-                        </h3>
-                      </div>
-                      <div className={styles.imgList}>
-                        <Image
-                          src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
-                            BRAWLERS.find((braw) => braw.name === brawl.name).id
-                          }/custom`}
-                          alt={`brawl stars ${brawler.name} `}
-                          sizes='56px,
+                        <div className={styles.brawlStats}>
+                          <div
+                            className={`${styles.positionCenter} ${
+                              brawler.name.toUpperCase() === brawl.name &&
+                              styles.brawlerIndexCont
+                            }`}
+                          >
+                            <h3
+                              className={`${styles.position} ${
+                                brawler.name.toUpperCase() === brawl.name &&
+                                styles.brawlerIndex
+                              }`}
+                            >
+                              {index + 1}
+                            </h3>
+                          </div>
+                          <div className={styles.imgList}>
+                            <Image
+                              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
+                                BRAWLERS.find(
+                                  (braw) => braw.name === brawl.name
+                                ).id
+                              }/custom`}
+                              alt={`brawl stars ${brawler.name} `}
+                              sizes='56px,
                           (min-width: 600px) 56px,
                           (min-width: 400px) 51px,
                           (min-width: 0px) 49px'
-                          fill={true}
-                        />
+                              fill={true}
+                            />
+                          </div>
+                          <h3 className={styles.name}>{brawl.name}</h3>
+                        </div>
+                        <h3 className={styles.statBrawl}>{brawl.used}</h3>
                       </div>
-                      <h3 className={styles.name}>{brawl.name}</h3>
-                    </div>
-                    <h3 className={styles.statBrawl}>{brawl.used}</h3>
-                  </div>
-                )
-              })}
+                    )
+                  })
+                : bestBrawlers.map((brawl, index) => {
+                    return (
+                      <div
+                        className={`${styles.div} ${
+                          index % 2 === 0 ? styles.even : styles.odd
+                        } ${
+                          brawler.name.toUpperCase() === brawl.name &&
+                          styles.sameBrawler
+                        }`}
+                        key={brawl.name}
+                      >
+                        <div className={styles.brawlStats}>
+                          <div
+                            className={`${styles.positionCenter} ${
+                              brawler.name.toUpperCase() === brawl.name &&
+                              styles.brawlerIndexCont
+                            }`}
+                          >
+                            <h3
+                              className={`${styles.position} ${
+                                brawler.name.toUpperCase() === brawl.name &&
+                                styles.brawlerIndex
+                              }`}
+                            >
+                              {index + 1}
+                            </h3>
+                          </div>
+                          <div className={styles.imgList}>
+                            <Image
+                              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
+                                BRAWLERS.find(
+                                  (braw) => braw.name === brawl.name
+                                ).id
+                              }/custom`}
+                              alt={`brawl stars ${brawler.name} `}
+                              sizes='56px,
+                          (min-width: 600px) 56px,
+                          (min-width: 400px) 51px,
+                          (min-width: 0px) 49px'
+                              fill={true}
+                            />
+                          </div>
+                          <h3 className={styles.name}>{brawl.name}</h3>
+                        </div>
+                        <h3 className={styles.statBrawl}>{brawl.winRate}%</h3>
+                      </div>
+                    )
+                  })}
             </div>
           </div>
           <div>
             <h2 className={styles.title}>Showdown</h2>
             <h4 className={styles.order}>Order By:</h4>
             <div className={styles.selectCont}>
-              <h3 className={`${styles.select} ${styles.selected}`}>
+              <h3
+                onClick={() => setSelectSd(true)}
+                className={`${styles.select} ${selectSd && styles.selected}`}
+              >
                 Most Used
               </h3>
-              <h3 className={`${styles.select}`}>Win Rate</h3>
+              <h3
+                onClick={() => setSelectSd(false)}
+                className={`${styles.select} ${!selectSd && styles.selected}`}
+              >
+                Win Rate
+              </h3>
             </div>
             <div className={styles.brawlersCont}>
-              {mostUsedSd.map((brawl, index) => {
-                return (
-                  <div
-                    className={`${styles.div} ${
-                      index % 2 === 0 ? styles.even : styles.odd
-                    } ${
-                      brawler.name.toUpperCase() === brawl.name &&
-                      styles.sameBrawler
-                    }`}
-                    key={brawl.name}
-                  >
-                    <div className={styles.brawlStats}>
+              {selectSd
+                ? mostUsedSd.map((brawl, index) => {
+                    return (
                       <div
-                        className={`${styles.positionCenter} ${
+                        className={`${styles.div} ${
+                          index % 2 === 0 ? styles.even : styles.odd
+                        } ${
                           brawler.name.toUpperCase() === brawl.name &&
-                          styles.brawlerIndexCont
+                          styles.sameBrawler
                         }`}
+                        key={brawl.name}
                       >
-                        <h3
-                          className={`${styles.position} ${
-                            brawler.name.toUpperCase() === brawl.name &&
-                            styles.brawlerIndex
-                          }`}
-                        >
-                          {index + 1}
-                        </h3>
-                      </div>
-                      <div className={styles.imgList}>
-                        <Image
-                          src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
-                            BRAWLERS.find((braw) => braw.name === brawl.name).id
-                          }/custom`}
-                          alt={`brawl stars ${brawler.name} `}
-                          sizes='56px,
+                        <div className={styles.brawlStats}>
+                          <div
+                            className={`${styles.positionCenter} ${
+                              brawler.name.toUpperCase() === brawl.name &&
+                              styles.brawlerIndexCont
+                            }`}
+                          >
+                            <h3
+                              className={`${styles.position} ${
+                                brawler.name.toUpperCase() === brawl.name &&
+                                styles.brawlerIndex
+                              }`}
+                            >
+                              {index + 1}
+                            </h3>
+                          </div>
+                          <div className={styles.imgList}>
+                            <Image
+                              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
+                                BRAWLERS.find(
+                                  (braw) => braw.name === brawl.name
+                                ).id
+                              }/custom`}
+                              alt={`brawl stars ${brawler.name} `}
+                              sizes='56px,
                           (min-width: 600px) 56px,
                           (min-width: 400px) 51px,
                           (min-width: 0px) 49px'
-                          fill={true}
-                        />
+                              fill={true}
+                            />
+                          </div>
+                          <h3 className={styles.name}>{brawl.name}</h3>
+                        </div>
+                        <h3 className={styles.statBrawl}>{brawl.used}</h3>
                       </div>
-                      <h3 className={styles.name}>{brawl.name}</h3>
-                    </div>
-                    <h3 className={styles.statBrawl}>{brawl.used}</h3>
-                  </div>
-                )
-              })}
+                    )
+                  })
+                : bestBrawlersSd.map((brawl, index) => {
+                    return (
+                      <div
+                        className={`${styles.div} ${
+                          index % 2 === 0 ? styles.even : styles.odd
+                        } ${
+                          brawler.name.toUpperCase() === brawl.name &&
+                          styles.sameBrawler
+                        }`}
+                        key={brawl.name}
+                      >
+                        <div className={styles.brawlStats}>
+                          <div
+                            className={`${styles.positionCenter} ${
+                              brawler.name.toUpperCase() === brawl.name &&
+                              styles.brawlerIndexCont
+                            }`}
+                          >
+                            <h3
+                              className={`${styles.position} ${
+                                brawler.name.toUpperCase() === brawl.name &&
+                                styles.brawlerIndex
+                              }`}
+                            >
+                              {index + 1}
+                            </h3>
+                          </div>
+                          <div className={styles.imgList}>
+                            <Image
+                              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
+                                BRAWLERS.find(
+                                  (braw) => braw.name === brawl.name
+                                ).id
+                              }/custom`}
+                              alt={`brawl stars ${brawler.name} `}
+                              sizes='56px,
+                          (min-width: 600px) 56px,
+                          (min-width: 400px) 51px,
+                          (min-width: 0px) 49px'
+                              fill={true}
+                            />
+                          </div>
+                          <h3 className={styles.name}>{brawl.name}</h3>
+                        </div>
+                        <h3 className={styles.statBrawl}>{brawl.winRate}%</h3>
+                      </div>
+                    )
+                  })}
             </div>
           </div>
         </div>
@@ -269,6 +398,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  console.time('xd')
   const { id } = params
 
   const brawlerId = BRAWLERS.find(
@@ -281,11 +411,19 @@ export async function getStaticProps({ params }) {
 
   const mostUsedSd = mostUsedBrawlers(brawlers, showdownMaps)
 
+  const bestBrawlers = BestBrawlers(brawlers, vsMaps)
+
+  const bestBrawlersSd = BestBrawlers(brawlers, showdownMaps)
+
   const res = await fetch(
     `https://api.brawlapi.com/v1/brawlers/${brawlerId.id}`
   )
 
   const brawler = await res.json()
 
-  return { props: { brawler, mostUsed, mostUsedSd } }
+  console.timeEnd('xd')
+
+  return {
+    props: { brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawlersSd },
+  }
 }
