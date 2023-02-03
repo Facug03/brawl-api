@@ -19,18 +19,18 @@ export default function Shodown({ leagueBrawlers, mostUsed }) {
   return (
     <>
       <Head>
-        <title>Best Brawlers for Showdown Database | Brawl Pro</title>
+        <title>Best Brawlers for Showdown | Brawl Pro</title>
         <meta
           property='og:title'
-          content='Best Brawlers for Showdown Database | Brawl Pro'
+          content='Best Brawlers for Showdown | Brawl Pro'
         />
         <meta
           name='description'
-          content='Best brawlers for showdown, here you can fin the current maps so you can see what is the best pick for every map and the most used brawlers directly from our database.'
+          content='Find the current maps so you can see what is the best pick for every map and the most used brawlers directly from our database.'
         />
         <meta
           property='og:description'
-          content='Best brawlers for showdown, here you can fin the current maps so you can see what is the best pick for every map and the most used brawlers directly from our database.'
+          content='Find the current maps so you can see what is the best pick for every map and the most used brawlers directly from our database.'
         />
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta

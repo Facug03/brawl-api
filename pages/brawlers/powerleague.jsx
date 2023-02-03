@@ -15,7 +15,7 @@ export default function PowerLeague({ leagueBrawlers, mostUsed }) {
   return (
     <>
       <Head>
-        <title>Best Brawlers for Power League Database | Brawl Pro</title>
+        <title>Best Brawlers for Power League | Brawl Pro</title>
         <meta
           property='og:title'
           content='Best Brawlers for Power League Database | Brawl Pro'
