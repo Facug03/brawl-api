@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 7px;
 }
 
 .article {
@@ -45,6 +45,14 @@
     color: #0e83f8;
     margin-left: 5px;
     text-shadow: #000 -2px 4px, #000 -2px -1px;
+}
+
+.description {
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+    text-shadow: #000 -1px 2px, #000 -1px -1px;
+    margin-bottom: 20px;
 }
 
 .showdown {
@@ -168,6 +176,10 @@
         font-size: 27px;
     }
 
+    .description {
+        font-size: 15px;
+    }
+
     .mode {
         font-size: 22px;
     }
@@ -205,6 +217,11 @@
     .title {
         font-size: 30px;
     }
+
+    .description {
+        font-size: 16px;
+    }
+
 
     .mode {
         font-size: 25px;
@@ -271,6 +288,10 @@
     .brawlerContainer {
         width: 67px;
         height: 55.5px;
+    }
+
+    .description {
+        font-size: 17px;
     }
 
     .mapCont {

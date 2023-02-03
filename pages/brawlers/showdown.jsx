@@ -73,6 +73,10 @@ export default function Shodown({ leagueBrawlers, mostUsed }) {
             height={50}
           />
         </div>
+        <p className={styles.description}>
+          Best Brawlers in Solo Showdown for each map. Find out which are the
+          best brawlers and the most used.
+        </p>
         <section className={styles.section}>
           {showdown.map((gameMode) => (
             <article

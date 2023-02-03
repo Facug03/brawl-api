@@ -66,15 +66,19 @@ export default function PowerLeague({ leagueBrawlers, mostUsed }) {
         <div className={styles.head}>
           <h2 className={styles.title}>
             Best brawlers for <span className={styles.power}>Power</span>
-            <span className={styles.league}>League</span>
+            <span className={styles.league}> League</span>
           </h2>
           <Image
             src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/power-league/custom'
-            alt='power league icon'
+            alt='power league brawl stars'
             width={50}
             height={50}
           />
         </div>
+        <p className={styles.description}>
+          Best Brawlers in Power League for each map. Find out which are the
+          best brawlers and the most used.
+        </p>
         <div className={styles.linkCont}>
           <h3 className={styles.select}>Select Mode</h3>
           <div className={styles.links}>
