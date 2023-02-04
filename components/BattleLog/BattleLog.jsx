@@ -160,7 +160,7 @@ export default function BattleLog({
         <div className={styles.battleBigBrawler}>
           <PlayerBrawler
             key={battle.bigBrawler.tag}
-            tag={player.tag}
+            tag={battle.bigBrawler.tag}
             trophies={battle.bigBrawler.brawler.trophies}
             vs={true}
             id={battle.bigBrawler.brawler.id}
