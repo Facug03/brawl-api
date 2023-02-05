@@ -33,11 +33,11 @@ export default function Brawler({
         />
         <meta
           name='description'
-          content={`${brawler.name} star powers, gadgets and you can find statistics in all modes, what's the brawler's win rate and how used it is.`}
+          content={`${brawler.name} star powers, gadgets and you can find statistics in all modes, tierlist of all brwalers and the win rate`}
         />
         <meta
           property='og:description'
-          content={`${brawler.name} star powers, gadgets and you can find statistics in all modes, what's the brawler's win rate and how used it is.`}
+          content={`${brawler.name} star powers, gadgets and you can find statistics in all modes, tierlist of all brwalers and the win rate`}
         />
         <meta name='apple-mobile-web-app-title' content='Brawl Pro' />
         <meta
