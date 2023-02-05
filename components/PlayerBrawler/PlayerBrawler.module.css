@@ -68,7 +68,7 @@
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     left: 0;
-    bottom: 15px;
+    bottom: 0px;
 }
 
 .powerVs {
@@ -80,7 +80,7 @@
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     left: 0;
-    bottom: 17px;
+    bottom: 0px;
 }
 
 .playerName {
@@ -91,19 +91,27 @@
     text-align: center;
 }
 
+.normal {
+    font-size: 1vh;
+}
+
 
 @media (min-width: 500px) {
     .playerName {
         font-size: 13px;
     }
 
-    .power {
+    .normal {
+        font-size: 1.1vh;
+    }
+
+    /* .power {
         bottom: 15px;
     }
     
     .powerVs {
         bottom: 19px;
-    }
+    } */
 }
 
 @media (min-width: 700px) {
@@ -111,14 +119,18 @@
         font-size: 15px;
     }
 
+    .normal {
+        font-size: 1.5vh;
+    }
+
     .power {
         font-size: 14px;
-        bottom: 22px;
+       
     }
     
     .powerVs {
         font-size: 14px;
-        bottom: 20px;
+      
     }
 
     .imgCont {
@@ -127,17 +139,9 @@
     }
 }
 
-
+/* 
 @media (min-width: 1380px) {
     .power {
-        position: absolute;
-        padding: 3px;
-        background-color: #000;
-        font-size: 14px;
-        font-weight: 600;
-        color: #ffffff;
-        text-shadow: #000 -1px 2px, #000 -1px -1px;
-        left: 0;
         bottom: 22px;
     }
     
@@ -160,5 +164,5 @@
         text-shadow: #000 -1px 2px, #000 -1px -1px;
         text-align: center;
     }
-}
+} */
 

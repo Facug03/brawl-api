@@ -19,6 +19,8 @@ export default function PlayerBrawler({
   // console.log(nameColor)
 
   const powerLeague = getPowerImg(trophies)
+  const lengthPyr = playerName.length
+  console.log({ playerName, length: playerName.length })
 
   return (
     <div className={`${duo ? styles.team : styles.playerContainer}`}>
@@ -62,11 +64,19 @@ export default function PlayerBrawler({
               fill={true}
               priority={false}
             />
+            <span className={`${vs ? styles.powerVs : styles.power}`}>
+              LVL. {power}
+            </span>
           </div>
-          <span className={`${vs ? styles.powerVs : styles.power}`}>
+          {/* <span className={`${vs ? styles.powerVs : styles.power}`}>
             LVL. {power}
-          </span>
-          <p style={{ color: nameColor }} className={styles.playerName}>
+          </span> */}
+          <p
+            style={{ color: nameColor }}
+            className={`${styles.playerName} ${
+              lengthPyr >= 11 && styles.normal
+            }`}
+          >
             {playerName.length > 13
               ? `${playerName.slice(0, 10)}...`
               : playerName}
@@ -82,14 +92,23 @@ export default function PlayerBrawler({
               fill={true}
               priority={false}
             />
+            <span className={`${vs ? styles.powerVs : styles.power}`}>
+              LVL. {power}
+            </span>
           </div>
-          <span className={`${vs ? styles.powerVs : styles.power}`}>
+          {/* <span className={`${vs ? styles.powerVs : styles.power}`}>
             LVL. {power}
-          </span>
-          <p style={{ color: '#ffffff' }} className={styles.playerName}>
-            {playerName.length > 13
+          </span> */}
+          <p
+            style={{ color: '#ffffff' }}
+            className={`${styles.playerName} ${
+              lengthPyr >= 11 && styles.normal
+            }`}
+          >
+            {/* {playerName.length > 13
               ? `${playerName.slice(0, 10)}...`
-              : playerName}
+              : playerName} */}
+            {playerName}
           </p>
         </a>
       )}
