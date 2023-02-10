@@ -35,7 +35,7 @@ export default function Events({ events }) {
       </Head>
       <h2 className={styles.title}>Events Rotation</h2>
       <section className={styles.section}>
-        {events.slice(0, 7).map((ele) => {
+        {events.slice(0, 8).map((ele) => {
           return (
             <article className={styles.article} key={ele.event.id}>
               <div
@@ -79,11 +79,11 @@ export default function Events({ events }) {
           )
         })}
       </section>
-      {events.length > 7 && (
+      {events.length > 8 && (
         <>
           <h2 className={styles.title}>Challenge</h2>
           <section className={styles.section}>
-            {events.slice(7).map((ele) => {
+            {events.slice(8).map((ele) => {
               return (
                 <article className={styles.article} key={ele.event.id}>
                   <div
