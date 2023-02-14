@@ -45,6 +45,7 @@ export default function Events({ events }) {
                 <div className={styles.info}>
                   <div className={styles.modeContainer}>
                     <Image
+                      unoptimized={true}
                       src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${ele.event.mode}/mini`}
                       alt={`${mode[ele.event.mode]} icon map brawl stars`}
                       width={33}
@@ -70,6 +71,7 @@ export default function Events({ events }) {
                     ele.event.mode === 'bossFight') &&
                   styles.showdown
                 } ${styles.img}`}
+                unoptimized={true}
                 src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${ele.event.id}/map`}
                 alt={`${ele.event.map}`}
                 width={265}
@@ -97,6 +99,7 @@ export default function Events({ events }) {
                           alt={`${mode[ele.event.mode]} icon map brawl stars`}
                           width={33}
                           height={35}
+                          unoptimized={true}
                         />
                         <h3 className={styles.mode}>
                           {mode[ele.event.mode]?.name}
@@ -122,6 +125,7 @@ export default function Events({ events }) {
                     alt={`${ele.event.map}`}
                     width={265}
                     height={415}
+                    unoptimized={true}
                   />
                 </article>
               )
