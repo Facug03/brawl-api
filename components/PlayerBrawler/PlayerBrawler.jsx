@@ -20,7 +20,6 @@ export default function PlayerBrawler({
 
   const powerLeague = getPowerImg(trophies)
   const lengthPyr = playerName.length
-  console.log({ playerName, length: playerName.length })
 
   return (
     <div className={`${duo ? styles.team : styles.playerContainer}`}>

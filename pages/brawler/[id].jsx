@@ -420,8 +420,6 @@ export async function getStaticProps({ params }) {
 
   const brawler = await res.json()
 
-  console.timeEnd('xd')
-
   return {
     props: { brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawlersSd },
   }
