@@ -189,7 +189,7 @@ export default function Brawler({
                               src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
                                 BRAWLERS.find(
                                   (braw) => braw.name === brawl.name
-                                ).id
+                                )?.id
                               }/custom`}
                               alt={`brawl stars ${brawler.name} `}
                               sizes='56px,
@@ -237,7 +237,7 @@ export default function Brawler({
                               src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
                                 BRAWLERS.find(
                                   (braw) => braw.name === brawl.name
-                                ).id
+                                )?.id
                               }/custom`}
                               alt={`brawl stars ${brawler.name} `}
                               sizes='56px,
@@ -306,7 +306,7 @@ export default function Brawler({
                               src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
                                 BRAWLERS.find(
                                   (braw) => braw.name === brawl.name
-                                ).id
+                                )?.id
                               }/custom`}
                               alt={`brawl stars ${brawler.name} `}
                               sizes='56px,
@@ -354,7 +354,7 @@ export default function Brawler({
                               src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
                                 BRAWLERS.find(
                                   (braw) => braw.name === brawl.name
-                                ).id
+                                )?.id
                               }/custom`}
                               alt={`brawl stars ${brawler.name} `}
                               sizes='56px,
