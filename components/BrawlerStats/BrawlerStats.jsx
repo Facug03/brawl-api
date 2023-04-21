@@ -4,13 +4,14 @@ import styles from './BrawlerStats.module.css'
 import { BRAWLERS } from '../../utils/rankings'
 
 export default function BrawlerStats({ name, stats }) {
+  console.log({ name })
   return (
     <div className={styles.div}>
       <div className={styles.brawlerContainer}>
         <Image
           className={styles.brawlerImg}
           src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
-            BRAWLERS.find((brawl) => brawl.name === name).id
+            BRAWLERS.find((brawl) => brawl.name === name)?.id
           }/custom`}
           alt={`brawl stars ${name}`}
           fill={true}
