@@ -398,7 +398,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.time('xd')
   const { id } = params
 
   const brawlerId = BRAWLERS.find(
