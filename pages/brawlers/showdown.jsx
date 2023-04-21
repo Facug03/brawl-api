@@ -85,12 +85,7 @@ export default function Shodown({ leagueBrawlers, mostUsed }) {
               key={gameMode.name}
             >
               {gameMode.maps.map((brawlMap, index) => (
-                <div
-                  className={`${styles.container} ${
-                    index === gameMode.maps.length - 1 && styles.last
-                  }`}
-                  key={brawlMap.id}
-                >
+                <div className={styles.container} key={brawlMap.id}>
                   <div className={styles.div}>
                     <div className={styles.info}>
                       <div className={styles.modeContainer}>

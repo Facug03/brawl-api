@@ -306,10 +306,6 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .last {
-        margin-right: auto;
-    }
-
     .imgCont {
         width: 280px;
         height: 280px;
