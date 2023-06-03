@@ -9,6 +9,7 @@ export default function BrawlerStats({ name, stats }) {
     <div className={styles.div}>
       <div className={styles.brawlerContainer}>
         <Image
+          unoptimized={true}
           className={styles.brawlerImg}
           src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
             BRAWLERS.find((brawl) => brawl.name === name)?.id

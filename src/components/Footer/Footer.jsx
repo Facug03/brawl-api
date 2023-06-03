@@ -1,4 +1,4 @@
-import Container from '../Container/Container'
+import Container from '../Container'
 import styles from './Footer.module.css'
 
 export default function Footer() {
