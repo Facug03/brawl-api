@@ -1,4 +1,4 @@
-import { getBrawlers } from '../../lib/redis'
+import { getBrawlers } from '@lib/redis'
 
 export default async function handler(req, res) {
   const brawlers = await getBrawlers()
