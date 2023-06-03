@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   const { location, selected, after, brawler } = req.query
-  console.log(brawler)
+
   try {
     const response = await fetch(
       `https://bsproxy.royaleapi.dev/v1/rankings/${location}/${selected}${

@@ -26,7 +26,6 @@ export function Rank({ rankings }) {
       )
         .then((res) => res.json())
         .then((data) => {
-          console.log(data)
           if (data?.items) {
             setData(data)
           } else {

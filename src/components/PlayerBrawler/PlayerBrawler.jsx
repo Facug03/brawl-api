@@ -16,8 +16,6 @@ export default function PlayerBrawler({
   player,
   battleType,
 }) {
-  // console.log(nameColor)
-
   const powerLeague = getPowerImg(trophies)
   const lengthPyr = playerName.length
 

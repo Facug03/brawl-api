@@ -117,6 +117,7 @@ export const getBrawlerColor = {
   GRIFF: '#b116ed',
   GROM: '#b116ed',
   STU: '#b116ed',
+  HANK: '#b116ed',
   EDGAR: '#b116ed',
   NANI: '#b116ed',
   EMZ: '#b116ed',
@@ -132,6 +133,7 @@ export const getBrawlerColor = {
   MAX: '#fe0020',
   'MR. P': '#fe0020',
   GENE: '#fe0020',
+  WILLOW: '#fe0020',
   TARA: '#fe0020',
   MORTIS: '#fe0020',
   CHESTER: '#feee1c',
@@ -163,6 +165,10 @@ export const getBrawlerColor = {
     'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
   GALE: 'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
   SURGE:
+    'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
+  'R-T':
+    'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
+  MAISIE:
     'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
 }
 
