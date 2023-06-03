@@ -191,4 +191,5 @@ export const mode = {
       'linear-gradient(133deg, rgba(60,118,229,1) 15%, rgba(119,216,229,0.9570027840237657) 49%, rgba(231,33,14,0.9205882181974352) 50%, rgba(240,34,16,1) 88%)',
   },
   bossFight: { name: 'Boss Fight', color: '#d22122' },
+  volleyBrawl: { name: 'Volley Brawl', color: '#f2a81d' },
 }
