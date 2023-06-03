@@ -20,6 +20,7 @@ export function Brawler({
       <div className={styles.brawlCont}>
         <div className={styles.imgCont}>
           <Image
+            unoptimized={true}
             src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawler.avatarId}/profile`}
             alt={`brawl stars ${brawler.name} `}
             sizes='115px,
@@ -52,6 +53,7 @@ export function Brawler({
                 <div key={star.id}>
                   <div className={styles.starCont}>
                     <Image
+                      unoptimized={true}
                       src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${star.id}/mini`}
                       alt={`logo of ${star.name} star power Brawl Stars`}
                       width={33}
@@ -79,6 +81,7 @@ export function Brawler({
                 <div key={star.id}>
                   <div className={styles.starCont}>
                     <Image
+                      unoptimized={true}
                       src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${star.id}/mini`}
                       alt={`logo of ${star.name} star power Brawl Stars`}
                       width={33}
@@ -146,6 +149,7 @@ export function Brawler({
                         </div>
                         <div className={styles.imgList}>
                           <Image
+                            unoptimized={true}
                             src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
                               BRAWLERS.find((braw) => braw.name === brawl.name)
                                 ?.id
@@ -193,6 +197,7 @@ export function Brawler({
                         </div>
                         <div className={styles.imgList}>
                           <Image
+                            unoptimized={true}
                             src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
                               BRAWLERS.find((braw) => braw.name === brawl.name)
                                 ?.id
@@ -261,6 +266,7 @@ export function Brawler({
                         </div>
                         <div className={styles.imgList}>
                           <Image
+                            unoptimized={true}
                             src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
                               BRAWLERS.find((braw) => braw.name === brawl.name)
                                 ?.id
@@ -308,6 +314,7 @@ export function Brawler({
                         </div>
                         <div className={styles.imgList}>
                           <Image
+                            unoptimized={true}
                             src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${
                               BRAWLERS.find((braw) => braw.name === brawl.name)
                                 ?.id

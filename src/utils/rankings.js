@@ -555,12 +555,10 @@ export const BRAWLERS = [
     id: 16000067,
     name: 'WILLOW',
   },
-  ,
   {
     id: 16000068,
     name: 'MAISIE',
   },
-  ,
   {
     id: 16000069,
     name: 'HANK',
