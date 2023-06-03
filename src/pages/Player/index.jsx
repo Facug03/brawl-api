@@ -7,7 +7,7 @@ import BattleLog from '@components/BattleLog/BattleLog'
 import { postBrawler, sortBrawlers } from '@utils/postBrawlers'
 import Brawler from '@components/Brawler/Brawler'
 
-export function Player(player) {
+export function Player({ player }) {
   const [drop, setDrop] = useState(false)
 
   useEffect(() => {

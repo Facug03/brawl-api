@@ -1,5 +1,7 @@
+import { basePath } from 'config'
+
 export async function postBrawler(brawlers) {
-  const res = await fetch('https://brawlpro.com/api/rate', {
+  const res = await fetch(`${basePath}api/rate`, {
     headers: {
       'Content-Type': 'application/json',
     },

@@ -1,7 +1,7 @@
-import { useRouter } from 'next/router'
 import { useState, useEffect } from 'react'
 
 import styles from './Card.module.css'
+import { basePath } from 'config'
 
 export default function Card({ type }) {
   const [id, setId] = useState('')
@@ -28,7 +28,7 @@ export default function Card({ type }) {
   const playerPage = (e) => {
     e.preventDefault()
     if (id.length) {
-      window.location.href = `${basePath}/${type}/${id}`
+      window.location.href = `${basePath}${type}/${id}`
     }
   }
 

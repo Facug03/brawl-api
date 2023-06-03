@@ -47,38 +47,33 @@ export function mostUsedBrawlers(brawlers, maps) {
 
 export function bestBrawlersInMaps(arr) {
   let brawlers = {
-    15000578: [],
-    15000005: [],
-    15000054: [],
-    15000115: [],
-    15000007: [],
-    15000147: [],
-    15000586: [],
-    15000018: [],
-    15000019: [],
-    15000143: [],
+    15000160: [],
     15000026: [],
-    15000592: [],
-    15000587: [],
-    15000294: [],
-    15000300: [],
-    15000368: [],
-    15000440: [],
+    15000024: [],
+    15000007: [],
+    15000010: [],
+    15000008: [],
+    15000082: [],
+    15000083: [],
+    15000005: [],
     15000548: [],
-    15000043: [],
-    15000589: [],
-    15000582: [],
-    15000016: [],
-    15000015: [],
+    15000440: [],
+    15000367: [],
+    15000293: [],
+    15000300: [],
+    15000294: [],
+    15000019: [],
+    15000018: [],
+    15000053: [],
     15000014: [],
     15000013: [],
+    15000043: [],
     15000032: [],
-    15000101: [],
-    15000033: [],
-    15000093: [],
-    15000105: [],
-    15000109: [],
-    15000272: [],
+    15000016: [],
+    15000589: [],
+    15000582: [],
+    15000015: [],
+    15000123: [],
   }
 
   for (let brawl in brawlers) {
@@ -129,92 +124,15 @@ export function BestBrawlers(brawlers, maps) {
 }
 
 export const showdownMaps = [
-  '15000043',
-  '15000589',
-  '15000582',
-  '15000016',
-  '15000015',
   '15000014',
   '15000013',
+  '15000043',
   '15000032',
-  '15000101',
-  '15000033',
-  '15000093',
-  '15000105',
-  '15000109',
-  '15000272',
-]
-
-export const vsMaps = [
-  '15000578',
-  '15000005',
-  '15000054',
-  '15000115',
-  '15000007',
-  '15000147',
-  '15000586',
-  '15000018',
-  '15000019',
-  '15000143',
-  '15000026',
-  '15000592',
-  '15000587',
-  '15000294',
-  '15000300',
-  '15000368',
-  '15000440',
-  '15000548',
-]
-
-export const modes = [
-  {
-    name: 'brawlBall',
-    maps: [
-      { name: 'Beach Ball', id: '15000143' },
-      { name: 'Pinhole Punt', id: '15000026' },
-      { name: 'Iron Corridor', id: '15000592' },
-    ],
-  },
-  {
-    name: 'gemGrab',
-    maps: [
-      { name: 'Hard Rock Mine', id: '15000007' },
-      { name: 'Double Swoosh', id: '15000115' },
-      { name: 'Acute Angle', id: '15000147' },
-    ],
-  },
-  {
-    name: 'bounty',
-    maps: [
-      { name: 'Canal Grande', id: '15000054' },
-      { name: 'Shooting Star', id: '15000005' },
-      { name: 'Nowhere To Hide', id: '15000578' },
-    ],
-  },
-  {
-    name: 'knockout',
-    maps: [
-      { name: 'Out In The Open', id: '15000548' },
-      { name: 'Flaring Phoenix', id: '15000440' },
-      { name: 'Belles Rock', id: '15000368' },
-    ],
-  },
-  {
-    name: 'hotZone',
-    maps: [
-      { name: 'Iron Cover', id: '15000587' },
-      { name: 'Ring Of Fire', id: '15000300' },
-      { name: 'Split', id: '15000294' },
-    ],
-  },
-  {
-    name: 'heist',
-    maps: [
-      { name: 'Safe Zone', id: '15000019' },
-      { name: 'Kaboom Canyon', id: '15000018' },
-      { name: 'Center Control', id: '15000586' },
-    ],
-  },
+  '15000016',
+  '15000589',
+  '15000582',
+  '15000015',
+  '15000123',
 ]
 
 export const showdown = [
@@ -229,6 +147,120 @@ export const showdown = [
       { name: 'Hard Limits', id: '15000589' },
       { name: 'Lush Poles', id: '15000582' },
       { name: 'Rockwall Brawl', id: '15000015' },
+      { name: 'Flying Fantasies', id: '15000123' },
     ],
   },
 ]
+
+export const vsMaps = [
+  '15000160',
+  '15000026',
+  '15000024',
+  '15000007',
+  '15000010',
+  '15000008',
+  '15000082',
+  '15000083',
+  '15000005',
+  '15000548',
+  '15000440',
+  '15000367',
+  '15000293',
+  '15000300',
+  '15000294',
+  '15000019',
+  '15000018',
+  '15000053',
+]
+
+export const modes = [
+  {
+    name: 'brawlBall',
+    maps: [
+      { name: 'Field Goal', id: '15000160' },
+      { name: 'Pinhole Punt', id: '15000026' },
+      { name: 'Backyard Bowl', id: '15000024' },
+    ],
+  },
+  {
+    name: 'gemGrab',
+    maps: [
+      { name: 'Hard Rock Mine', id: '15000007' },
+      { name: 'Gem Fort', id: '15000010' },
+      { name: 'Crystal Arcade', id: '15000008' },
+    ],
+  },
+  {
+    name: 'bounty',
+    maps: [
+      { name: 'Layer Cake', id: '15000082' },
+      { name: 'Dry Season', id: '15000083' },
+      { name: 'Shooting Star', id: '15000005' },
+    ],
+  },
+  {
+    name: 'knockout',
+    maps: [
+      { name: 'Out In The Open', id: '15000548' },
+      { name: 'Flaring Phoenix', id: '15000440' },
+      { name: 'Goldarm Gulch', id: '15000367' },
+    ],
+  },
+  {
+    name: 'hotZone',
+    maps: [
+      { name: 'Parallel Plays', id: '15000293' },
+      { name: 'Ring Of Fire', id: '15000300' },
+      { name: 'Split', id: '15000294' },
+    ],
+  },
+  {
+    name: 'heist',
+    maps: [
+      { name: 'Safe Zone', id: '15000019' },
+      { name: 'Kaboom Canyon', id: '15000018' },
+      { name: 'Hot Potato', id: '15000053' },
+    ],
+  },
+]
+
+// {
+//   name: 'knockout',
+//   maps: [
+//     { name: 'Out In The Open', id: '15000548' },
+//     { name: 'Flaring Phoenix', id: '15000440' },
+//     { name: 'Belles Rock', id: '15000368' },
+//   ],
+// },
+
+export function createEmptyBrawlersObject(vsMaps, showdownMaps) {
+  let brawlers = {}
+
+  vsMaps.forEach((mapId) => {
+    const map = modes.find((mode) => mode.maps.some((m) => m.id === mapId))
+    if (map) {
+      map.maps.forEach((mapData) => {
+        if (!brawlers[mapData.id]) {
+          brawlers[mapData.id] = []
+        }
+      })
+    }
+  })
+
+  showdownMaps.forEach((mapId) => {
+    const map = showdown[0].maps.find((m) => m.id === mapId)
+    if (map) {
+      if (!brawlers[map.id]) {
+        brawlers[map.id] = []
+      }
+    }
+  })
+
+  return brawlers
+}
+
+// Example usage:
+// const emptyBrawlers = createEmptyBrawlersObject(vsMaps, showdownMaps)
+// console.log(emptyBrawlers)
+// console.log(emptyBrawlers['15000160'])
+// console.log(emptyBrawlers['15000014'])
