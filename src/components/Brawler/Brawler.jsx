@@ -22,6 +22,7 @@ export default function Brawler({
       <div className={styles.brawler}>
         <div className={styles.brawlerContainer}>
           <Image
+            unoptimized={true}
             style={{ background: getBrawlerColor[name] }}
             className={styles.brawlerImg}
             src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
@@ -29,6 +30,7 @@ export default function Brawler({
             fill={true}
           />
           <Image
+            unoptimized={true}
             className={styles.rankBrawl}
             src={`${getRankImg(rank)}`}
             alt={`Brawl stars rank icon ${rank}`}
@@ -83,6 +85,7 @@ export default function Brawler({
                 return (
                   <div key={star.id} className={styles.starContainer}>
                     <Image
+                      unoptimized={true}
                       src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${star.id}/mini`}
                       alt={`logo of ${star.name} star power Brawl Stars`}
                       width={33}
@@ -98,6 +101,7 @@ export default function Brawler({
                 return (
                   <div key={gad.id} className={styles.starContainer}>
                     <Image
+                      unoptimized={true}
                       src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${gad.id}/mini`}
                       alt={`logo of ${gad.name} gadget Brawl Stars`}
                       width={33}
@@ -115,6 +119,7 @@ export default function Brawler({
                 return (
                   <div key={gear.id}>
                     <Image
+                      unoptimized={true}
                       src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${gear.id}/mini`}
                       alt={`logo of ${gear.name} gear Brawl Stars`}
                       width={33}

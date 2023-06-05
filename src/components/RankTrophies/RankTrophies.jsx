@@ -27,6 +27,7 @@ export default function RankTrophies({
         </div>
         <div className={styles.imgContainer}>
           <Image
+            unoptimized={true}
             src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
             alt={`profile of the ${rank} in the world of Brawl Stars`}
             fill={true}
@@ -44,6 +45,7 @@ export default function RankTrophies({
       <div className={`${styles.trophiesCont} ${memberCount && styles.clubs}`}>
         <div className={styles.trophyImg}>
           <Image
+            unoptimized={true}
             src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
             alt='trophy icon'
             fill={true}

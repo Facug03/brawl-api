@@ -25,6 +25,7 @@ export default function PlayerBrawler({
         {battleType?.includes('Ranked') ? (
           <div className={styles.leagueRanked}>
             <Image
+              unoptimized={true}
               src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/power-${powerLeague.rank}/mini`}
               alt={`${powerLeague.rank} power league icon`}
               width={powerLeague.rank !== 'masters' ? 25 : 33}
@@ -41,6 +42,7 @@ export default function PlayerBrawler({
         ) : (
           <div className={styles.trophiesBrawler}>
             <Image
+              unoptimized={true}
               src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
               alt='trophy icon'
               width={20}
@@ -55,6 +57,7 @@ export default function PlayerBrawler({
         <div>
           <div className={styles.imgCont}>
             <Image
+              unoptimized={true}
               className={styles.imgBrawl}
               src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
               alt={`Information of ${name}`}
@@ -84,6 +87,7 @@ export default function PlayerBrawler({
           <div className={styles.imgCont}>
             <Image
               className={styles.imgBrawl}
+              unoptimized={true}
               src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
               alt={`Information of ${name}`}
               fill={true}
