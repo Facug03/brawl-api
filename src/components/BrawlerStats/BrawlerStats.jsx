@@ -4,7 +4,6 @@ import styles from './BrawlerStats.module.css'
 import { BRAWLERS } from '../../utils/rankings'
 
 export default function BrawlerStats({ name, stats }) {
-  console.log({ name })
   return (
     <div className={styles.div}>
       <div className={styles.brawlerContainer}>
