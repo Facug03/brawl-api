@@ -100,6 +100,7 @@ export function Showdown({ leagueBrawlers, mostUsed }) {
                   )}
                   <div className={styles.imgCont}>
                     <Image
+                      unoptimized={true}
                       className={styles.img}
                       src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawlMap.id}/map`}
                       alt={`${brawlMap.name}`}

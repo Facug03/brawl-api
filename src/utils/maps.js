@@ -71,7 +71,6 @@ export function bestBrawlersInMaps(arr) {
     15000032: [],
     15000016: [],
     15000589: [],
-    15000582: [],
     15000015: [],
     15000123: [],
   }
@@ -130,7 +129,6 @@ export const showdownMaps = [
   '15000032',
   '15000016',
   '15000589',
-  '15000582',
   '15000015',
   '15000123',
 ]
@@ -145,7 +143,6 @@ export const showdown = [
       { name: 'Acid Lakes', id: '15000032' },
       { name: 'Feast or Famine', id: '15000016' },
       { name: 'Hard Limits', id: '15000589' },
-      { name: 'Lush Poles', id: '15000582' },
       { name: 'Rockwall Brawl', id: '15000015' },
       { name: 'Flying Fantasies', id: '15000123' },
     ],
