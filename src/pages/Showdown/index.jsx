@@ -30,7 +30,6 @@ export function Showdown({ leagueBrawlers, mostUsed }) {
           </h3>
         </div>
       )}
-      <h2>Still recolecting data, so this picks may not be accurate.</h2>
       <div className={styles.head}>
         <h2 className={styles.title}>Best brawlers for Showdown</h2>
         <Image
