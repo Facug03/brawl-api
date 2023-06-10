@@ -1,8 +1,23 @@
 import Head from 'next/head'
 
+import styles from '@pages/Player/Player.module.css'
 import { Player } from '@pages/Player'
+import { basePath } from 'config'
 
 export default function PlayerPage(player) {
+  if (player.reason) {
+    return (
+      <div className={styles.errorContainer}>
+        <h2 className={styles.error}>
+          The tag doesn&apos;t exits, look if you spelled it right.
+        </h2>
+        <a href={`${basePath}`} className={styles.button}>
+          Home
+        </a>
+      </div>
+    )
+  }
+
   return (
     <>
       <Head>
@@ -59,6 +74,6 @@ export async function getServerSideProps({ params }) {
       player = { ...player, ...resp.value }
     }
   })
-
+  console.log({ player })
   return { props: player }
 }

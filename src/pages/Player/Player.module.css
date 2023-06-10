@@ -1,439 +1,447 @@
 .head {
-    display: flex;
-    padding: 5px 10px;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
+  display: flex;
+  padding: 5px 10px;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.button {
+  background-color: #2188e8;
+  font-weight: 700;
+  width: fit-content;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  color: #ffffff;
+  border-radius: 3px;
+  font-size: 25px;
+  border: solid #000000 2px;
+  text-shadow: #000 -1px 2px, #000 -1px -1px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .icon {
-    position: relative;
+  position: relative;
 }
 
 .imgProfile {
-    position: relative;
-    width: 80px;
-    height: 80px;
+  position: relative;
+  width: 80px;
+  height: 80px;
 }
 
 .tag {
-    position: absolute;
-    bottom: -8px;
-    left: 0px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
+  position: absolute;
+  bottom: -8px;
+  left: 0px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: #000 -1px 2px, #000 -1px -1px;
 }
 
 .profile {
-    padding: 10px 20px;
-    border: 3px solid #000000;
-    transform: skew(-7deg,0deg);
-    background-color: #353d50;
-    box-shadow: #0e0e16 0px 3px 9px;
+  padding: 10px 20px;
+  border: 3px solid #000000;
+  transform: skew(-7deg, 0deg);
+  background-color: #353d50;
+  box-shadow: #0e0e16 0px 3px 9px;
 }
 
 .profileContainer {
-    transform: skew(7deg,0deg);
+  transform: skew(7deg, 0deg);
 }
 
 .nameContainer {
-    display: flex;
-    gap: 5px;
-    align-items: center;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 .name {
-    font-size: 21px;
-    font-weight: 700;
-    /* text-shadow: #000 -1px 2px, #000 -1px -1px; */
-    padding-bottom: 6px;
+  font-size: 21px;
+  font-weight: 700;
+  /* text-shadow: #000 -1px 2px, #000 -1px -1px; */
+  padding-bottom: 6px;
 }
 
 .exp {
-    position: relative;
+  position: relative;
 }
 
 .imgExp {
-    position: relative;
-    width: 35px;
-    height: 35px;
+  position: relative;
+  width: 35px;
+  height: 35px;
 }
 
 .level {
-    position: absolute;
-    font-size: 13px;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: #000 -0.5px 1px, #000 -1px -0.5px;
-    bottom: 11px;
-    left: 6px;
+  position: absolute;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: #000 -0.5px 1px, #000 -1px -0.5px;
+  bottom: 11px;
+  left: 6px;
 }
 
 .trophies {
-    display: flex;
-    gap: 5px;
-    align-items: center;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 
 .imgTrophy {
-    position: relative;
-    width: 25px;
-    height: 20px;
+  position: relative;
+  width: 25px;
+  height: 20px;
 }
 
 .number {
-    font-size: 15px;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: #000 -1px 2px, #000 -1px -1px;
 }
 
 .info {
-    margin: 75px 0;
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 0.8fr));
-    gap: 15px;
-    justify-content: center;
+  margin: 75px 0;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 0.8fr));
+  gap: 15px;
+  justify-content: center;
 }
 
 .statsProfile {
-    position: relative;
-    padding: 15px;
-    border: 3px solid #000000;
-    transform: skew(-7deg,0deg);
-    background-color: #353d50;
-    box-shadow: #0e0e16 0px 3px 9px;
+  position: relative;
+  padding: 15px;
+  border: 3px solid #000000;
+  transform: skew(-7deg, 0deg);
+  background-color: #353d50;
+  box-shadow: #0e0e16 0px 3px 9px;
 }
 
 .infoClub {
-    cursor: pointer;
-    text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .infoPlayer {
-    padding: 0 3px;
-    transform: skew(7deg,0deg);
-    font-size: 17px;
-    position: absolute;
-    top: -10px;
-    left: 3px;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
-    background-color: #363b4e;
+  padding: 0 3px;
+  transform: skew(7deg, 0deg);
+  font-size: 17px;
+  position: absolute;
+  top: -10px;
+  left: 3px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: #000 -1px 2px, #000 -1px -1px;
+  background-color: #363b4e;
 }
 
 .stats {
-    transform: skew(7deg,0deg);
-    font-size: 15px;
-    font-weight: 600;
-    color: #ffffff;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
+  transform: skew(7deg, 0deg);
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: #000 -1px 2px, #000 -1px -1px;
 }
 
 /* ---- */
 
 .drop {
-    background-color: #2188e8;
-    padding: 10px;
-    transform: skew(-7deg,0deg);
-    border: #000000 solid 2px;
-    cursor: pointer;
+  background-color: #2188e8;
+  padding: 10px;
+  transform: skew(-7deg, 0deg);
+  border: #000000 solid 2px;
+  cursor: pointer;
 }
 
 .open {
-    transform: rotate(90deg);
-    position: absolute;
-    left: 7px;
+  transform: rotate(90deg);
+  position: absolute;
+  left: 7px;
 }
 
 .close {
-    position: absolute;
-    left: 7px;
+  position: absolute;
+  left: 7px;
 }
 
 .text {
-    font-size: 21px;
-    color: #ffffff;
-    font-weight: 800;
-    transform: skew(7deg,0deg);
-    padding-left: 30px;
-    position: relative;
-    text-shadow: #000 -2px 3px, #000 -1px -1px;
-    /* margin: 40px 0px 15px 0px; */
+  font-size: 21px;
+  color: #ffffff;
+  font-weight: 800;
+  transform: skew(7deg, 0deg);
+  padding-left: 30px;
+  position: relative;
+  text-shadow: #000 -2px 3px, #000 -1px -1px;
+  /* margin: 40px 0px 15px 0px; */
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  min-height: 500px;
 }
 
 .error {
-    text-align: center;
-    text-shadow: #000 -2px 3px, #000 -1px -1px;
-    font-size: 21px;
-    color: #ffffff;
-    margin-top: 15px;
+  text-align: center;
+  text-shadow: #000 -2px 3px, #000 -1px -1px;
+  font-size: 21px;
+  color: #ffffff;
+  margin-top: 15px;
 }
 
 .brawlers {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    row-gap: 50px;
-    column-gap: 25px;
-    margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  row-gap: 50px;
+  column-gap: 25px;
+  margin-top: 70px;
 }
 
 @media (min-width: 390px) {
-    .info {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .info {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
-    .infoPlayer {
-        font-size: 14px;
-    }
-    
-    .stats {
-        font-size: 13px;
-    }
-    
+  .infoPlayer {
+    font-size: 14px;
+  }
+
+  .stats {
+    font-size: 13px;
+  }
 }
 
 @media (min-width: 390px) {
-    .head {
-        padding: 5px 15px;
-    }
+  .head {
+    padding: 5px 15px;
+  }
 
-    .name {
-        font-size: 23px;
-    }
+  .name {
+    font-size: 23px;
+  }
 
-    .text {
-        font-size: 23px;
-    }
+  .text {
+    font-size: 23px;
+  }
 
-    .imgTrophy {
-        width: 25px;
-        height: 20px;
-    }
+  .imgTrophy {
+    width: 25px;
+    height: 20px;
+  }
 
-    .number {
-        font-size: 18px;
-    }
+  .number {
+    font-size: 18px;
+  }
 
+  .imgProfile {
+    width: 80px;
+    height: 80px;
+  }
 
-    .imgProfile {
-        width: 80px;
-        height: 80px;
-    }
+  .tag {
+    bottom: -10px;
+    left: 0px;
+    font-size: 16px;
+  }
 
-    .tag {
-        bottom: -10px;
-        left: 0px;
-        font-size: 16px;
-    }
+  .profile {
+    padding: 10px 20px;
+  }
 
-    .profile {
-        padding: 10px 20px;
-    }
-    
-    .imgExp {
-        width: 40px;
-        height: 40px;
-    }
+  .imgExp {
+    width: 40px;
+    height: 40px;
+  }
 
-    .infoPlayer {
-        font-size: 16px;
-        top: -13px;
-        left: 8px;
-    }
-    
+  .infoPlayer {
+    font-size: 16px;
+    top: -13px;
+    left: 8px;
+  }
 
-    .stats {
-        font-size: 14px;
-    }
+  .stats {
+    font-size: 14px;
+  }
 
-    .level {
-        bottom: 11px;
-        left: 6px;
-        font-size: 14px;
-    }
+  .level {
+    bottom: 11px;
+    left: 6px;
+    font-size: 14px;
+  }
 
-    .info {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        justify-content: center;
-        gap: 20px;
-    }
+  .info {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    gap: 20px;
+  }
 }
-
 
 @media (min-width: 460px) {
-    .head {
-        padding: 5px 20px;
-    }
+  .head {
+    padding: 5px 20px;
+  }
 
-    .name {
-        font-size: 25px;
-    }
+  .name {
+    font-size: 25px;
+  }
 
+  .text {
+    font-size: 25px;
+  }
 
-    .text {
-        font-size: 25px;
-    }
+  .imgTrophy {
+    width: 30px;
+    height: 25px;
+  }
 
-    .imgTrophy {
-        width: 30px;
-        height: 25px;
-    }
+  .number {
+    font-size: 18px;
+  }
 
-    .number {
-        font-size: 18px;
-    }
+  .imgProfile {
+    width: 100px;
+    height: 100px;
+  }
 
-    .imgProfile {
-        width: 100px;
-        height: 100px;
-    }
+  .tag {
+    bottom: -15px;
+    left: 0px;
+    font-size: 17px;
+  }
 
-    .tag {
-        bottom: -15px;
-        left: 0px;
-        font-size: 17px;
-    }
+  .profile {
+    padding: 10px 30px;
+  }
 
-    .profile {
-        padding: 10px 30px;
-    }
+  .infoPlayer {
+    font-size: 19px;
+    top: -16px;
+    left: 8px;
+  }
 
-    .infoPlayer {
-        font-size: 19px;
-        top: -16px;
-        left: 8px;
-    }
-    
+  .info {
+    gap: 40px;
+  }
 
-    .info {
-        gap: 40px;
-    }
+  .imgExp {
+    width: 40px;
+    height: 40px;
+  }
 
-    .imgExp {
-        width: 40px;
-        height: 40px;
-    }
-
-    .level {
-        bottom: 11px;
-        left: 6px;
-        font-size: 14px;
-    }
+  .level {
+    bottom: 11px;
+    left: 6px;
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 550px) {
-    .head {
-        justify-content: space-between;
-        flex-direction: row;
-        gap: 0;
-    }
+  .head {
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 0;
+  }
 
-    .infoPlayer {
-        font-size: 24px;
-    }
+  .infoPlayer {
+    font-size: 24px;
+  }
 }
-
 
 @media (min-width: 595px) {
-    .head {
-        padding: 5px 30px;
-    }
+  .head {
+    padding: 5px 30px;
+  }
 
-    .name {
-        font-size: 28px;
-    }
+  .name {
+    font-size: 28px;
+  }
 
-    .text {
-        font-size: 28px;
-    }
+  .text {
+    font-size: 28px;
+  }
 
-    .number {
-        font-size: 20px;
-    }
+  .number {
+    font-size: 20px;
+  }
 
-    .imgProfile {
-        width: 120px;
-        height: 120px;
-    }
+  .imgProfile {
+    width: 120px;
+    height: 120px;
+  }
 
-    .tag {
-        bottom: -12px;
-        left: 0px;
-        font-size: 20px;
-    }
+  .tag {
+    bottom: -12px;
+    left: 0px;
+    font-size: 20px;
+  }
 
-    .imgExp {
-        width: 50px;
-        height: 50px;
-    }  
+  .imgExp {
+    width: 50px;
+    height: 50px;
+  }
 
-    .level {
-        bottom: 15px;
-        left: 10px;
-        font-size: 15px;
-    }
+  .level {
+    bottom: 15px;
+    left: 10px;
+    font-size: 15px;
+  }
 
-    .stats {
-        font-size: 20px;
-    }
-    
-    .brawlers {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 10px;
-    }
+  .stats {
+    font-size: 20px;
+  }
+
+  .brawlers {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 10px;
+  }
 }
 
-
 @media (min-width: 800px) {
-    .head {
-        padding: 5px 50px;
-    }
+  .head {
+    padding: 5px 50px;
+  }
 
-    .profile {
-        padding: 10px 50px;
-    }
+  .profile {
+    padding: 10px 50px;
+  }
 
-    .nameContainer {
-        gap: 15px;
-    }
+  .nameContainer {
+    gap: 15px;
+  }
 
-    .brawlers {
-        column-gap: 0px;
-    }
+  .brawlers {
+    column-gap: 0px;
+  }
 }
 
 @media (min-width: 915px) {
-    .head {
-        justify-content: unset;
-        gap: 100px;
-    }
+  .head {
+    justify-content: unset;
+    gap: 100px;
+  }
 
-    .profile {
-        padding: 10px 100px;
-    }
+  .profile {
+    padding: 10px 100px;
+  }
 
-    .nameContainer {
-        gap: 25px;
-    }
+  .nameContainer {
+    gap: 25px;
+  }
 
-    .info {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    } 
+  .info {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 1000px) {
-    .brawlers {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+  .brawlers {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
-
-
-
-
-
-
-
