@@ -43,7 +43,8 @@ export function Events({ events }) {
                 } ${styles.img} ${
                   (ele.event.mode === 'roboRumble' ||
                     ele.event.mode === 'basketBrawl' ||
-                    ele.event.mode === 'bossFight') &&
+                    ele.event.mode === 'bossFight' ||
+                    ele.event.mode === 'volleyBrawl') &&
                   styles.showdown
                 } ${styles.img}`}
                 unoptimized={true}
@@ -93,7 +94,8 @@ export function Events({ events }) {
                     } ${styles.img} ${
                       (ele.event.mode === 'roboRumble' ||
                         ele.event.mode === 'basketBrawl' ||
-                        ele.event.mode === 'bossFight') &&
+                        ele.event.mode === 'bossFight' ||
+                        ele.event.mode === 'volleyBrawl') &&
                       styles.showdown
                     } ${styles.img}`}
                     src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${ele.event.id}/map`}
