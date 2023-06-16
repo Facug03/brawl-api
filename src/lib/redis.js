@@ -40,6 +40,7 @@ let brawlerSchema = new Schema(
     15000582: { type: 'string[]' },
     15000015: { type: 'string[]' },
     15000123: { type: 'string[]' },
+    15000045: { type: 'string[]' },
   },
   {
     dataStructure: 'JSON',
