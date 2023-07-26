@@ -131,6 +131,7 @@ export const getBrawlerColor = {
   GRAY: '#fe0020',
   BYRON: '#fe0020',
   MAX: '#fe0020',
+  DOUG: '#fe0020',
   'MR. P': '#fe0020',
   GENE: '#fe0020',
   WILLOW: '#fe0020',
@@ -169,6 +170,8 @@ export const getBrawlerColor = {
   'R-T':
     'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
   MAISIE:
+    'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
+  CORDELIUS:
     'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
 }
 

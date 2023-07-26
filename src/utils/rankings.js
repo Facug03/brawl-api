@@ -563,4 +563,12 @@ export const BRAWLERS = [
     id: 16000069,
     name: 'HANK',
   },
+  {
+    id: 16000070,
+    name: 'CORDELIUS',
+  },
+  {
+    id: 16000071,
+    name: 'DOUG',
+  },
 ]
