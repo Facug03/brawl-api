@@ -34,12 +34,15 @@ export default function Card({ type }) {
 
   return (
     <article className={styles.card}>
-      <h2 className={styles.search}>{type}</h2>
+      <label for={type} className={styles.search}>
+        {type}
+      </label>
       <form onSubmit={playerPage} className={styles.form}>
         <span className={styles.hashtag}>#</span>
         <input
           value={id}
           name={type}
+          id={type}
           onChange={controlInput}
           className={styles.tag}
         />

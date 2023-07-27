@@ -5,7 +5,7 @@
 
 .p {
     font-weight: 500;
-    font-size: 13px;
+    font-size: 14px;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     text-align: center;
@@ -14,8 +14,8 @@
 .mail {
     display: block;
     font-weight: 500;
-    font-size: 13px;
-    color: #2188e8;
+    font-size: 14px;
+    color: #45a5ff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     text-align: center;
     margin-bottom: 10px;
@@ -24,7 +24,7 @@
 
 .policy {
     font-weight: 500;
-    font-size: 11px;
+    font-size: 12px;
     color: #ffffff;
     text-shadow: #000 -1px 2px, #000 -1px -1px;
     text-align: center;
@@ -32,21 +32,6 @@
 
 .link {
     color: #ffffff;
-}
-
-
-@media (min-width: 420px) {
-    .p {
-        font-size: 14px;
-    }
-
-    .mail {
-        font-size: 14px;
-    }
-    
-    .policy {
-        font-size: 12px;
-    }
 }
 
 @media (min-width: 500px) {
