@@ -13,10 +13,10 @@ export default function Main() {
   return (
     <main>
       <Container>
-        <h2 className={styles.title}>
+        <h1 className={styles.title}>
           Search your profile or club
           <span className={styles.stats}> stats</span>!
-        </h2>
+        </h1>
         <section className={styles.section}>
           <Card type='player' />
           <Card type='club' />

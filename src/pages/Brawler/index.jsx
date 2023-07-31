@@ -33,7 +33,7 @@ export function Brawler({
           />
         </div>
         <div>
-          <h2 className={styles.brawlName}>{brawler.name}</h2>
+          <h1 className={styles.brawlName}>{brawler.name}</h1>
           <h3 className={styles.class}>{brawler.class.name}</h3>
           <h4 style={{ color: brawler.rarity.color }} className={styles.rarity}>
             {brawler.rarity.name}

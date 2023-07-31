@@ -32,10 +32,10 @@ export function PowerLeague({ leagueBrawlers, mostUsed }) {
         </div>
       )}
       <div className={styles.head}>
-        <h2 className={styles.title}>
+        <h1 className={styles.title}>
           Best brawlers for <span className={styles.power}>Power</span>
           <span className={styles.league}> League</span>
-        </h2>
+        </h1>
         <Image
           src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/power-league/custom'
           alt='power league brawl stars'

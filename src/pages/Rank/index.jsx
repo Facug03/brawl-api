@@ -57,7 +57,7 @@ export function Rank({ rankings }) {
 
   return (
     <Container>
-      <h2 className={styles.title}>Leaderboards</h2>
+      <h1 className={styles.title}>Leaderboards Brawl Stars</h1>
       <ul className={styles.ul}>
         {LEADERBOARDS.map((el) => (
           <li

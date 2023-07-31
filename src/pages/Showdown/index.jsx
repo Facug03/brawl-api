@@ -31,7 +31,7 @@ export function Showdown({ leagueBrawlers, mostUsed }) {
         </div>
       )}
       <div className={styles.head}>
-        <h2 className={styles.title}>Best brawlers for Showdown</h2>
+        <h1 className={styles.title}>Best brawlers for Showdown</h1>
         <Image
           src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/soloShowdown/custom'
           alt='showdown icon brawl stars'

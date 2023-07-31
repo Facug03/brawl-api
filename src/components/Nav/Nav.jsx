@@ -5,9 +5,9 @@ export default function Nav() {
   return (
     <header className={styles.header}>
       <a href={basePath} className={styles.logo}>
-        <h1 className={styles.game}>
+        <h2 className={styles.game}>
           Brawl <span className={styles.pro}>Pro</span>
-        </h1>
+        </h2>
       </a>
       <ul className={styles.nav}>
         <li>

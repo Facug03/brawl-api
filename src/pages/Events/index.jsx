@@ -8,7 +8,7 @@ import Container from '@components/Container'
 export function Events({ events }) {
   return (
     <Container>
-      <h2 className={styles.title}>Events Rotation</h2>
+      <h1 className={styles.title}>Event Rotation Brawl Stars</h1>
       <section className={styles.section}>
         {events.slice(0, 8).map((ele) => {
           return (

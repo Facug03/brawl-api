@@ -34,7 +34,7 @@ export default function Card({ type }) {
 
   return (
     <article className={styles.card}>
-      <label for={type} className={styles.search}>
+      <label htmlFor={type} className={styles.search}>
         {type}
       </label>
       <form onSubmit={playerPage} className={styles.form}>

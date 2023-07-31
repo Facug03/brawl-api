@@ -20,7 +20,7 @@ export function Brawlers({ brawlers }) {
 
   return (
     <Container>
-      <h2 className={styles.title}>All Brawlers</h2>
+      <h1 className={styles.title}>All Brawlers</h1>
       <div className={styles.filterCont}>
         <p
           onClick={() => setSort(true)}
