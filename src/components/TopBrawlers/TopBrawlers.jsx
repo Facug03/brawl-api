@@ -11,8 +11,8 @@ export default function TopBrawlers() {
           <span className={styles.league}>League</span>
         </h2>
         <Image
-          src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/power-league/custom'
-          alt='power league icon'
+          src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/power-league/custom"
+          alt="power league icon"
           width={50}
           height={50}
         />
@@ -21,8 +21,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.one}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000062/custom'
-            alt='Buster'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000062/custom"
+            alt="Buster"
             width={135}
             height={105}
           />
@@ -31,8 +31,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.two}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000063/custom'
-            alt='Chester'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000063/custom"
+            alt="Chester"
             width={135}
             height={105}
           />
@@ -41,8 +41,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.three}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000064/custom'
-            alt='Gray'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000064/custom"
+            alt="Gray"
             width={135}
             height={105}
           />
@@ -51,8 +51,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.four}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000021/custom'
-            alt='Gene'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000021/custom"
+            alt="Gene"
             width={135}
             height={105}
           />
@@ -61,8 +61,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.five}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000059/custom'
-            alt='Otis'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000059/custom"
+            alt="Otis"
             width={135}
             height={105}
           />
@@ -71,8 +71,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.six}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000012/custom'
-            alt='Crow'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000012/custom"
+            alt="Crow"
             width={135}
             height={105}
           />
@@ -81,8 +81,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.seven}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000057/custom'
-            alt='Janet'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000057/custom"
+            alt="Janet"
             width={135}
             height={105}
           />
@@ -91,8 +91,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.eight}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000048/custom'
-            alt='Grom'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000048/custom"
+            alt="Grom"
             width={135}
             height={105}
           />
@@ -101,8 +101,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.nine}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000029/custom'
-            alt='Bea'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000029/custom"
+            alt="Bea"
             width={135}
             height={105}
           />
@@ -111,8 +111,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.ten}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000032/custom'
-            alt='Max'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000032/custom"
+            alt="Max"
             width={135}
             height={105}
           />
@@ -121,8 +121,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.eleven}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000019/custom'
-            alt='Penny'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000019/custom"
+            alt="Penny"
             width={135}
             height={105}
           />
@@ -131,8 +131,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.twelve}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000061/custom'
-            alt='Gus'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000061/custom"
+            alt="Gus"
             width={135}
             height={105}
           />
@@ -141,8 +141,8 @@ export default function TopBrawlers() {
         <div className={styles.container}>
           <Image
             className={`${styles.img} ${styles.thirteen}`}
-            src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000065/custom'
-            alt='Mandy'
+            src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/16000065/custom"
+            alt="Mandy"
             width={135}
             height={105}
           />

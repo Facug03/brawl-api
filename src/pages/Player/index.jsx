@@ -39,12 +39,10 @@ export function Player({ player }) {
             {
               player: player.name,
               tagPlayer: player.tag,
-              color: player.nameColor
-                ? `#${player.nameColor.slice(4)}`
-                : '#ffffff',
+              color: player.nameColor ? `#${player.nameColor.slice(4)}` : '#ffffff',
             },
             ...profile,
-          ])
+          ]),
         )
       }
 
@@ -55,12 +53,10 @@ export function Player({ player }) {
             {
               player: player.name,
               tagPlayer: player.tag,
-              color: player.nameColor
-                ? `#${player.nameColor.slice(4)}`
-                : '#ffffff',
+              color: player.nameColor ? `#${player.nameColor.slice(4)}` : '#ffffff',
             },
             ...profile.slice(0, -1),
-          ])
+          ]),
         )
       }
     }
@@ -70,9 +66,7 @@ export function Player({ player }) {
     return <h3 className={styles.error}>Error</h3>
   }
 
-  const nameColor = player.nameColor
-    ? `#${player.nameColor.slice(4)}`
-    : '#ffffff'
+  const nameColor = player.nameColor ? `#${player.nameColor.slice(4)}` : '#ffffff'
   return (
     <Container>
       <header className={styles.head}>
@@ -81,7 +75,7 @@ export function Player({ player }) {
             <Image
               className={styles.img}
               src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${player.icon.id}/profile`}
-              alt='profile picture of Brawl Stars'
+              alt="profile picture of Brawl Stars"
               fill={true}
             />
           </div>
@@ -96,8 +90,8 @@ export function Player({ player }) {
               <div className={styles.exp}>
                 <div className={styles.imgExp}>
                   <Image
-                    src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/player-level/custom'
-                    alt='player level icon of Brawl Stars'
+                    src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/player-level/custom"
+                    alt="player level icon of Brawl Stars"
                     fill={true}
                   />
                 </div>
@@ -107,8 +101,8 @@ export function Player({ player }) {
             <div className={styles.trophies}>
               <div className={styles.imgTrophy}>
                 <Image
-                  src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
-                  alt='trophy icon'
+                  src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini"
+                  alt="trophy icon"
                   fill={true}
                 />
               </div>
@@ -124,10 +118,7 @@ export function Player({ player }) {
               Club
             </h3>
 
-            <a
-              className={styles.infoClub}
-              href={`/club/${player.club.tag.slice(1)}`}
-            >
+            <a className={styles.infoClub} href={`/club/${player.club.tag.slice(1)}`}>
               <p className={styles.stats}>{player.club.name}</p>
             </a>
           </div>
@@ -171,9 +162,7 @@ export function Player({ player }) {
       </div>
       <div onClick={() => setDrop(!drop)} className={styles.drop}>
         <h3 className={styles.text}>
-          <span className={`${drop && styles.open} ${styles.close}`}>
-            {'>'}
-          </span>
+          <span className={`${drop && styles.open} ${styles.close}`}>{'>'}</span>
           Battle Log
         </h3>
       </div>
@@ -181,11 +170,7 @@ export function Player({ player }) {
         <div>
           {player.items ? (
             player.items.map((item) => {
-              if (
-                item.battle.type?.includes('Ranked') &&
-                !item.battle.starPlayer
-              )
-                return
+              if (item.battle.type?.includes('Ranked') && !item.battle.starPlayer) return
               return (
                 <BattleLog
                   key={item.battleTime}

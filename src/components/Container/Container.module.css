@@ -1,22 +1,21 @@
 .container {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 
 @media (min-width: 410px) {
-    .container {
-        margin: 0 27px;
-    }
+  .container {
+    margin: 0 27px;
+  }
 }
 
-
 @media (min-width: 500px) {
-    .container {
-        margin: 0 30px;
-    }
+  .container {
+    margin: 0 30px;
+  }
 }
 
 @media (min-width: 730px) {
-    .container {
-        margin: 0 80px;
-    }
+  .container {
+    margin: 0 80px;
+  }
 }

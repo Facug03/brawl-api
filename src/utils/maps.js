@@ -1,26 +1,21 @@
 export function mostUsedInMaps(brawlers, maps) {
-  let mapsFilter = {}
+  const mapsFilter = {}
 
   brawlers.forEach((brawler) => {
-    for (let brawl in brawler.entityFields) {
+    for (const brawl in brawler.entityFields) {
       if (maps.some((map) => map === brawl)) {
         const sum = brawler[brawl].reduce((a, b) => Number(a) + Number(b), 0)
 
         mapsFilter = {
           ...mapsFilter,
-          [brawl]: [
-            ...(mapsFilter[brawl] || []),
-            { name: brawler.name, used: sum },
-          ],
+          [brawl]: [...(mapsFilter[brawl] || []), { name: brawler.name, used: sum }],
         }
       }
     }
   })
 
-  for (let map in mapsFilter) {
-    mapsFilter[map] = mapsFilter[map]
-      .sort((a, b) => b.used - a.used)
-      .slice(0, 10)
+  for (const map in mapsFilter) {
+    mapsFilter[map] = mapsFilter[map].sort((a, b) => b.used - a.used).slice(0, 10)
   }
 
   return mapsFilter
@@ -28,13 +23,11 @@ export function mostUsedInMaps(brawlers, maps) {
 
 export function mostUsedBrawlers(brawlers, maps) {
   const brawlersFilter = brawlers.map((brawler) => {
-    let brawlerFilter = { name: brawler.name, used: 0 }
+    const brawlerFilter = { name: brawler.name, used: 0 }
 
-    for (let brawl in brawler.entityFields) {
+    for (const brawl in brawler.entityFields) {
       if (maps.some((map) => map === brawl)) {
-        const used =
-          brawler[brawl].reduce((a, b) => Number(a) + Number(b), 0) +
-          brawlerFilter.used
+        const used = brawler[brawl].reduce((a, b) => Number(a) + Number(b), 0) + brawlerFilter.used
         brawlerFilter = { ...brawlerFilter, used }
       }
     }
@@ -46,7 +39,7 @@ export function mostUsedBrawlers(brawlers, maps) {
 }
 
 export function bestBrawlersInMaps(arr) {
-  let brawlers = {
+  const brawlers = {
     15000160: [],
     15000026: [],
     15000118: [],
@@ -75,18 +68,14 @@ export function bestBrawlersInMaps(arr) {
     15000033: [],
   }
 
-  for (let brawl in brawlers) {
+  for (const brawl in brawlers) {
     arr.forEach((ar) => {
       if (ar[brawl][0] !== '0' || ar[brawl][1] !== '0') {
         brawlers[brawl] = [
           ...brawlers[brawl],
           {
             name: ar.name,
-            winRate: Math.round(
-              (Number(ar[brawl][0]) /
-                (Number(ar[brawl][0]) + Number(ar[brawl][1]))) *
-                100
-            ),
+            winRate: Math.round((Number(ar[brawl][0]) / (Number(ar[brawl][0]) + Number(ar[brawl][1]))) * 100),
           },
         ]
           .sort((a, b) => b.winRate - a.winRate)
@@ -100,9 +89,9 @@ export function bestBrawlersInMaps(arr) {
 
 export function BestBrawlers(brawlers, maps) {
   const brawlersFilter = brawlers.map((brawler) => {
-    let brawlerFilter = { name: brawler.name, vic: 0, def: 0 }
+    const brawlerFilter = { name: brawler.name, vic: 0, def: 0 }
 
-    for (let brawl in brawler.entityFields) {
+    for (const brawl in brawler.entityFields) {
       if (maps.some((map) => map === brawl)) {
         const vic = Number(brawler[brawl][0]) + Number(brawlerFilter.vic)
         const def = Number(brawler[brawl][1]) + Number(brawlerFilter.def)

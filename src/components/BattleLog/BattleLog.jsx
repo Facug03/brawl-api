@@ -5,24 +5,14 @@ import { mode } from '../../utils/profileInfo'
 import PlayerBrawler from '../PlayerBrawler/PlayerBrawler'
 import styles from './BattleLog.module.css'
 
-export default function BattleLog({
-  battleTime,
-  event,
-  battle,
-  nameColor,
-  playerProfile,
-}) {
+export default function BattleLog({ battleTime, event, battle, nameColor, playerProfile }) {
   const timeAgo = getTimeAgo(battleTime)
 
   return (
     <article className={styles.article}>
       <div className={styles.header}>
         <h3 className={styles.typeMode}>
-          {battle.type
-            ? battle.type === 'soloRanked'
-              ? 'Solo Mode'
-              : battle.type
-            : 'ㅤㅤㅤ'}
+          {battle.type ? (battle.type === 'soloRanked' ? 'Solo Mode' : battle.type) : 'ㅤㅤㅤ'}
         </h3>
         <h3 className={styles.timeAgo}>{timeAgo}</h3>
       </div>
@@ -43,19 +33,9 @@ export default function BattleLog({
         </div>
         <div className={styles.resContainer}>
           {battle.mode.toLowerCase().includes('showdown') ? (
-            <h3
-              className={`${styles.result} ${
-                battle.rank <= 5 ? styles.win : styles.lose
-              }`}
-            >
-              RANK {battle.rank}
-            </h3>
+            <h3 className={`${styles.result} ${battle.rank <= 5 ? styles.win : styles.lose}`}>RANK {battle.rank}</h3>
           ) : (
-            <h3
-              className={`${styles.result} ${
-                battle.result === 'victory' ? styles.win : styles.lose
-              }`}
-            >
+            <h3 className={`${styles.result} ${battle.result === 'victory' ? styles.win : styles.lose}`}>
               {battle.result}
             </h3>
           )}
@@ -63,8 +43,8 @@ export default function BattleLog({
         {battle.trophyChange && (
           <div className={styles.typeContainer}>
             <Image
-              src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
-              alt='trophy icon'
+              src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini"
+              alt="trophy icon"
               width={20}
               height={15}
               priority={false}
@@ -156,49 +136,47 @@ export default function BattleLog({
         </div>
       )}
 
-      {!battle.mode.toLowerCase().includes('showdown') &&
-        battle.mode !== 'duels' &&
-        battle?.type && (
-          <div className={styles.battleContainer}>
-            <div className={styles.brawlers}>
-              {battle.teams[0].map((player) => (
-                <PlayerBrawler
-                  key={player.tag}
-                  tag={player.tag}
-                  trophies={player.brawler.trophies}
-                  vs={true}
-                  id={player.brawler.id}
-                  name={player.brawler.name}
-                  playerName={player.name}
-                  power={player.brawler.power}
-                  player={playerProfile}
-                  nameColor={nameColor}
-                  battleType={battle.type}
-                />
-              ))}
-            </div>
-            <div className={styles.vsContainer}>
-              <h3 className={styles.vs}>VS</h3>
-            </div>
-            <div className={styles.brawlers}>
-              {battle.teams[1]?.map((player) => (
-                <PlayerBrawler
-                  key={player.tag}
-                  tag={player.tag}
-                  trophies={player.brawler.trophies}
-                  vs={true}
-                  id={player.brawler.id}
-                  name={player.brawler.name}
-                  playerName={player.name}
-                  power={player.brawler.power}
-                  player={playerProfile}
-                  nameColor={nameColor}
-                  battleType={battle.type}
-                />
-              ))}
-            </div>
+      {!battle.mode.toLowerCase().includes('showdown') && battle.mode !== 'duels' && battle?.type && (
+        <div className={styles.battleContainer}>
+          <div className={styles.brawlers}>
+            {battle.teams[0].map((player) => (
+              <PlayerBrawler
+                key={player.tag}
+                tag={player.tag}
+                trophies={player.brawler.trophies}
+                vs={true}
+                id={player.brawler.id}
+                name={player.brawler.name}
+                playerName={player.name}
+                power={player.brawler.power}
+                player={playerProfile}
+                nameColor={nameColor}
+                battleType={battle.type}
+              />
+            ))}
           </div>
-        )}
+          <div className={styles.vsContainer}>
+            <h3 className={styles.vs}>VS</h3>
+          </div>
+          <div className={styles.brawlers}>
+            {battle.teams[1]?.map((player) => (
+              <PlayerBrawler
+                key={player.tag}
+                tag={player.tag}
+                trophies={player.brawler.trophies}
+                vs={true}
+                id={player.brawler.id}
+                name={player.brawler.name}
+                playerName={player.name}
+                power={player.brawler.power}
+                player={playerProfile}
+                nameColor={nameColor}
+                battleType={battle.type}
+              />
+            ))}
+          </div>
+        </div>
+      )}
 
       {battle.mode === 'bigGame' && (
         <div className={styles.battleBigBrawler}>

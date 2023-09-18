@@ -1,111 +1,118 @@
 .playerContainer {
-    justify-self: center;
-    position: relative;
+  justify-self: center;
+  position: relative;
 }
 
 .brawlerInfo {
-    position: relative;
+  position: relative;
 }
 
 .team {
-    margin-bottom: 15px;
-    position: relative;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .trophiesBrawler {
-    z-index: 50;
-    position: absolute;
-    display: flex;
-    padding: 3px;
-    background-color: #000;
-    align-items: center;
-    gap: 2px;
+  z-index: 50;
+  position: absolute;
+  display: flex;
+  padding: 3px;
+  background-color: #000;
+  align-items: center;
+  gap: 2px;
 }
 
 .leagueRanked {
-    z-index: 50;
-    position: absolute;
-    display: flex; 
-    padding: 3px;
-    align-items: center;
-    gap: 2px;
+  z-index: 50;
+  position: absolute;
+  display: flex;
+  padding: 3px;
+  align-items: center;
+  gap: 2px;
 }
 
 .leagueLevel {
-    font-size: 20px;
-    font-weight: 800;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
+  font-size: 20px;
+  font-weight: 800;
+  text-shadow:
+    #000 -1px 2px,
+    #000 -1px -1px;
 }
 
 .trophies {
-    font-size: 14px;
-    font-weight: 600;
-    color: #fdd935;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fdd935;
 }
 
 .imgCont {
-    position: relative;
-    width: 70px;
-    height: 70px;
+  position: relative;
+  width: 70px;
+  height: 70px;
 }
 
 .imgBrawl {
-    object-fit: cover;
-    border: 5px #000000 solid;
-    object-position: left;
+  object-fit: cover;
+  border: 5px #000000 solid;
+  object-position: left;
 }
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .power {
-    position: absolute;
-    padding: 3px;
-    background-color: #000;
-    font-size: 12px;
-    font-weight: 600;
-    color: #ffffff;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
-    left: 0;
-    bottom: 0px;
+  position: absolute;
+  padding: 3px;
+  background-color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow:
+    #000 -1px 2px,
+    #000 -1px -1px;
+  left: 0;
+  bottom: 0px;
 }
 
 .powerVs {
-    position: absolute;
-    padding: 3px;
-    background-color: #000;
-    font-size: 12px;
-    font-weight: 600;
-    color: #ffffff;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
-    left: 0;
-    bottom: 0px;
+  position: absolute;
+  padding: 3px;
+  background-color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow:
+    #000 -1px 2px,
+    #000 -1px -1px;
+  left: 0;
+  bottom: 0px;
 }
 
 .playerName {
-    font-size: 12px;
-    font-weight: 600;
-    color: #ffffff;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
-    text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow:
+    #000 -1px 2px,
+    #000 -1px -1px;
+  text-align: center;
 }
 
 .normal {
-    font-size: 1vh;
+  font-size: 1vh;
 }
 
-
 @media (min-width: 500px) {
-    .playerName {
-        font-size: 13px;
-    }
+  .playerName {
+    font-size: 13px;
+  }
 
-    .normal {
-        font-size: 1.1vh;
-    }
+  .normal {
+    font-size: 1.1vh;
+  }
 
-    /* .power {
+  /* .power {
         bottom: 15px;
     }
     
@@ -115,28 +122,26 @@
 }
 
 @media (min-width: 700px) {
-    .playerName {
-        font-size: 15px;
-    }
+  .playerName {
+    font-size: 15px;
+  }
 
-    .normal {
-        font-size: 1.5vh;
-    }
+  .normal {
+    font-size: 1.5vh;
+  }
 
-    .power {
-        font-size: 14px;
-       
-    }
-    
-    .powerVs {
-        font-size: 14px;
-      
-    }
+  .power {
+    font-size: 14px;
+  }
 
-    .imgCont {
-        width: 100px;
-        height: 100px;
-    }
+  .powerVs {
+    font-size: 14px;
+  }
+
+  .imgCont {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 /* 
@@ -165,4 +170,3 @@
         text-align: center;
     }
 } */
-

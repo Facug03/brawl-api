@@ -1,16 +1,15 @@
 {
-    "name": "Brawl Pro",
-    "short_name": "Brawl Pro",
-    "icons": [
-      {
-        "src": "/logo.png",
-        "sizes": "86x48",
-        "type": "image/png"
-      }
-    ],
-    "theme_color": "#363b4e",
-    "background_color": "#363b4e",
-    "display": "standalone",
-    "start_url": "/"
-  }
-  
+  "name": "Brawl Pro",
+  "short_name": "Brawl Pro",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "86x48",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#363b4e",
+  "background_color": "#363b4e",
+  "display": "standalone",
+  "start_url": "/"
+}

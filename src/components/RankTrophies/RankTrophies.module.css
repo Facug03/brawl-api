@@ -1,208 +1,214 @@
 .article {
-    /* padding: 8px; */
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    border: 3px #000 solid;
-    overflow: hidden;
+  /* padding: 8px; */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  border: 3px #000 solid;
+  overflow: hidden;
 }
 
 .even {
-    background-color: #897789;
+  background-color: #897789;
 }
 
 .odd {
-    background-color: #756673;
+  background-color: #756673;
 }
 
 .rankCont {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px;
-    overflow: hidden;
-    text-overflow: clip;
-    white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
 }
 
 .rankCenter {
-    width: 42px;
-    height: 100%;
-    background-color: #62555f;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 42px;
+  height: 100%;
+  background-color: #62555f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rank {
-    font-size: 20px;
-    font-weight: 700;
-    color: #a397a1;
+  font-size: 20px;
+  font-weight: 700;
+  color: #a397a1;
 }
 
 .imgContainer {
-    position: relative;
-    width: 38px;
-    height: 38px;
+  position: relative;
+  width: 38px;
+  height: 38px;
 }
 
 .nameCon {
-    overflow: hidden;
-    text-overflow: clip;
-    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
 }
 
 .name {
-    font-size: 15px;
-    font-weight: 700;
-    text-shadow: #000 -0.5px 1.5px, #000 -1px -1px;
-    text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  text-shadow:
+    #000 -0.5px 1.5px,
+    #000 -1px -1px;
+  text-decoration: none;
 }
 
 .clubName {
-    font-size: 11px;
-    font-weight: 700;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .trophiesCont {
-    border-left: #000 solid 2px;
-    background-color: #655762;
-    width: 95px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px;
+  border-left: #000 solid 2px;
+  background-color: #655762;
+  width: 95px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
 }
 
 .clubs {
-    width: 105px;
+  width: 105px;
 }
 
 .trophyImg {
-    position: relative;
-    width: 23px;
-    height: 17px;
+  position: relative;
+  width: 23px;
+  height: 17px;
 }
 
 .trophies {
-    font-size: 14px;
-    font-weight: 700;
-    color: #e8ae23;
-    text-shadow: #000 -1px 2px, #000 -1px -1px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #e8ae23;
+  text-shadow:
+    #000 -1px 2px,
+    #000 -1px -1px;
 }
 
 @media (min-width: 400px) {
-    .rankCont {
-        padding: 8px;
-    }
+  .rankCont {
+    padding: 8px;
+  }
 
-    .name {
-        font-size: 16px;
-        text-shadow: #000 -1px 2.5px, #000 -1.5px -1.5px;
-    }
+  .name {
+    font-size: 16px;
+    text-shadow:
+      #000 -1px 2.5px,
+      #000 -1.5px -1.5px;
+  }
 
-    .trophies {
-        font-size: 15px;
-        text-shadow: #000 -1px 2.5px, #000 -1.5px -1.5px;
-    }
+  .trophies {
+    font-size: 15px;
+    text-shadow:
+      #000 -1px 2.5px,
+      #000 -1.5px -1.5px;
+  }
 
-    .trophiesCont {
-        width: 105px;
-        padding: 8px;
-    }
+  .trophiesCont {
+    width: 105px;
+    padding: 8px;
+  }
 
-    .clubs {
-        width: 115px;
-    }
+  .clubs {
+    width: 115px;
+  }
 
-    .trophyImg {
-        width: 25px;
-        height: 20px;
-    }
+  .trophyImg {
+    width: 25px;
+    height: 20px;
+  }
 }
 
-
 @media (min-width: 495px) {
-    .rankCenter {
-        width: 42px;
-    }
-    
-    .rank {
-        font-size: 22px;
-    }
+  .rankCenter {
+    width: 42px;
+  }
 
-    .name {
-        font-size: 19px;
-    }
+  .rank {
+    font-size: 22px;
+  }
 
-    .clubName {
-        font-size: 12px;
-    }
+  .name {
+    font-size: 19px;
+  }
 
-    .trophies {
-        font-size: 18px;
-    }
+  .clubName {
+    font-size: 12px;
+  }
 
-    .trophiesCont {
-        width: 125px;
-    }
+  .trophies {
+    font-size: 18px;
+  }
 
-    .clubs {
-        width: 140px;
-    }
+  .trophiesCont {
+    width: 125px;
+  }
 
-    .trophyImg {
-        width: 35px;
-        height: 25px;
-    }
+  .clubs {
+    width: 140px;
+  }
+
+  .trophyImg {
+    width: 35px;
+    height: 25px;
+  }
 }
 
 @media (min-width: 555px) {
-    .rankCenter {
-        width: 50px;
-    }
-    
-    .rank {
-        font-size: 27px;
-    }
+  .rankCenter {
+    width: 50px;
+  }
 
-    .name {
-        font-size: 23px;
-    }
+  .rank {
+    font-size: 27px;
+  }
 
-    .clubName {
-        font-size: 13px;
-    }
+  .name {
+    font-size: 23px;
+  }
 
-    .trophies {
-        font-size: 22px;
-    }
+  .clubName {
+    font-size: 13px;
+  }
 
-    .trophiesCont {
-        width: 150px;
-    }
+  .trophies {
+    font-size: 22px;
+  }
 
-    .clubs {
-        width: 155px;
-    }
+  .trophiesCont {
+    width: 150px;
+  }
+
+  .clubs {
+    width: 155px;
+  }
 }
 
 @media (min-width: 630px) {
-    .imgContainer {
-        width: 60px;
-        height: 60px;
-    }
+  .imgContainer {
+    width: 60px;
+    height: 60px;
+  }
 
-    .name {
-        font-size: 26px;
-    }
+  .name {
+    font-size: 26px;
+  }
 
-    .trophies {
-        font-size: 25px;
-    }
+  .trophies {
+    font-size: 25px;
+  }
 
-    .clubs {
-        width: 175px;
-    }
-
+  .clubs {
+    width: 175px;
+  }
 }

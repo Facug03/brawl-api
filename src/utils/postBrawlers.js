@@ -15,9 +15,7 @@ export async function postBrawler(brawlers) {
 }
 
 export function sortBrawlers(items, player) {
-  const soloRanked = items.filter(
-    (item) => item.battle.type === 'soloRanked' && item.battle.starPlayer
-  )
+  const soloRanked = items.filter((item) => item.battle.type === 'soloRanked' && item.battle.starPlayer)
 
   const showdown = items.filter((item) => item.battle.mode === 'soloShowdown')
 
@@ -25,13 +23,9 @@ export function sortBrawlers(items, player) {
   let brawlersDefeat = {}
 
   soloRanked.forEach((map) => {
-    const isMythicPlayer = map.battle.teams[0]?.some(
-      (player) => player.brawler.trophies >= 13
-    )
+    const isMythicPlayer = map.battle.teams[0]?.some((player) => player.brawler.trophies >= 13)
 
-    const isMythicPlayerSecondTeam = map.battle.teams[1]?.some(
-      (player) => player.brawler.trophies >= 13
-    )
+    const isMythicPlayerSecondTeam = map.battle.teams[1]?.some((player) => player.brawler.trophies >= 13)
 
     if (isMythicPlayer || isMythicPlayerSecondTeam) {
       if (map.battle.teams[0].some((ele) => ele.name === player)) {
@@ -41,10 +35,7 @@ export function sortBrawlers(items, player) {
         if (map.battle.result === 'victory') {
           brawlersVictory = {
             ...brawlersVictory,
-            [map.event.id]: [
-              ...(brawlersVictory[map.event.id] || []),
-              ...team0,
-            ],
+            [map.event.id]: [...(brawlersVictory[map.event.id] || []), ...team0],
           }
           brawlersDefeat = {
             ...brawlersDefeat,
@@ -53,10 +44,7 @@ export function sortBrawlers(items, player) {
         } else {
           brawlersVictory = {
             ...brawlersVictory,
-            [map.event.id]: [
-              ...(brawlersVictory[map.event.id] || []),
-              ...team1,
-            ],
+            [map.event.id]: [...(brawlersVictory[map.event.id] || []), ...team1],
           }
           brawlersDefeat = {
             ...brawlersDefeat,
@@ -70,10 +58,7 @@ export function sortBrawlers(items, player) {
         if (map.battle.result === 'victory') {
           brawlersVictory = {
             ...brawlersVictory,
-            [map.event.id]: [
-              ...(brawlersVictory[map.event.id] || []),
-              ...team1,
-            ],
+            [map.event.id]: [...(brawlersVictory[map.event.id] || []), ...team1],
           }
           brawlersDefeat = {
             ...brawlersDefeat,
@@ -82,10 +67,7 @@ export function sortBrawlers(items, player) {
         } else {
           brawlersVictory = {
             ...brawlersVictory,
-            [map.event.id]: [
-              ...(brawlersVictory[map.event.id] || []),
-              ...team0,
-            ],
+            [map.event.id]: [...(brawlersVictory[map.event.id] || []), ...team0],
           }
           brawlersDefeat = {
             ...brawlersDefeat,
@@ -97,16 +79,9 @@ export function sortBrawlers(items, player) {
   })
 
   showdown.forEach((map) => {
-    if (
-      map.event.map &&
-      map.battle.players.some((player) => player.brawler.trophies >= 600)
-    ) {
-      const winners = map.battle.players
-        .slice(0, 4)
-        .map((player) => player.brawler.name)
-      const losers = map.battle.players
-        .slice(4)
-        .map((player) => player.brawler.name)
+    if (map.event.map && map.battle.players.some((player) => player.brawler.trophies >= 600)) {
+      const winners = map.battle.players.slice(0, 4).map((player) => player.brawler.name)
+      const losers = map.battle.players.slice(4).map((player) => player.brawler.name)
 
       brawlersVictory = {
         ...brawlersVictory,

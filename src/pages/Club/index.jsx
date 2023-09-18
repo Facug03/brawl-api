@@ -23,17 +23,14 @@ export function Club(club) {
               color: '#ffffff',
             },
             ...profile,
-          ])
+          ]),
         )
       }
 
       if (profile.length === 6 && !isRepeated) {
         window.localStorage.setItem(
           'club',
-          JSON.stringify([
-            { player: club.name, tagPlayer: club.tag },
-            ...profile.slice(0, -1),
-          ])
+          JSON.stringify([{ player: club.name, tagPlayer: club.tag }, ...profile.slice(0, -1)]),
         )
       }
     }
@@ -50,7 +47,7 @@ export function Club(club) {
           <div className={styles.imgCont}>
             <Image
               src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${club.badgeId}/profile`}
-              alt='profile picture of Brawl Stars'
+              alt="profile picture of Brawl Stars"
               fill={true}
             />
           </div>
@@ -62,8 +59,8 @@ export function Club(club) {
             <div className={styles.trophies}>
               <div className={styles.imgTro}>
                 <Image
-                  src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
-                  alt='trophy icon'
+                  src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini"
+                  alt="trophy icon"
                   fill={true}
                 />
               </div>
@@ -78,15 +75,9 @@ export function Club(club) {
           <p className={styles.stats}>{club.type}</p>
         </div>
         <div className={styles.statTrophies}>
-          <h3 className={`${styles.infoPlayer} ${styles.reqTro}`}>
-            Required Trophies
-          </h3>
+          <h3 className={`${styles.infoPlayer} ${styles.reqTro}`}>Required Trophies</h3>
           <div className={styles.imgTro}>
-            <Image
-              src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
-              alt='trophy icon'
-              fill={true}
-            />
+            <Image src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini" alt="trophy icon" fill={true} />
           </div>
           <p className={styles.stats}>{club.requiredTrophies}</p>
         </div>
@@ -104,9 +95,7 @@ export function Club(club) {
             index={index}
             rank={index + 1}
             name={member.name}
-            clubName={
-              member.role === 'vicePresident' ? 'vice president' : member.role
-            }
+            clubName={member.role === 'vicePresident' ? 'vice president' : member.role}
             nameColor={`#${member.nameColor.slice(4)}`}
             tag={member.tag}
             trophies={member.trophies}

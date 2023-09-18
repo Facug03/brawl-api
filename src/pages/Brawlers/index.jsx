@@ -22,16 +22,10 @@ export function Brawlers({ brawlers }) {
     <Container>
       <h1 className={styles.title}>All Brawlers</h1>
       <div className={styles.filterCont}>
-        <p
-          onClick={() => setSort(true)}
-          className={`${styles.filter} ${sort && styles.selected}`}
-        >
+        <p onClick={() => setSort(true)} className={`${styles.filter} ${sort && styles.selected}`}>
           Newest
         </p>
-        <p
-          onClick={sortBrawlers}
-          className={`${styles.filter} ${!sort && styles.selected}`}
-        >
+        <p onClick={sortBrawlers} className={`${styles.filter} ${!sort && styles.selected}`}>
           Rarity
         </p>
       </div>
@@ -39,30 +33,21 @@ export function Brawlers({ brawlers }) {
         {sort
           ? brawlers.map((brawler) => (
               <article key={brawler.id}>
-                <a
-                  className={styles.link}
-                  href={`brawler/${brawler.name
-                    .toLowerCase()
-                    .split(' ')
-                    .join('')}`}
-                >
+                <a className={styles.link} href={`brawler/${brawler.name.toLowerCase().split(' ').join('')}`}>
                   <div className={styles.imgCont}>
                     <Image
                       unoptimized={true}
                       src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawler.avatarId}/profile`}
                       alt={`${brawler.name} avatar image in brawl stars`}
-                      sizes='85px,
+                      sizes="85px,
                   (min-width: 600px) 75px,
-                  (min-width: 0px) 60px'
+                  (min-width: 0px) 60px"
                       fill={true}
                     />
                   </div>
                   <h3 className={styles.brawlerName}>{brawler.name}</h3>
                   <h4 className={styles.rarity}>Rarity:</h4>
-                  <p
-                    style={{ color: brawler.rarityColor }}
-                    className={styles.p}
-                  >
+                  <p style={{ color: brawler.rarityColor }} className={styles.p}>
                     {brawler.rarity}
                   </p>
                 </a>
@@ -70,29 +55,20 @@ export function Brawlers({ brawlers }) {
             ))
           : sortedBrawlers.map((brawler) => (
               <article key={brawler.id}>
-                <a
-                  className={styles.link}
-                  href={`brawler/${brawler.name
-                    .toLowerCase()
-                    .split(' ')
-                    .join('')}`}
-                >
+                <a className={styles.link} href={`brawler/${brawler.name.toLowerCase().split(' ').join('')}`}>
                   <div className={styles.imgCont}>
                     <Image
                       src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawler.avatarId}/profile`}
                       alt={`${brawler.name} avatar image in brawl stars`}
-                      sizes='85px,
+                      sizes="85px,
                 (min-width: 600px) 75px,
-                (min-width: 0px) 60px'
+                (min-width: 0px) 60px"
                       fill={true}
                     />
                   </div>
                   <h3 className={styles.brawlerName}>{brawler.name}</h3>
                   <h4 className={styles.rarity}>Rarity:</h4>
-                  <p
-                    style={{ color: brawler.rarityColor }}
-                    className={styles.p}
-                  >
+                  <p style={{ color: brawler.rarityColor }} className={styles.p}>
                     {brawler.rarity}
                   </p>
                 </a>

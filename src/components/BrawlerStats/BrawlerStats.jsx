@@ -15,12 +15,12 @@ export default function BrawlerStats({ name, stats }) {
           }/custom`}
           alt={`brawl stars ${name}`}
           fill={true}
-          sizes='67px,
+          sizes="67px,
                                   (min-width: 775px) 72px,
                                   (min-width: 730px) 62px, 
                                   (min-width: 450px) 75px,
                                   (min-width: 400px) 70px,
-                                  (min-width: 0px) 60'
+                                  (min-width: 0px) 60"
         />
         <h4 className={styles.winRate}>{stats}</h4>
       </div>

@@ -17,10 +17,7 @@ export default function Card({ type }) {
   }, [profile, type])
 
   const controlInput = ({ target }) => {
-    if (
-      target.value.length < 10 &&
-      /^[A-Za-z0-9]*$/.test(target.value.trim())
-    ) {
+    if (target.value.length < 10 && /^[A-Za-z0-9]*$/.test(target.value.trim())) {
       setId(target.value.toUpperCase().trim())
     }
   }
@@ -39,21 +36,11 @@ export default function Card({ type }) {
       </label>
       <form onSubmit={playerPage} className={styles.form}>
         <span className={styles.hashtag}>#</span>
-        <input
-          value={id}
-          name={type}
-          id={type}
-          onChange={controlInput}
-          className={styles.tag}
-        />
+        <input value={id} name={type} id={type} onChange={controlInput} className={styles.tag} />
         <div className={styles.grid}>
           {!!profile.length &&
             profile.map((pro) => (
-              <a
-                key={pro.player}
-                className={styles.playerCon}
-                href={`/${type}/${pro.tagPlayer.slice(1)}`}
-              >
+              <a key={pro.player} className={styles.playerCon} href={`/${type}/${pro.tagPlayer.slice(1)}`}>
                 <h4 style={{ color: pro.color }} className={styles.player}>
                   {pro.player}
                 </h4>

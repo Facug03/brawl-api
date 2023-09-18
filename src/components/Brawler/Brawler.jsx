@@ -4,17 +4,7 @@ import Image from 'next/image'
 import styles from './Brawler.module.css'
 import { getRankImg, getBrawlerColor } from '../../utils/profileInfo'
 
-export default function Brawler({
-  id,
-  name,
-  rank,
-  trophies,
-  power,
-  highestTrophies,
-  gears,
-  starPowers,
-  gadgets,
-}) {
+export default function Brawler({ id, name, rank, trophies, power, highestTrophies, gears, starPowers, gadgets }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -43,8 +33,8 @@ export default function Brawler({
           <p className={styles.nameBrawl}>{name}</p>
           <div className={styles.infoBrawl}>
             <Image
-              src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/custom'
-              alt='trophy icon'
+              src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/custom"
+              alt="trophy icon"
               width={25}
               height={20}
             />
@@ -55,8 +45,8 @@ export default function Brawler({
               <p className={styles.highestTrophies}>Highest trophies</p>
               <div className={styles.infoBrawlHigh}>
                 <Image
-                  src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/custom'
-                  alt='trophy icon'
+                  src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/custom"
+                  alt="trophy icon"
                   width={25}
                   height={20}
                 />
@@ -71,9 +61,7 @@ export default function Brawler({
       </div>
       <div className={styles.abilitiesContainer} onClick={() => setOpen(!open)}>
         <p className={styles.starGadgets}>
-          <span className={`${open && styles.open} ${styles.close}`}>
-            {'>'}
-          </span>
+          <span className={`${open && styles.open} ${styles.close}`}>{'>'}</span>
           Star Powers and Gadgets
         </p>
       </div>

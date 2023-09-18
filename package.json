@@ -7,13 +7,13 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@next/font": "13.1.1",
     "@vercel/analytics": "0.1.8",
     "date-fns": "2.29.3",
-    "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "next": "13.1.1",
     "react": "18.2.0",
@@ -22,6 +22,15 @@
     "redis-om": "0.3.6"
   },
   "devDependencies": {
-    "next-sitemap": "3.1.47"
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.2",
+    "next-sitemap": "3.1.47",
+    "prettier": "^3.0.3"
   }
 }

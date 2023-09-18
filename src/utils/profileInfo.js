@@ -1,20 +1,12 @@
 export function getRankImg(n) {
-  if (n > 34)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/obsidian/mini'
-  else if (n >= 30)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/ruby/mini'
-  else if (n >= 25)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/emerald/mini'
-  else if (n >= 20)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/amethyst/mini'
-  else if (n >= 15)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/diamond/mini'
-  else if (n >= 10)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/gold/mini'
-  else if (n >= 5)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/silver/mini'
-  else if (n >= 1)
-    return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/bronze/mini'
+  if (n > 34) return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/obsidian/mini'
+  else if (n >= 30) return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/ruby/mini'
+  else if (n >= 25) return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/emerald/mini'
+  else if (n >= 20) return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/amethyst/mini'
+  else if (n >= 15) return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/diamond/mini'
+  else if (n >= 10) return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/gold/mini'
+  else if (n >= 5) return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/silver/mini'
+  else if (n >= 1) return 'https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/bronze/mini'
 }
 
 const bronze = {

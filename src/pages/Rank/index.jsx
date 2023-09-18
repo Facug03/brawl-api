@@ -21,9 +21,7 @@ export function Rank({ rankings }) {
   useEffect(() => {
     if (location.name !== 'Global' || brawler.length || selected === 'clubs') {
       setLoading(true)
-      fetch(
-        `${basePath}api/players?location=${location.code}&selected=${selected}&brawler=${brawler}`
-      )
+      fetch(`${basePath}api/players?location=${location.code}&selected=${selected}&brawler=${brawler}`)
         .then((res) => res.json())
         .then((data) => {
           if (data?.items) {
@@ -42,7 +40,7 @@ export function Rank({ rankings }) {
   const nextPage = () => {
     if (data.paging.cursors?.after) {
       fetch(
-        `${basePath}api/players?location=${location.code}&after=${data.paging.cursors.after}&brawler=${brawler}&selected=${selected}`
+        `${basePath}api/players?location=${location.code}&after=${data.paging.cursors.after}&brawler=${brawler}&selected=${selected}`,
       )
         .then((res) => res.json())
         .then((res) => {
@@ -80,9 +78,7 @@ export function Rank({ rankings }) {
 
       <div onClick={() => setDrop(!drop)} className={styles.drop}>
         <h3 className={styles.location}>
-          <span className={`${drop && styles.open} ${styles.close}`}>
-            {'>'}
-          </span>
+          <span className={`${drop && styles.open} ${styles.close}`}>{'>'}</span>
           {location.name}
         </h3>
       </div>
@@ -116,9 +112,7 @@ export function Rank({ rankings }) {
         <div className={styles.brawlerContainer}>
           {BRAWLERS.map((brawl) => (
             <div
-              className={`${styles.imgCont} ${
-                brawl.id == brawler && styles.selectedBrawler
-              }`}
+              className={`${styles.imgCont} ${brawl.id == brawler && styles.selectedBrawler}`}
               onClick={() => setBrawler(`${brawl.id}`)}
               key={brawl.id}
             >
@@ -165,11 +159,7 @@ export function Rank({ rankings }) {
                     name={player.name}
                     rank={player.rank}
                     clubName={player.club?.name}
-                    nameColor={
-                      player.nameColor
-                        ? `#${player.nameColor.slice(4)}`
-                        : '#ffffff'
-                    }
+                    nameColor={player.nameColor ? `#${player.nameColor.slice(4)}` : '#ffffff'}
                     trophies={player.trophies}
                     memberCount={player?.memberCount}
                     type={player.memberCount ? 'club' : 'player'}

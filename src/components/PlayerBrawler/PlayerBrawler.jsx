@@ -32,10 +32,7 @@ export default function PlayerBrawler({
               height={powerLeague.rank !== 'masters' ? 27 : 29}
               priority={false}
             />
-            <span
-              className={styles.leagueLevel}
-              style={{ color: powerLeague.color }}
-            >
+            <span className={styles.leagueLevel} style={{ color: powerLeague.color }}>
               {'I'.repeat(powerLeague.level)}
             </span>
           </div>
@@ -43,8 +40,8 @@ export default function PlayerBrawler({
           <div className={styles.trophiesBrawler}>
             <Image
               unoptimized={true}
-              src='https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini'
-              alt='trophy icon'
+              src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/mini"
+              alt="trophy icon"
               width={20}
               height={15}
               priority={false}
@@ -64,22 +61,13 @@ export default function PlayerBrawler({
               fill={true}
               priority={false}
             />
-            <span className={`${vs ? styles.powerVs : styles.power}`}>
-              LVL. {power}
-            </span>
+            <span className={`${vs ? styles.powerVs : styles.power}`}>LVL. {power}</span>
           </div>
           {/* <span className={`${vs ? styles.powerVs : styles.power}`}>
             LVL. {power}
           </span> */}
-          <p
-            style={{ color: nameColor }}
-            className={`${styles.playerName} ${
-              lengthPyr >= 11 && styles.normal
-            }`}
-          >
-            {playerName.length > 13
-              ? `${playerName.slice(0, 10)}...`
-              : playerName}
+          <p style={{ color: nameColor }} className={`${styles.playerName} ${lengthPyr >= 11 && styles.normal}`}>
+            {playerName.length > 13 ? `${playerName.slice(0, 10)}...` : playerName}
           </p>
         </div>
       ) : (
@@ -93,19 +81,12 @@ export default function PlayerBrawler({
               fill={true}
               priority={false}
             />
-            <span className={`${vs ? styles.powerVs : styles.power}`}>
-              LVL. {power}
-            </span>
+            <span className={`${vs ? styles.powerVs : styles.power}`}>LVL. {power}</span>
           </div>
           {/* <span className={`${vs ? styles.powerVs : styles.power}`}>
             LVL. {power}
           </span> */}
-          <p
-            style={{ color: '#ffffff' }}
-            className={`${styles.playerName} ${
-              lengthPyr >= 11 && styles.normal
-            }`}
-          >
+          <p style={{ color: '#ffffff' }} className={`${styles.playerName} ${lengthPyr >= 11 && styles.normal}`}>
             {/* {playerName.length > 13
               ? `${playerName.slice(0, 10)}...`
               : playerName} */}

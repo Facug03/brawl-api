@@ -1,64 +1,64 @@
 .drop {
-    background-color: #2188e8;
-    padding: 10px;
-    margin: 40px 0px 15px 0px;
-    transform: skew(-7deg,0deg);
-    border: #000000 solid 2px;
-    cursor: pointer;
+  background-color: #2188e8;
+  padding: 10px;
+  margin: 40px 0px 15px 0px;
+  transform: skew(-7deg, 0deg);
+  border: #000000 solid 2px;
+  cursor: pointer;
 }
 
 .dropClub {
-    background-color: #2188e8;
-    padding: 10px;
-    margin: 20px 0px 15px 0px;
-    transform: skew(-7deg,0deg);
-    border: #000000 solid 2px;
-    cursor: pointer;
+  background-color: #2188e8;
+  padding: 10px;
+  margin: 20px 0px 15px 0px;
+  transform: skew(-7deg, 0deg);
+  border: #000000 solid 2px;
+  cursor: pointer;
 }
 
 .text {
-    font-size: 25px;
-    color: #ffffff;
-    font-weight: 800;
-    transform: skew(7deg,0deg);
-    padding-left: 30px;
-    position: relative;
-    text-shadow: #000 -2px 3px, #000 -1px -1px;
-    /* margin: 40px 0px 15px 0px; */
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: 800;
+  transform: skew(7deg, 0deg);
+  padding-left: 30px;
+  position: relative;
+  text-shadow:
+    #000 -2px 3px,
+    #000 -1px -1px;
+  /* margin: 40px 0px 15px 0px; */
 }
 
 .open {
-    transform: rotate(90deg);
-    position: absolute;
-    left: 7px;
+  transform: rotate(90deg);
+  position: absolute;
+  left: 7px;
 }
 
 .close {
-    position: absolute;
-    left: 7px;
+  position: absolute;
+  left: 7px;
 }
 
 .tutorial {
-    
 }
 
 @media (min-width: 420px) {
-    .text {
-        font-size: 27px;
-    }
+  .text {
+    font-size: 27px;
+  }
 }
 
-
 @media (min-width: 500px) {
-    .text {
-        font-size: 30px;
-    }
+  .text {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 1180px) {
-    .tutorial {
-        display: grid;
-        grid-auto-columns: minmax(0, 1fr);
-        grid-auto-flow: column;
-    }
+  .tutorial {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+  }
 }

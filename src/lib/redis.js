@@ -42,7 +42,7 @@ let brawlerSchema = new Schema(
   },
   {
     dataStructure: 'JSON',
-  }
+  },
 )
 
 export async function createIndex() {
@@ -74,25 +74,16 @@ export async function postBrawlers(brawler) {
     const result = {}
     brawlersVictory[brawl].forEach((el) => (result[el] = result[el] + 1 || 1))
 
-    const brawlersVic = brawlersVictory[brawl].filter(
-      (el, index) => brawlersVictory[brawl].indexOf(el) === index
-    )
+    const brawlersVic = brawlersVictory[brawl].filter((el, index) => brawlersVictory[brawl].indexOf(el) === index)
 
     const res = await Promise.all(
       brawlersVic.map(async (player) => {
-        const brawlerResult = await repository
-          .search()
-          .where('name')
-          .equals(player)
-          .return.first()
+        const brawlerResult = await repository.search().where('name').equals(player).return.first()
 
         if (brawlerResult) {
           const brawlEdit = await repository.fetch(brawlerResult.entityId)
 
-          brawlEdit[brawl] = [
-            (Number(brawlEdit[brawl][0]) + result[player]).toString(),
-            brawlEdit[brawl][1],
-          ]
+          brawlEdit[brawl] = [(Number(brawlEdit[brawl][0]) + result[player]).toString(), brawlEdit[brawl][1]]
 
           await repository.save(brawlEdit)
         } else {
@@ -127,7 +118,7 @@ export async function postBrawlers(brawler) {
             [brawl]: [result[player].toString(), '5'],
           })
         }
-      })
+      }),
     )
   }
 
@@ -135,25 +126,16 @@ export async function postBrawlers(brawler) {
     const result = {}
     brawlersDefeat[brawl].forEach((el) => (result[el] = result[el] + 1 || 1))
 
-    const brawlersDef = brawlersDefeat[brawl].filter(
-      (el, index) => brawlersDefeat[brawl].indexOf(el) === index
-    )
+    const brawlersDef = brawlersDefeat[brawl].filter((el, index) => brawlersDefeat[brawl].indexOf(el) === index)
 
     const res = await Promise.all(
       brawlersDef.map(async (player) => {
-        const brawlerResult = await repository
-          .search()
-          .where('name')
-          .equals(player)
-          .return.first()
+        const brawlerResult = await repository.search().where('name').equals(player).return.first()
 
         if (brawlerResult) {
           const brawlEdit = await repository.fetch(brawlerResult.entityId)
 
-          brawlEdit[brawl] = [
-            brawlEdit[brawl][0],
-            (Number(brawlEdit[brawl][1]) + result[player]).toString(),
-          ]
+          brawlEdit[brawl] = [brawlEdit[brawl][0], (Number(brawlEdit[brawl][1]) + result[player]).toString()]
 
           await repository.save(brawlEdit)
         } else {
@@ -188,7 +170,7 @@ export async function postBrawlers(brawler) {
             [brawl]: ['0', '5'],
           })
         }
-      })
+      }),
     )
   }
 
