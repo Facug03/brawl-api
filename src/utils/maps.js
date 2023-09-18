@@ -1,5 +1,5 @@
 export function mostUsedInMaps(brawlers, maps) {
-  const mapsFilter = {}
+  let mapsFilter = {}
 
   brawlers.forEach((brawler) => {
     for (const brawl in brawler.entityFields) {
@@ -23,7 +23,7 @@ export function mostUsedInMaps(brawlers, maps) {
 
 export function mostUsedBrawlers(brawlers, maps) {
   const brawlersFilter = brawlers.map((brawler) => {
-    const brawlerFilter = { name: brawler.name, used: 0 }
+    let brawlerFilter = { name: brawler.name, used: 0 }
 
     for (const brawl in brawler.entityFields) {
       if (maps.some((map) => map === brawl)) {
@@ -89,7 +89,7 @@ export function bestBrawlersInMaps(arr) {
 
 export function BestBrawlers(brawlers, maps) {
   const brawlersFilter = brawlers.map((brawler) => {
-    const brawlerFilter = { name: brawler.name, vic: 0, def: 0 }
+    let brawlerFilter = { name: brawler.name, vic: 0, def: 0 }
 
     for (const brawl in brawler.entityFields) {
       if (maps.some((map) => map === brawl)) {
@@ -211,7 +211,7 @@ export const modes = [
 ]
 
 export function createEmptyBrawlersObject(vsMaps, showdownMaps) {
-  let brawlers = {}
+  const brawlers = {}
 
   vsMaps.forEach((mapId) => {
     const map = modes.find((mode) => mode.maps.some((m) => m.id === mapId))

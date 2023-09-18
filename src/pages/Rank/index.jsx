@@ -112,7 +112,7 @@ export function Rank({ rankings }) {
         <div className={styles.brawlerContainer}>
           {BRAWLERS.map((brawl) => (
             <div
-              className={`${styles.imgCont} ${brawl.id == brawler && styles.selectedBrawler}`}
+              className={`${styles.imgCont} ${brawl.id === brawler && styles.selectedBrawler}`}
               onClick={() => setBrawler(`${brawl.id}`)}
               key={brawl.id}
             >

@@ -15,11 +15,11 @@ export function Player({ player }) {
       const sortedBrawlers = sortBrawlers(player.items, player.name)
       console.log(sortedBrawlers)
       if (sortedBrawlers) {
-        let start = performance.now()
+        const start = performance.now()
         postBrawler(sortedBrawlers)
           .then((res) => {
             console.log(res)
-            let end = performance.now()
+            const end = performance.now()
             console.log('Tiempo empleado:', end - start, 'milisegundos')
           })
           .catch((err) => console.log(err))
@@ -170,7 +170,7 @@ export function Player({ player }) {
         <div>
           {player.items ? (
             player.items.map((item) => {
-              if (item.battle.type?.includes('Ranked') && !item.battle.starPlayer) return
+              if (item.battle.type?.includes('Ranked') && !item.battle.starPlayer) return null
               return (
                 <BattleLog
                   key={item.battleTime}

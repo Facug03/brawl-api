@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import styles from './Tutorial.module.css'
 
 export default function Tutorial({ drop, setDrop, type, children }) {

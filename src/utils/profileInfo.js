@@ -76,12 +76,12 @@ export function getPowerImg(n) {
       level: -3 + n,
       color: silver.color,
     }
-  else n >= bronze.trophie
-  return {
-    rank: bronze.name,
-    level: n,
-    color: bronze.color,
-  }
+  else if (n >= bronze.trophie)
+    return {
+      rank: bronze.name,
+      level: n,
+      color: bronze.color,
+    }
 }
 
 export const getBrawlerColor = {

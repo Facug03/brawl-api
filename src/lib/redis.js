@@ -9,7 +9,7 @@ async function connect() {
 
 class Brawler extends Entity {}
 
-let brawlerSchema = new Schema(
+const brawlerSchema = new Schema(
   Brawler,
   {
     name: { type: 'string' },
@@ -70,13 +70,13 @@ export async function postBrawlers(brawler) {
 
   const repository = client.fetchRepository(brawlerSchema)
 
-  for (let brawl in brawlersVictory) {
+  for (const brawl in brawlersVictory) {
     const result = {}
     brawlersVictory[brawl].forEach((el) => (result[el] = result[el] + 1 || 1))
 
     const brawlersVic = brawlersVictory[brawl].filter((el, index) => brawlersVictory[brawl].indexOf(el) === index)
 
-    const res = await Promise.all(
+    await Promise.all(
       brawlersVic.map(async (player) => {
         const brawlerResult = await repository.search().where('name').equals(player).return.first()
 
@@ -122,13 +122,13 @@ export async function postBrawlers(brawler) {
     )
   }
 
-  for (let brawl in brawlersDefeat) {
+  for (const brawl in brawlersDefeat) {
     const result = {}
     brawlersDefeat[brawl].forEach((el) => (result[el] = result[el] + 1 || 1))
 
     const brawlersDef = brawlersDefeat[brawl].filter((el, index) => brawlersDefeat[brawl].indexOf(el) === index)
 
-    const res = await Promise.all(
+    await Promise.all(
       brawlersDef.map(async (player) => {
         const brawlerResult = await repository.search().where('name').equals(player).return.first()
 
