@@ -114,6 +114,7 @@ export const getBrawlerColor = {
   NANI: '#b116ed',
   EMZ: '#b116ed',
   BEA: '#b116ed',
+  CHUCK: '#b116ed',
   BIBI: '#b116ed',
   PIPER: '#b116ed',
   FRANK: '#b116ed',
@@ -164,6 +165,8 @@ export const getBrawlerColor = {
   MAISIE:
     'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
   CORDELIUS:
+    'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
+  PEARL:
     'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
 }
 
