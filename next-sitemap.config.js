@@ -5,14 +5,18 @@ module.exports = {
   changefreq: 'hourly',
   autoLastmod: false,
   priority: 0.75,
-  additionalSitemaps: ['/sitemap/brawlers.xml', '/sitemap/players-0.xml'],
+  additionalSitemaps: ['https://brawlpro.com/sitemap/brawlers.xml', 'https://brawlpro.com/sitemap/players-0.xml'],
   transform: async (config, path) => {
-    const secondaryPath = ['/brawlers', '/events', '/rank', '/brawlers/powerleague', '/brawlers/showdown']
+    const secondaryPath = ['/events', '/rank', '/brawlers/powerleague', '/brawlers/showdown']
 
     const result = {
       loc: path,
       changefreq: config.changefreq,
       priority: config.priority,
+    }
+
+    if ('/brawlers'.includes(path)) {
+      return
     }
 
     if (path === '/') {
