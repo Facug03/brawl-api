@@ -14,7 +14,7 @@ module.exports = {
       priority: config.priority,
     }
 
-    if ('/brawler'.includes(path)) {
+    if (path.includes('/brawler/')) {
       return
     }
 
