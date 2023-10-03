@@ -5,7 +5,6 @@ module.exports = {
   changefreq: 'hourly',
   autoLastmod: false,
   priority: 0.75,
-  additionalSitemaps: ['https://brawlpro.com/sitemap/brawlers.xml', 'https://brawlpro.com/sitemap/players-0.xml'],
   transform: async (config, path) => {
     const secondaryPath = ['/events', '/rank', '/brawlers/powerleague', '/brawlers/showdown']
 
@@ -15,7 +14,7 @@ module.exports = {
       priority: config.priority,
     }
 
-    if ('/brawlers'.includes(path)) {
+    if ('/brawler'.includes(path)) {
       return
     }
 
