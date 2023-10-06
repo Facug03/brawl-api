@@ -17,6 +17,10 @@
   color: #ffffff;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .class {
   font-size: 14px;
   text-shadow:

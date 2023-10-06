@@ -134,7 +134,9 @@ export function Brawler({ brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawl
                             fill={true}
                           />
                         </div>
-                        <h3 className={styles.name}>{brawl.name}</h3>
+                        <a className={styles.link} href={`${brawl.name.toLowerCase().split(' ').join('')}`}>
+                          <h3 className={styles.name}>{brawl.name}</h3>
+                        </a>
                       </div>
                       <h3 className={styles.statBrawl}>{brawl.used}</h3>
                     </div>
@@ -176,7 +178,9 @@ export function Brawler({ brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawl
                             fill={true}
                           />
                         </div>
-                        <h3 className={styles.name}>{brawl.name}</h3>
+                        <a className={styles.link} href={`${brawl.name.toLowerCase().split(' ').join('')}`}>
+                          <h3 className={styles.name}>{brawl.name}</h3>
+                        </a>
                       </div>
                       <h3 className={styles.statBrawl}>{brawl.winRate}%</h3>
                     </div>
@@ -233,7 +237,9 @@ export function Brawler({ brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawl
                             fill={true}
                           />
                         </div>
-                        <h3 className={styles.name}>{brawl.name}</h3>
+                        <a className={styles.link} href={`${brawl.name.toLowerCase().split(' ').join('')}`}>
+                          <h3 className={styles.name}>{brawl.name}</h3>
+                        </a>
                       </div>
                       <h3 className={styles.statBrawl}>{brawl.used}</h3>
                     </div>
@@ -275,7 +281,9 @@ export function Brawler({ brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawl
                             fill={true}
                           />
                         </div>
-                        <h3 className={styles.name}>{brawl.name}</h3>
+                        <a className={styles.link} href={`${brawl.name.toLowerCase().split(' ').join('')}`}>
+                          <h3 className={styles.name}>{brawl.name}</h3>
+                        </a>
                       </div>
                       <h3 className={styles.statBrawl}>{brawl.winRate}%</h3>
                     </div>
