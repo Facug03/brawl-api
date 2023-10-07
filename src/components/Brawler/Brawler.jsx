@@ -33,7 +33,6 @@ export default function Brawler({ id, name, rank, trophies, power, highestTrophi
           <a className={styles.link} href={`/brawler/${name.toLowerCase().split(' ').join('')}`}>
             <p className={styles.nameBrawl}>{name}</p>
           </a>
-
           <div className={styles.infoBrawl}>
             <Image
               src="https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/trophy/custom"
