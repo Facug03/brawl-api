@@ -21,6 +21,10 @@
   left: -12px;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .rankNum {
   position: absolute;
   bottom: -1px;
