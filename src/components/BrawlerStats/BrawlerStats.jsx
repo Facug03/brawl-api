@@ -5,7 +5,7 @@ import { BRAWLERS } from '../../utils/rankings'
 
 export default function BrawlerStats({ name, stats }) {
   return (
-    <div className={styles.div}>
+    <a href={`/brawler/${name.toLowerCase().split(' ').join('')}`}>
       <div className={styles.brawlerContainer}>
         <Image
           unoptimized={true}
@@ -24,6 +24,6 @@ export default function BrawlerStats({ name, stats }) {
         />
         <h4 className={styles.winRate}>{stats}</h4>
       </div>
-    </div>
+    </a>
   )
 }
