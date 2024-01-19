@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://brawlpro.com
+
+# Sitemaps
+Sitemap: https://brawlpro.com/sitemap.xml

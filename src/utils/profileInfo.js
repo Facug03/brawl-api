@@ -119,6 +119,7 @@ export const getBrawlerColor = {
   PIPER: '#b116ed',
   FRANK: '#b116ed',
   PAM: '#b116ed',
+  'LARRY & LAWRIE': '#b116ed',
   SQUEAK: '#fe0020',
   SPROUT: '#fe0020',
   GRAY: '#fe0020',
@@ -130,6 +131,8 @@ export const getBrawlerColor = {
   WILLOW: '#fe0020',
   TARA: '#fe0020',
   MORTIS: '#fe0020',
+  CHARLIE: '#fe0020',
+  MICO: '#fe0020',
   CHESTER: '#feee1c',
   AMBER: '#feee1c',
   SANDY: '#feee1c',
@@ -137,6 +140,7 @@ export const getBrawlerColor = {
   CROW: '#feee1c',
   SPIKE: '#feee1c',
   LEON: '#feee1c',
+  KIT: '#feee1c',
   MANDY:
     'linear-gradient(203deg, rgba(236,199,27,1) 6%, rgba(234,113,36,1) 21%, rgba(208,35,118,1) 37%, rgba(167,20,227,1) 70%)',
   BUSTER:

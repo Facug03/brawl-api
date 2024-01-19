@@ -32,8 +32,12 @@ export function Brawlers({ brawlers }) {
       <section className={styles.section}>
         {sort
           ? brawlers.map((brawler) => (
-              <article key={brawler.id}>
-                <a className={styles.link} href={`brawler/${brawler.name.toLowerCase().split(' ').join('')}`}>
+              <a
+                key={brawler.id}
+                className={styles.link}
+                href={`brawler/${brawler.name.toLowerCase().split(' ').join('')}`}
+              >
+                <article style={{ overflow: 'hidden' }}>
                   <div className={styles.imgCont}>
                     <Image
                       unoptimized={true}
@@ -50,8 +54,8 @@ export function Brawlers({ brawlers }) {
                   <p style={{ color: brawler.rarityColor }} className={styles.p}>
                     {brawler.rarity}
                   </p>
-                </a>
-              </article>
+                </article>
+              </a>
             ))
           : sortedBrawlers.map((brawler) => (
               <article key={brawler.id}>
