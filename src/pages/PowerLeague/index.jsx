@@ -83,13 +83,21 @@ export function PowerLeague({ leagueBrawlers, mostUsed }) {
                       <h3 className={styles.stats}>Win Rate</h3>
                       <div className={styles.brawlers}>
                         {leagueBrawlers[brawlMap.id].map((brawler) => (
-                          <BrawlerStats key={brawler.name} name={brawler.name} stats={brawler.winRate + '%'} />
+                          <BrawlerStats
+                            key={`${brawler.name}${brawler.winRate}`}
+                            name={brawler.name}
+                            stats={brawler.winRate + '%'}
+                          />
                         ))}
                       </div>
                       <h3 className={`${styles.stats} ${styles.stat}`}>Most Used</h3>
                       <div className={styles.brawlers}>
                         {mostUsed[brawlMap.id].map((brawler) => (
-                          <BrawlerStats key={brawler.name} name={brawler.name} stats={brawler.used} />
+                          <BrawlerStats
+                            key={`${brawler.name}${brawler.used}`}
+                            name={brawler.name}
+                            stats={brawler.used}
+                          />
                         ))}
                       </div>
                     </div>
