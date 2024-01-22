@@ -1,5 +1,6 @@
 import { Rubik } from '@next/font/google'
 import Speed from '@components/Speed'
+import { Analytics } from '@vercel/analytics/react'
 // import { SpeedInsights } from '@vercel/speed-insights/next'
 // import Script from 'next/script'
 
@@ -29,6 +30,7 @@ export default function App({ Component, pageProps }) {
       </div>
       {/* <SpeedInsights /> */}
       <Speed />
+      <Analytics />
     </>
   )
 }
