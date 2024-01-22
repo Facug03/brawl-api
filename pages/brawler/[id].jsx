@@ -59,6 +59,8 @@ export async function getStaticProps({ params }) {
 
   const brawlers = await getBrawlers()
 
+  console.log('llegué', brawlers)
+
   const mostUsed = mostUsedBrawlers(brawlers, vsMaps)
 
   const mostUsedSd = mostUsedBrawlers(brawlers, showdownMaps)

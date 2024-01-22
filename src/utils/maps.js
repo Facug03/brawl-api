@@ -219,9 +219,3 @@ export function createEmptyBrawlersObject(vsMaps, showdownMaps) {
 
   return brawlers
 }
-
-// Example usage:
-// const emptyBrawlers = createEmptyBrawlersObject(vsMaps, showdownMaps)
-// console.log(emptyBrawlers)
-// console.log(emptyBrawlers['15000160'])
-// console.log(emptyBrawlers['15000014'])

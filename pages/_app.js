@@ -1,4 +1,4 @@
-import { Rubik } from '@next/font/google'
+import { Rubik } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 // import Script from 'next/script'
 

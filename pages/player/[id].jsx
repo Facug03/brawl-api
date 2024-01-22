@@ -63,6 +63,6 @@ export async function getServerSideProps({ params }) {
       player = { ...player, ...resp.value }
     }
   })
-  console.log({ player })
+
   return { props: player }
 }
