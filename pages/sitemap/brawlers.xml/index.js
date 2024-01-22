@@ -7,7 +7,7 @@ const SitemapBrawlers = () => {}
 export default SitemapBrawlers
 
 export const getServerSideProps = async (ctx) => {
-  const allBrawlers = BRAWLERS.map((brawler) => brawler.name.toLowerCase())
+  const allBrawlers = BRAWLERS.map((brawler) => brawler.name.toLowerCase().split(' ').join('').replace(/&/g, '&amp;'))
 
   const brawlersSitemap = allBrawlers.map((brawler) => ({
     loc: `${basePath}brawler/${brawler}`,
