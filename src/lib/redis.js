@@ -184,7 +184,5 @@ export async function getBrawlers() {
 
   const brawlers = await repository.search().return.all()
 
-  console.log({ brawlers })
-
   return brawlers
 }
