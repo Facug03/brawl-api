@@ -20,5 +20,5 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', 'prettier'],
-  rules: {},
+  rules: { 'no-unused-vars': 'error', quotes: ['warn', 'single'], semi: ['warn', 'never'] },
 }
