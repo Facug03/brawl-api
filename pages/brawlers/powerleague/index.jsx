@@ -1,8 +1,8 @@
 import Head from 'next/head'
 
-import { bestBrawlersInMaps, mostUsedInMaps, vsMaps } from '@utils/maps'
-import { getBrawlers } from '@lib/redis'
-import { PowerLeague } from '@pages/PowerLeague'
+// import { bestBrawlersInMaps, mostUsedInMaps, vsMaps } from '@utils/maps'
+// import { getBrawlers } from '@lib/redis'
+// import { PowerLeague } from '@pages/PowerLeague'
 
 export default function PowerLeaguePage({ leagueBrawlers, mostUsed }) {
   return (
@@ -26,17 +26,18 @@ export default function PowerLeaguePage({ leagueBrawlers, mostUsed }) {
         <link rel="icon" href="/logo.png" />
         <link rel="canonical" href="https://brawlpro.com/brawlers/powerleague" />
       </Head>
-      <PowerLeague leagueBrawlers={leagueBrawlers} mostUsed={mostUsed} />
+      {/* <PowerLeague leagueBrawlers={leagueBrawlers} mostUsed={mostUsed} /> */}
     </>
   )
 }
 
 export async function getStaticProps() {
-  const brawlers = await getBrawlers()
+  // const brawlers = await getBrawlers()
 
-  const leagueBrawlers = bestBrawlersInMaps(brawlers)
+  // const leagueBrawlers = bestBrawlersInMaps(brawlers)
 
-  const mostUsed = mostUsedInMaps(brawlers, vsMaps)
+  // const mostUsed = mostUsedInMaps(brawlers, vsMaps)
 
-  return { props: { leagueBrawlers, mostUsed } }
+  // return { props: { leagueBrawlers, mostUsed } }
+  return { props: { leagueBrawlers: [], mostUsed: [] } }
 }

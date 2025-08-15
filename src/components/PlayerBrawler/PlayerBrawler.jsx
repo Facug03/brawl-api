@@ -18,7 +18,7 @@ export default function PlayerBrawler({
 }) {
   const powerLeague = getPowerImg(trophies)
   const lengthPyr = playerName.length
-
+  console.log({ playerName, tag, id, name, power, player, nameColor, battleType })
   return (
     <div className={`${duo ? styles.team : styles.playerContainer}`}>
       <div className={styles.brawlerInfo}>
@@ -56,7 +56,9 @@ export default function PlayerBrawler({
             <Image
               unoptimized={true}
               className={styles.imgBrawl}
-              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
+              src={`https://media.brawltime.ninja/brawlers/${name
+                .toLowerCase()
+                .replace(' ', '_')}/avatar.webp?size=160`}
               alt={`Information of ${name}`}
               fill={true}
               priority={false}
@@ -76,7 +78,9 @@ export default function PlayerBrawler({
             <Image
               className={styles.imgBrawl}
               unoptimized={true}
-              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
+              src={`https://media.brawltime.ninja/brawlers/${name
+                .toLowerCase()
+                .replace(' ', '_')}/avatar.webp?size=160`}
               alt={`Information of ${name}`}
               fill={true}
               priority={false}

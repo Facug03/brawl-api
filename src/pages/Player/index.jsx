@@ -74,7 +74,7 @@ export function Player({ player }) {
           <div className={styles.imgProfile}>
             <Image
               className={styles.img}
-              src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${player.icon.id}/profile`}
+              src={`https://media.brawltime.ninja/avatars/${player.icon.id}.webp?size=160`}
               alt="profile picture of Brawl Stars"
               fill={true}
             />

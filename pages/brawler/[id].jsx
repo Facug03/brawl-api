@@ -2,10 +2,10 @@ import Head from 'next/head'
 
 import { Brawler } from '@pages/Brawler'
 import { BRAWLERS } from '@utils/rankings'
-import { mostUsedBrawlers, BestBrawlers, vsMaps, showdownMaps } from '@utils/maps'
-import { getBrawlers } from '@lib/redis'
+// import { mostUsedBrawlers, BestBrawlers, vsMaps, showdownMaps } from '@utils/maps'
+// import { getBrawlers } from '@lib/redis'
 
-export default function BrawlerPage({ brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawlersSd }) {
+export default function BrawlerPage({ brawler }) {
   return (
     <>
       <Head>
@@ -29,10 +29,10 @@ export default function BrawlerPage({ brawler, mostUsed, mostUsedSd, bestBrawler
       </Head>
       <Brawler
         brawler={brawler}
-        mostUsed={mostUsed}
-        mostUsedSd={mostUsedSd}
-        bestBrawlers={bestBrawlers}
-        bestBrawlersSd={bestBrawlersSd}
+        // mostUsed={mostUsed}
+        // mostUsedSd={mostUsedSd}
+        // bestBrawlers={bestBrawlers}
+        // bestBrawlersSd={bestBrawlersSd}
       />
     </>
   )
@@ -56,24 +56,15 @@ export async function getStaticProps({ params }) {
   const { id } = params
 
   const brawlerId = BRAWLERS.find((brawler) => brawler.name.toLocaleLowerCase().split(' ').join('') === id)
-
-  const brawlers = await getBrawlers()
-
-  console.log('llegué', brawlers)
-
-  const mostUsed = mostUsedBrawlers(brawlers, vsMaps)
-
-  const mostUsedSd = mostUsedBrawlers(brawlers, showdownMaps)
-
-  const bestBrawlers = BestBrawlers(brawlers, vsMaps)
-
-  const bestBrawlersSd = BestBrawlers(brawlers, showdownMaps)
-
+  // const brawlers = await getBrawlers()
+  // const mostUsed = mostUsedBrawlers(brawlers, vsMaps)
+  // const mostUsedSd = mostUsedBrawlers(brawlers, showdownMaps)
+  // const bestBrawlers = BestBrawlers(brawlers, vsMaps)
+  // const bestBrawlersSd = BestBrawlers(brawlers, showdownMaps)
   const res = await fetch(`https://api.brawlapi.com/v1/brawlers/${brawlerId.id}`)
-
   const brawler = await res.json()
 
   return {
-    props: { brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawlersSd },
+    props: { brawler },
   }
 }

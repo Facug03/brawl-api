@@ -1,8 +1,8 @@
 import Head from 'next/head'
 
-import { bestBrawlersInMaps, mostUsedInMaps, showdownMaps } from '@utils/maps'
-import { getBrawlers } from '@lib/redis'
-import { Showdown } from '@pages/Showdown'
+// import { bestBrawlersInMaps, mostUsedInMaps, showdownMaps } from '@utils/maps'
+// import { getBrawlers } from '@lib/redis'
+// import { Showdown } from '@pages/Showdown'
 
 export default function ShowdownPage({ leagueBrawlers, mostUsed }) {
   return (
@@ -26,17 +26,18 @@ export default function ShowdownPage({ leagueBrawlers, mostUsed }) {
         <link rel="icon" href="/logo.png" />
         <link rel="canonical" href="https://brawlpro.com/brawlers/showdown" />
       </Head>
-      <Showdown leagueBrawlers={leagueBrawlers} mostUsed={mostUsed} />
+      {/* <Showdown leagueBrawlers={leagueBrawlers} mostUsed={mostUsed} /> */}
     </>
   )
 }
 
 export async function getStaticProps() {
-  const brawlers = await getBrawlers()
+  // const brawlers = await getBrawlers()
 
-  const leagueBrawlers = bestBrawlersInMaps(brawlers)
+  // const leagueBrawlers = bestBrawlersInMaps(brawlers)
 
-  const mostUsed = mostUsedInMaps(brawlers, showdownMaps)
+  // const mostUsed = mostUsedInMaps(brawlers, showdownMaps)
 
-  return { props: { leagueBrawlers, mostUsed } }
+  // return { props: { leagueBrawlers, mostUsed } }
+  return { props: { leagueBrawlers: [], mostUsed: [] } }
 }

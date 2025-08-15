@@ -4,8 +4,11 @@ import styles from './Events.module.css'
 import { getInterval } from '@utils/parseDate'
 import { mode } from '@utils/profileInfo'
 import Container from '@components/Container'
+import { iconMap } from 'consts/icon-map'
 
 export function Events({ events }) {
+  console.log(events)
+
   return (
     <Container>
       <h1 className={styles.title}>Event Rotation Brawl Stars</h1>
@@ -18,7 +21,11 @@ export function Events({ events }) {
                   <div className={styles.modeContainer}>
                     <Image
                       unoptimized={true}
-                      src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${ele.event.mode}/mini`}
+                      src={
+                        ele.event.mode === 'trophyThieves'
+                          ? 'https://media.brawltime.ninja/modes/trophy-thieves/icon.webp?size=160'
+                          : `https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${iconMap[ele.event.mode]}/mini`
+                      }
                       alt={`${mode[ele.event.mode]} icon map brawl stars`}
                       width={33}
                       height={35}
@@ -30,7 +37,10 @@ export function Events({ events }) {
                 </div>
               </div>
               <Image
-                className={`${ele.event.mode.toLowerCase().includes('showdown') && styles.showdown} ${styles.img} ${
+                className={`${
+                  (ele.event.mode.toLowerCase().includes('showdown') || ele.event.mode.toLowerCase().includes('5v5')) &&
+                  styles.showdown
+                } ${styles.img} ${
                   (ele.event.mode === 'roboRumble' ||
                     ele.event.mode === 'basketBrawl' ||
                     ele.event.mode === 'bossFight' ||
@@ -38,7 +48,7 @@ export function Events({ events }) {
                   styles.showdown
                 } ${styles.img}`}
                 unoptimized={true}
-                src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${ele.event.id}/map`}
+                src={`https://media.brawltime.ninja/maps/${ele.event.id}.webp?size=265`}
                 alt={`${ele.event.map}`}
                 width={265}
                 height={415}

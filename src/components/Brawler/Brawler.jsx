@@ -15,7 +15,10 @@ export default function Brawler({ id, name, rank, trophies, power, highestTrophi
             unoptimized={true}
             style={{ background: getBrawlerColor[name] }}
             className={styles.brawlerImg}
-            src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
+            src={`https://media.brawltime.ninja/brawlers/${name
+              .toLowerCase()
+              .split(' ')
+              .join('')}/avatar.webp?size=160`}
             alt={`Information of ${name}`}
             fill={true}
           />

@@ -52,6 +52,7 @@ export function Rank({ rankings }) {
         })
     }
   }
+  console.log({ rankings })
 
   return (
     <Container>

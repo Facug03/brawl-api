@@ -11,22 +11,22 @@ export default function Nav() {
       </a>
       <ul className={styles.nav}>
         <li>
-          <a className={styles.li} href={`/brawlers`}>
+          <a className={styles.li} href={'/brawlers'}>
             Brawlers
           </a>
         </li>
-        <li>
-          <a className={styles.li} href={`/brawlers/powerleague`}>
+        {/* <li>
+          <a className={styles.li} href={'/brawlers/powerleague'}>
             Best Brawlers
           </a>
-        </li>
+        </li> */}
         <li>
-          <a className={styles.li} href={`/events`}>
+          <a className={styles.li} href={'/events'}>
             Events
           </a>
         </li>
         <li>
-          <a className={styles.li} href={`/rank`}>
+          <a className={styles.li} href={'/rank'}>
             Rankings
           </a>
         </li>

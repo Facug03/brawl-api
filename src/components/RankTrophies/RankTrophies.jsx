@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from './RankTrophies.module.css'
 
 export default function RankTrophies({ index, name, rank, id, nameColor, clubName, trophies, tag, memberCount, type }) {
+  console.log('RankTrophies', { index, name, rank, id, nameColor, clubName, trophies, tag, memberCount, type })
   return (
     <article className={`${styles.article} ${index % 2 === 0 ? styles.even : styles.odd}`}>
       <div className={styles.rankCont}>
@@ -12,7 +13,7 @@ export default function RankTrophies({ index, name, rank, id, nameColor, clubNam
         <div className={styles.imgContainer}>
           <Image
             unoptimized={true}
-            src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${id}/custom`}
+            src={`https://media.brawltime.ninja/avatars/${id}.webp?size=100`}
             alt={`profile of the ${rank} in the world of Brawl Stars`}
             fill={true}
           />

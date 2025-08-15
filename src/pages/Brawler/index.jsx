@@ -1,13 +1,14 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 import Image from 'next/image'
 
 import styles from './Brawler.module.css'
 import Container from '@components/Container'
-import { BRAWLERS } from '@utils/rankings'
+// import { BRAWLERS } from '@utils/rankings'
 
-export function Brawler({ brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawlersSd }) {
-  const [select, setSelect] = useState(true)
-  const [selectSd, setSelectSd] = useState(true)
+export function Brawler({ brawler }) {
+  // const [select, setSelect] = useState(true)
+  // const [selectSd, setSelectSd] = useState(true)
+  console.log(brawler)
 
   return (
     <Container>
@@ -15,7 +16,7 @@ export function Brawler({ brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawl
         <div className={styles.imgCont}>
           <Image
             unoptimized={true}
-            src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawler.avatarId}/profile`}
+            src={`https://media.brawltime.ninja/avatars/${brawler.avatarId}.webp?size=160`}
             alt={`brawl stars ${brawler.name} `}
             sizes="115px,
                     (min-width: 1100px) 115x,
@@ -45,7 +46,7 @@ export function Brawler({ brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawl
                   <div className={styles.starCont}>
                     <Image
                       unoptimized={true}
-                      src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${star.id}/mini`}
+                      src={star.imageUrl}
                       alt={`logo of ${star.name} star power Brawl Stars`}
                       width={33}
                       height={33}
@@ -62,21 +63,21 @@ export function Brawler({ brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawl
         <div className={styles.stats}>
           <h3 className={styles.abilities}>Gadgets</h3>
           <div style={{ borderColor: brawler.rarity.color }} className={styles.abiliCont}>
-            {brawler.gadgets.map((star) => {
+            {brawler.gadgets.map((gadget) => {
               return (
-                <div key={star.id}>
+                <div key={gadget.id}>
                   <div className={styles.starCont}>
                     <Image
                       unoptimized={true}
-                      src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${star.id}/mini`}
-                      alt={`logo of ${star.name} star power Brawl Stars`}
+                      src={gadget.imageUrl}
+                      alt={`logo of ${gadget.name} gadget power Brawl Stars`}
                       width={33}
                       height={33}
                       priority={false}
                     />
-                    <p className={`${styles.starName} ${styles.gadgetColor}`}>{star.name}</p>
+                    <p className={`${styles.starName} ${styles.gadgetColor}`}>{gadget.name}</p>
                   </div>
-                  <p className={styles.starDescrip}>{star.description}</p>
+                  <p className={styles.starDescrip}>{gadget.description}</p>
                 </div>
               )
             })}
@@ -84,7 +85,7 @@ export function Brawler({ brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawl
         </div>
       </div>
 
-      <div className={styles.statsCont}>
+      {/* <div className={styles.statsCont}>
         <div>
           <h2 className={styles.title}>3 vs 3 Modes</h2>
           <h4 className={styles.order}>Order By:</h4>
@@ -291,7 +292,7 @@ export function Brawler({ brawler, mostUsed, mostUsedSd, bestBrawlers, bestBrawl
                 })}
           </div>
         </div>
-      </div>
+      </div> */}
     </Container>
   )
 }

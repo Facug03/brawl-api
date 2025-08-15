@@ -595,4 +595,80 @@ export const BRAWLERS = [
     id: 16000077,
     name: 'LARRY & LAWRIE',
   },
+  {
+    id: 16000078,
+    name: 'MELODIE',
+  },
+  {
+    id: 16000079,
+    name: 'ANGELO',
+  },
+  {
+    id: 16000080,
+    name: 'DRACO',
+  },
+  {
+    id: 16000081,
+    name: 'LILY',
+  },
+  {
+    id: 16000082,
+    name: 'BERRY',
+  },
+  {
+    id: 16000083,
+    name: 'CLANCY',
+  },
+  {
+    id: 16000084,
+    name: 'MOE',
+  },
+  {
+    id: 16000085,
+    name: 'KENJI',
+  },
+  {
+    id: 16000086,
+    name: 'SHADE',
+  },
+  {
+    id: 16000087,
+    name: 'JUJU',
+  },
+  {
+    id: 16000088,
+    name: 'BUZZ LIGHTYEAR',
+  },
+  {
+    id: 16000089,
+    name: 'MEEPLE',
+  },
+  {
+    id: 16000090,
+    name: 'OLLIE',
+  },
+  {
+    id: 16000091,
+    name: 'LUMI',
+  },
+  {
+    id: 16000092,
+    name: 'FINX',
+  },
+  {
+    id: 16000093,
+    name: 'JAE-YONG',
+  },
+  {
+    id: 16000094,
+    name: 'KAZE',
+  },
+  {
+    id: 16000095,
+    name: 'ALLI',
+  },
+  {
+    id: 16000096,
+    name: 'TRUNK',
+  },
 ]

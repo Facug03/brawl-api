@@ -41,7 +41,7 @@ export function Brawlers({ brawlers }) {
                   <div className={styles.imgCont}>
                     <Image
                       unoptimized={true}
-                      src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawler.avatarId}/profile`}
+                      src={`https://media.brawltime.ninja/avatars/${brawler.avatarId}.webp?size=160`}
                       alt={`${brawler.name} avatar image in brawl stars`}
                       sizes="85px,
                   (min-width: 600px) 75px,
@@ -62,7 +62,7 @@ export function Brawlers({ brawlers }) {
                 <a className={styles.link} href={`brawler/${brawler.name.toLowerCase().split(' ').join('')}`}>
                   <div className={styles.imgCont}>
                     <Image
-                      src={`https://imagedelivery.net/YuuZ9BLOxw-yqfwDx251Sg/${brawler.avatarId}/profile`}
+                      src={`https://media.brawltime.ninja/avatars/${brawler.avatarId}.webp?size=160`}
                       alt={`${brawler.name} avatar image in brawl stars`}
                       sizes="85px,
                 (min-width: 600px) 75px,

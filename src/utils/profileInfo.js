@@ -194,4 +194,7 @@ export const mode = {
   },
   bossFight: { name: 'Boss Fight', color: '#d22122' },
   volleyBrawl: { name: 'Volley Brawl', color: '#f2a81d' },
+  trophyThieves: { name: 'Trophy Thieves', color: '#34aa9cff' },
+  gemGrab5V5: { name: 'Gem Grab 5v5', color: '#953be6' },
+  trioShowdown: { name: 'Trio Showdown', color: '#64a617' },
 }
